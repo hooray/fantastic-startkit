@@ -1,0 +1,50 @@
+$example-sprite-address: (0px, 0px, 0px, 0px, 100px, 100px, 210px, 210px, '@/assets/sprites/example.[hash].png', 'address');
+$example-sprite-feedback: (110px, 0px, -110px, 0px, 100px, 100px, 210px, 210px, '@/assets/sprites/example.[hash].png', 'feedback');
+$example-sprite-payment: (0px, 110px, 0px, -110px, 100px, 100px, 210px, 210px, '@/assets/sprites/example.[hash].png', 'payment');
+
+$example-sprites: (
+	address: $example-sprite-address,
+	feedback: $example-sprite-feedback,
+	payment: $example-sprite-payment,
+);
+
+@mixin example-sprite-width($sprite) {
+    width: nth($sprite, 5);
+}
+
+@mixin example-sprite-height($sprite) {
+    height: nth($sprite, 6);
+}
+
+@mixin example-sprite-position($sprite) {
+    $sprite-offset-x: nth($sprite, 3);
+    $sprite-offset-y: nth($sprite, 4);
+    background-position: $sprite-offset-x $sprite-offset-y;
+}
+
+@mixin example-sprite-size($sprite) {
+    background-size: nth($sprite, 7) nth($sprite, 8);
+}
+
+@mixin example-sprite-image($sprite) {
+    $sprite-image: nth($sprite, 9);
+    background-image: url(#{$sprite-image});
+}
+
+@mixin example-sprite($name) {
+    @include example-sprite-image(map-get($example-sprites, #{$name}));
+    @include example-sprite-position(map-get($example-sprites, #{$name}));
+    @include example-sprite-size(map-get($example-sprites, #{$name}));
+    @include example-sprite-width(map-get($example-sprites, #{$name}));
+    @include example-sprite-height(map-get($example-sprites, #{$name}));
+    background-repeat: no-repeat;
+}
+
+@mixin all-example-sprites() {
+    @each $key, $val in $example-sprites {
+        $sprite-name: nth($val, 10);
+        .example-#{$sprite-name}-sprites {
+            @include example-sprite($key);
+        }
+    }
+}
