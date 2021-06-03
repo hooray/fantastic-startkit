@@ -24,7 +24,7 @@
 
 [![star](https://img.shields.io/github/stars/hooray/fantastic-template?style=social)](https://github.com/hooray/fantastic-template)
 
-[![star](https://gitee.com/eoner/fantastic-template/badge/star.svg?theme=dark)](https://gitee.com/eoner/fantastic-template)
+[![star](https://gitee.com/hooray/fantastic-template/badge/star.svg?theme=dark)](https://gitee.com/hooray/fantastic-template)
 
 ## 推广
 
