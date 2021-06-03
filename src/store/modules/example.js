@@ -19,7 +19,6 @@ const actions = {
         }).then(res => {
             commit('setNews', res.data.list)
         })
-        api.get('/banner/category')
     }
 }
 

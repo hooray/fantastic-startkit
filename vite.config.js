@@ -19,7 +19,7 @@ fs.readdirSync('src/assets/sprites').map(dirname => {
                     glob: '*.png'
                 },
                 target: {
-                    image: `./src/assets/sprites/${dirname}.[hash].png`,
+                    image: `./src/assets/sprites/${dirname}.png`,
                     css: [
                         [
                             `./src/assets/sprites/_${dirname}.scss`,
@@ -30,7 +30,7 @@ fs.readdirSync('src/assets/sprites').map(dirname => {
                     ]
                 },
                 apiOptions: {
-                    cssImageRef: `@/assets/sprites/${dirname}.[hash].png`,
+                    cssImageRef: `@/assets/sprites/${dirname}.png`,
                     spritesheet_info: {
                         name: dirname,
                         format: 'handlebars_based_template'
@@ -88,38 +88,6 @@ export default ({ mode, command }) => {
                 symbolId: 'icon-[dir]-[name]'
             }),
             ...spritesmithTasks,
-            // spritesmith({
-            //     watch: true,
-            //     src: {
-            //         cwd: './src/assets/sprites',
-            //         glob: '*.png'
-            //     },
-            //     target: {
-            //         image: './src/assets/target/sprite.[hash].png',
-            //         css: [
-            //             [
-            //                 './src/assets/style/sprite.scss',
-            //                 {
-            //                     format: 'handlebars_based_template'
-            //                 }
-            //             ]
-            //         ]
-            //     },
-            //     apiOptions: {
-            //         cssImageRef: 'assets/target/sprite.[hash].png',
-            //         spritesheet_info: {
-            //             name: 'vite1',
-            //             format: 'handlebars_based_template'
-            //         }
-            //     },
-            //     customTemplates: {
-            //         handlebars_based_template: './scss.template.hbs'
-            //     },
-            //     spritesmithOptions: {
-            //         algorithm: 'binary-tree',
-            //         padding: 10
-            //     }
-            // }),
             compression(),
             mock({
                 mockPath: 'src/mock',
