@@ -4,7 +4,7 @@
     "scripts": {
         "dev": "vite",
         "build:test": "vite build --mode test",
-        "build": "vite build && anywhere --d ./dist",
+        "build": "vite build",
         "serve:test": "anywhere --d ./dist-test",
         "serve": "anywhere --d ./dist",
         "svgo": "svgo -f src/assets/icons",

@@ -87,7 +87,6 @@ export default ({ mode, command }) => {
                 iconDirs: [path.resolve(process.cwd(), 'src/assets/icons/')],
                 symbolId: 'icon-[dir]-[name]'
             }),
-            ...spritesmithTasks,
             compression(),
             mock({
                 mockPath: 'src/mock',
@@ -96,7 +95,8 @@ export default ({ mode, command }) => {
                     import { setupProdMockServer } from './mockProdServer';
                     setupProdMockServer();
                 `
-            })
+            }),
+            ...spritesmithTasks
         ],
         resolve: {
             alias: {
