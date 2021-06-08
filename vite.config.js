@@ -8,21 +8,38 @@ import { viteMockServe as mock } from 'vite-plugin-mock'
 const fs = require('fs')
 const path = require('path')
 
-const spritesmithTasks = []
-fs.readdirSync('src/assets/sprites').map(dirname => {
-    if (fs.statSync(`src/assets/sprites/${dirname}`).isDirectory()) {
+// https://vitejs.dev/config/
+export default ({ mode, command }) => {
+    // 全局 scss 资源
+    const scssResources = []
+    fs.readdirSync('src/assets/styles/resources').map(dirname => {
+        if (fs.statSync(`src/assets/styles/resources/${dirname}`).isFile()) {
+            scssResources.push(`@import "src/assets/styles/resources/${dirname}";`)
+        }
+    })
+    // css 精灵图相关
+    const spriteDirnames = []
+    fs.readdirSync('src/assets/sprites').map(dirname => {
+        if (fs.statSync(`src/assets/sprites/${dirname}`).isDirectory()) {
+            spriteDirnames.push(dirname)
+            // css 精灵图生成的 scss 文件也需要放入全局 scss 资源
+            scssResources.push(`@import "src/assets/sprites/_${dirname}.scss";`)
+        }
+    })
+    const spritesmithTasks = []
+    spriteDirnames.map(item => {
         spritesmithTasks.push(
             spritesmith({
-                watch: true,
+                watch: command === 'serve',
                 src: {
-                    cwd: `./src/assets/sprites/${dirname}`,
+                    cwd: `./src/assets/sprites/${item}`,
                     glob: '*.png'
                 },
                 target: {
-                    image: `./src/assets/sprites/${dirname}.png`,
+                    image: `./src/assets/sprites/${item}.png`,
                     css: [
                         [
-                            `./src/assets/sprites/_${dirname}.scss`,
+                            `./src/assets/sprites/_${item}.scss`,
                             {
                                 format: 'handlebars_based_template'
                             }
@@ -30,9 +47,9 @@ fs.readdirSync('src/assets/sprites').map(dirname => {
                     ]
                 },
                 apiOptions: {
-                    cssImageRef: `@/assets/sprites/${dirname}.png`,
+                    cssImageRef: `@/assets/sprites/${item}.png`,
                     spritesheet_info: {
-                        name: dirname,
+                        name: item,
                         format: 'handlebars_based_template'
                     }
                 },
@@ -45,11 +62,7 @@ fs.readdirSync('src/assets/sprites').map(dirname => {
                 }
             })
         )
-    }
-})
-
-// https://vitejs.dev/config/
-export default ({ mode, command }) => {
+    })
     return defineConfig({
         // 开发服务器选项 https://cn.vitejs.dev/config/#server-options
         server: {
@@ -106,11 +119,7 @@ export default ({ mode, command }) => {
         css: {
             preprocessorOptions: {
                 scss: {
-                    additionalData: `
-                        @import "src/assets/styles/resources/variables.scss";
-                        @import "src/assets/styles/resources/utils.scss";
-                        @import "src/assets/sprites/_example.scss";
-                    `
+                    additionalData: scssResources.join('')
                 }
             }
         }
