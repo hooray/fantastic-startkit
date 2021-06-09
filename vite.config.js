@@ -70,7 +70,7 @@ export default ({ mode, command }) => {
             proxy: {
                 '/proxy': {
                     target: loadEnv(mode, process.cwd()).VITE_APP_API_ROOT,
-                    changeOrigin: command === 'serve',
+                    changeOrigin: command === 'serve' && loadEnv(mode, process.cwd()).VITE_OPEN_PROXY == 'true',
                     rewrite: path => path.replace(/\/proxy/, '')
                 }
             }
@@ -78,10 +78,10 @@ export default ({ mode, command }) => {
         // 构建选项 https://cn.vitejs.dev/config/#server-fsserve-root
         build: {
             outDir: mode == 'production' ? 'dist' : `dist-${mode}`,
-            sourcemap: mode != 'production',
+            sourcemap: loadEnv(mode, process.cwd()).VITE_BUILD_SOURCEMAP == 'true',
             terserOptions: {
                 compress: {
-                    drop_console: loadEnv(mode, process.cwd()).VITE_BUILD_DROP_CONSOLE
+                    drop_console: loadEnv(mode, process.cwd()).VITE_BUILD_DROP_CONSOLE == 'true'
                 }
             }
         },
