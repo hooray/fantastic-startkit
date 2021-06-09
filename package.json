@@ -9,6 +9,8 @@
         "serve": "anywhere --d ./dist",
         "svgo": "svgo -f src/assets/icons",
         "new": "plop",
+        "lint:eslint": "eslint src/**/*.js src/**/*.vue --fix",
+        "lint:stylelint": "stylelint src/**/*.vue src/**/*.{scss,less} --fix",
         "prepare": "husky install"
     },
     "dependencies": {
