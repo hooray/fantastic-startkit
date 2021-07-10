@@ -14,11 +14,7 @@ module.exports = {
         'plugin:vue/strongly-recommended',
         'eslint:recommended'
     ],
-    parserOptions: {
-        ecmaVersion: 2015,
-        parser: 'babel-eslint',
-        sourceType: 'module'
-    },
+    parser: 'vue-eslint-parser',
     rules: {
         // 代码风格
         'block-spacing': [2, 'always'],

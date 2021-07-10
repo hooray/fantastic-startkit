@@ -1,0 +1,77 @@
+Arguments: 
+  D:\soft\nodejs\node.exe D:\soft\Yarn\bin\yarn.js add vue-eslint-parser -D
+
+PATH: 
+  C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Python27\;C:\Python27\Scripts;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;D:\soft\cmder_mini;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Common Files\Thunder Network\KanKan\Codecs;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\soft\Yarn\bin\;D:\soft\NetSarang\Xshell 7\;d:\soft\Git\cmd;D:\soft\nodejs\;C:\Users\hoora\AppData\Local\Microsoft\WindowsApps;C:\Users\hoora\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\hoora\AppData\Local\Yarn\bin;C:\Users\hoora\AppData\Roaming\npm
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  14.17.3
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile 'C:\Users\hoora\AppData\Local\Yarn\Cache\v6\npm-ignore-4.0.6-750e3db5862087b4737ebac8207ffd1ef27b25fc-integrity\node_modules\ignore\legacy.js' -> 'D:\project\fantastic-template\node_modules\@eslint\eslintrc\node_modules\ignore\legacy.js'
+
+npm manifest: 
+  {
+      "name": "fantastic-template",
+      "version": "0.1.0",
+      "scripts": {
+          "dev": "vite",
+          "build:test": "vite build --mode test",
+          "build": "vite build",
+          "serve:test": "hs ./dist-test -o",
+          "serve": "hs ./dist -o",
+          "svgo": "svgo -f src/assets/icons",
+          "new": "plop",
+          "lint:eslint": "eslint src/**/*.js src/**/*.vue --fix",
+          "lint:stylelint": "stylelint src/**/*.vue src/**/*.{scss,less} --fix",
+          "prepare": "husky install"
+      },
+      "dependencies": {
+          "axios": "^0.21.1",
+          "dayjs": "^1.10.4",
+          "js-cookie": "^2.2.1",
+          "mitt": "^3.0.0",
+          "mockjs": "^1.1.0",
+          "nprogress": "^0.2.0",
+          "vue": "^3.0.5",
+          "vue-router": "^4.0.5",
+          "vuex": "^4.0.0"
+      },
+      "devDependencies": {
+          "@babel/core": "^7.14.6",
+          "@babel/eslint-parser": "^7.14.7",
+          "@vitejs/plugin-vue": "^1.2.3",
+          "@vue/compiler-sfc": "^3.0.5",
+          "eslint": "^7.22.0",
+          "eslint-plugin-vue": "^7.10.0",
+          "http-server": "^0.12.3",
+          "husky": "^7.0.1",
+          "lint-staged": "^11.0.0",
+          "plop": "^2.7.4",
+          "postcss-px-to-viewport": "^1.1.1",
+          "sass": "^1.32.8",
+          "stylelint": "^13.12.0",
+          "stylelint-config-recommended-scss": "^4.2.0",
+          "stylelint-config-standard": "^22.0.0",
+          "stylelint-scss": "^3.19.0",
+          "svgo": "^2.3.0",
+          "vite": "^2.3.6",
+          "vite-plugin-compression": "^0.3.0",
+          "vite-plugin-html": "^2.0.7",
+          "vite-plugin-mock": "^2.7.0",
+          "vite-plugin-spritesmith": "^0.1.0",
+          "vite-plugin-svg-icons": "^1.0.0"
+      }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
