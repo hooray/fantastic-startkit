@@ -69,7 +69,7 @@ export default ({ mode, command }) => {
             open: true,
             proxy: {
                 '/proxy': {
-                    target: loadEnv(mode, process.cwd()).VITE_APP_API_ROOT,
+                    target: loadEnv(mode, process.cwd()).VITE_APP_API_BASEURL,
                     changeOrigin: command === 'serve' && loadEnv(mode, process.cwd()).VITE_OPEN_PROXY == 'true',
                     rewrite: path => path.replace(/\/proxy/, '')
                 }
@@ -103,7 +103,6 @@ export default ({ mode, command }) => {
             compression(),
             mock({
                 mockPath: 'src/mock',
-                supportTs: false,
                 injectCode: `
                     import { setupProdMockServer } from './mockProdServer';
                     setupProdMockServer();

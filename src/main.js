@@ -5,14 +5,8 @@ import store from './store'
 
 const app = createApp(App)
 
-import api from './api'
-app.config.globalProperties.$api = api
-
-import dayjs from 'dayjs'
-app.config.globalProperties.$dayjs = dayjs
-
-import Cookies from 'js-cookie'
-app.config.globalProperties.$cookies = Cookies
+import globalProperties from '@/util/global.properties'
+globalProperties(app)
 
 // 全局组件自动注册
 import { registerGlobalComponent } from '@/components/registerGlobalComponent'
@@ -21,6 +15,7 @@ registerGlobalComponent(app)
 // 加载 svg 图标
 import 'vite-plugin-svg-icons/register'
 
+// 全局样式
 import '@/assets/styles/globals.scss'
 
 app
