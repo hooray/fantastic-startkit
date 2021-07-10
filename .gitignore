@@ -4,6 +4,3 @@ dist*
 dist-ssr
 *.local
 src/assets/sprites/*.*
-
-yarn-debug.log*
-yarn-error.log*

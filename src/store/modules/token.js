@@ -1,9 +1,9 @@
 // import api from '@/api'
 
-const state = {
+const state = () => ({
     token: localStorage.token,
     failuretime: localStorage.failuretime
-}
+})
 
 const getters = {
     isLogin: state => {

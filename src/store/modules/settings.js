@@ -2,9 +2,9 @@
  * 存放全局公用状态
  */
 
-const state = {
+const state = () => ({
     title: ''
-}
+})
 
 const getters = {}
 

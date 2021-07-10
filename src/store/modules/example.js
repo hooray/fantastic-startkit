@@ -1,8 +1,8 @@
 import api from '@/api'
 
-const state = {
+const state = () => ({
     news: []
-}
+})
 
 const getters = {
     newsCount: state => {
