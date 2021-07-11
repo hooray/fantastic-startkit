@@ -1,0 +1,1 @@
+import{o as e,c as o,a as d}from"./app.31a6bc24.js";const c='{"title":"全局组件","description":"","frontmatter":{},"relativePath":"global-component.md","lastUpdated":1626001987106}',a={},n=d('',5);a.render=function(d,c,a,p,t,r){return e(),o("div",null,[n])};export default a;export{c as __pageData};

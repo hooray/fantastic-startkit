@@ -1,1 +1,0 @@
-import{o as n,c as s,a}from"./app.2f713d2d.js";const t='{"title":"Vuex","description":"","frontmatter":{},"relativePath":"vuex.md","lastUpdated":1626002156559}',p={},o=a('',7);p.render=function(a,t,p,e,c,u){return n(),s("div",null,[o])};export default p;export{t as __pageData};

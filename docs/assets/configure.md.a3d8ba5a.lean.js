@@ -1,0 +1,1 @@
+import{o as a,c as s,a as n}from"./app.31a6bc24.js";const e='{"title":"环境配置","description":"","frontmatter":{},"relativePath":"configure.md","lastUpdated":1626001899952}',t={},o=n('',6);t.render=function(n,e,t,p,l,r){return a(),s("div",null,[o])};export default t;export{e as __pageData};

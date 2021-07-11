@@ -1,4 +1,5 @@
 module.exports = {
+	base: '/fantastic-template/',
     title: 'Fantastic-template 官网',
     description: '一款开箱即用的 Vue 项目模板，基于 Vue(3.x) & Vite(2.x)',
     themeConfig: {

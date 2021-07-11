@@ -1,1 +1,0 @@
-import{o as p,c as e,a as t}from"./app.2f713d2d.js";const o='{"title":"快速创建文件","description":"","frontmatter":{},"relativePath":"plop.md","lastUpdated":1626006988650}',a={},r=t('',7);a.render=function(t,o,a,c,s,l){return p(),e("div",null,[r])};export default a;export{o as __pageData};
