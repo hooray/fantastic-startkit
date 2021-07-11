@@ -13,8 +13,8 @@ features:
   details: SVG 图标自动载入，CSS 精灵图自动合成
 - title: Mock 数据
   details: 本地和生产环境均可使用 Mock 数据
-- title: GZip 压缩
-  details: 支持 GZip 优化项目体积，提高加载速度
+- title: 文件压缩
+  details: 支持 gzip / brotli 优化项目体积，提高加载速度
 - title: 代码规范
   details: 结合 IDE 插件、ESlint 、stylelint 、Git 钩子，轻松实现团队代码规范
 footer: Copyright © Fantastic-template
