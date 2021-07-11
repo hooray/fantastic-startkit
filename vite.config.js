@@ -63,6 +63,19 @@ export default ({ mode, command }) => {
             })
         )
     })
+    const compressionTasks = []
+    loadEnv(mode, process.cwd()).VITE_BUILD_COMPRESS.split(',').map(v => {
+        if (v == 'gzip') {
+            compressionTasks.push(compression())
+        }
+        if (v == 'brotli') {
+            compressionTasks.push(
+                compression({
+                    algorithm: 'brotliCompress'
+                })
+            )
+        }
+    })
     return defineConfig({
         // 开发服务器选项 https://cn.vitejs.dev/config/#server-options
         server: {
@@ -100,7 +113,7 @@ export default ({ mode, command }) => {
                 iconDirs: [path.resolve(process.cwd(), 'src/assets/icons/')],
                 symbolId: 'icon-[dir]-[name]'
             }),
-            compression(),
+            ...compressionTasks,
             mock({
                 mockPath: 'src/mock',
                 injectCode: `
