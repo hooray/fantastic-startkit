@@ -64,18 +64,20 @@ export default ({ mode, command }) => {
         )
     })
     const compressionTasks = []
-    loadEnv(mode, process.cwd()).VITE_BUILD_COMPRESS.split(',').map(v => {
-        if (v == 'gzip') {
-            compressionTasks.push(compression())
-        }
-        if (v == 'brotli') {
-            compressionTasks.push(
-                compression({
-                    algorithm: 'brotliCompress'
-                })
-            )
-        }
-    })
+    if (loadEnv(mode, process.cwd()).VITE_BUILD_COMPRESS != undefined) {
+        loadEnv(mode, process.cwd()).VITE_BUILD_COMPRESS.split(',').map(v => {
+            if (v == 'gzip') {
+                compressionTasks.push(compression())
+            }
+            if (v == 'brotli') {
+                compressionTasks.push(
+                    compression({
+                        algorithm: 'brotliCompress'
+                    })
+                )
+            }
+        })
+    }
     return defineConfig({
         // 开发服务器选项 https://cn.vitejs.dev/config/#server-options
         server: {
