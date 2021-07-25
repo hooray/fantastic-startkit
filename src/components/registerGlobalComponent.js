@@ -1,8 +1,7 @@
-export function registerGlobalComponent(app) {
+export default function registerGlobalComponent(app) {
     const componentsContext = import.meta.globEager('./**/index.vue')
-    Object.keys(componentsContext).forEach(v => {
-        // 获取文件中的 default 模块
-        const component = componentsContext[v].default
+    for (const path in componentsContext) {
+        const component = componentsContext[path].default
         app.component(component.name, component)
-    })
+    }
 }

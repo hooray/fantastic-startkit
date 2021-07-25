@@ -2,9 +2,9 @@ import { createStore, createLogger } from 'vuex'
 
 const modules = {}
 const modulesContext = import.meta.globEager('./modules/*.js')
-Object.keys(modulesContext).forEach(v => {
-    modules[v.slice(10, -3)] = modulesContext[v].default
-})
+for (const path in modulesContext) {
+    modules[path.slice(10, -3)] = modulesContext[path].default
+}
 
 export default createStore({
     modules: modules,
