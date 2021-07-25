@@ -1,15 +1,35 @@
-# 快速创建文件
+# 代码文件自动生成
 
 开发过程中，避免不了手动去频繁创建页面、组件等文件，并且还要在文件里写一些必要的代码，是不是觉得很麻烦？现在你可以用更简洁的方式来处理这一切。
 
-![](https://s1.ax1x.com/2020/06/30/N5jWcV.gif)
-
-:::tip
-该功能基于 [plop](https://www.npmjs.com/package/plop) 实现
+:::tip 说明
+该功能基于 [plop](https://www.npmjs.com/package/plop) 实现，在扩展新的模式前，请先详细阅读 plop 文档。
 :::
 
-模板默认提供了 page(页面/布局) 、component(组件) 、store(全局状态) 三个模板文件，通过 `pnpm new` 指令可以自行选择。
+模板默认提供了 3 种模式，通过 `pnpm run new` 指令可以自行选择。
 
-在实际项目开发中，建议根据项目定制适合项目的模板文件，可以大大提高开发效率，当多人协作开发时，也能统一部分标准。
+- `page` 页面文件
+- `component` 组件文件
+- `store` Vuex 全局状态文件
 
-模板目录为 `./plop-templates/` ，如果开发者新建自定义模板，需要在根目录 `plopfile.js` 里引用后才能使用。
+除了模板提供的 3 种模式，你还可以自定义新的模式，其原理就是通过预设模板，按照特定规则创建文件或者文件夹。
+
+预设模板文件存放在 `./plop-templates/` 目录下，并在 `./plopfile.js` 文件里进行引用，你可以参考现有 3 种模式的目录结构进行创建新的模板。
+
+## page
+
+![](/fantastic-admin/plop-page.gif)
+
+page 模式下，只能在 `./src/views/` 目录下选择指定的文件夹进行生成，生成的文件中，部分关键位置会被替换掉，例如 `<page-header />` 中的 `title` 会按照你输入的中文名称替换，页面的 `name` 会根据当前文件目录和文件名自动生成，确保唯一。
+
+## component
+
+![](/fantastic-admin/plop-component.gif)
+
+component 模式可以选择生成的是全局组件还是局部组件，全局组件生成目录为 `./src/components/` ，局部组件则在 `./src/views/` 目录下选择指定的文件夹进行生成。
+
+## store
+
+![](/fantastic-admin/plop-store.gif)
+
+store 模式则会在 `./src/store/modules/` 目录下生成一个空模板。

@@ -1,1 +1,0 @@
-import{o as n,c as s,a}from"./app.31a6bc24.js";const p='{"title":"移动端支持","description":"","frontmatter":{},"relativePath":"mobile-support.md","lastUpdated":1625999333983}',t={},o=a('',5);t.render=function(a,p,t,e,c,r){return n(),s("div",null,[o])};export default t;export{p as __pageData};

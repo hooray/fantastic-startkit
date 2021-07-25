@@ -1,13 +1,6 @@
 # 开始
 
-由于本模板为 Vue 3 项目模版，整体技术栈的版本都有升级，所以在开始使用前，建议先阅读以下官方文档，熟悉本模版使用到的技术栈。
-
-- [Vite](https://cn.vitejs.dev/)
-- [Vue 3](https://v3.cn.vuejs.org/) ([v3 迁移指南](https://v3.cn.vuejs.org/guide/migration/introduction.html))
-- [Vue Router 4](https://next.router.vuejs.org/zh/)
-- [Vuex 4](https://next.vuex.vuejs.org/zh/index.html)
-
-## 准备工作
+## 开发环境
 
 使用本模板前，需要在本地依次安装好 [Node.js](https://nodejs.org/zh-cn/), [pnpm](https://pnpm.io/zh/), [Git](https://git-scm.com/) 和 [Visual Studio Code](https://code.visualstudio.com/)，并且在 Visual Studio Code 里安装好以下扩展：
 
@@ -53,15 +46,31 @@ git clone https://gitee.com/hooray/fantastic-template.git
 # 进入项目目录
 cd fantastic-template
 
-# 安装项目依赖（本模板使用 pnpm 进行依赖包的版本锁定，请勿使用 npm/yarn 进行安装）
-pnpm i
+# 安装项目依赖
+pnpm install
 
 # 运行
 pnpm run dev
 ```
 
-运行后将自动打开浏览器并访问 `http://localhost:3000` ，如果一切正常，将看到 “**欢迎使用 Fantastic-template**” 。
+运行成功后，会自动访问页面，默认情况下，地址为 `http://localhost:3000`
+
+::: warning 注意
+安装依赖时如果提示 husky 安装失败，请使用 `git init` 对项目进行初始化，然后重新安装依赖即可。
+
+husky 需要项目有 git 环境才能正常安装，详细介绍请阅读《[代码规范 - husky & lint-staged](coding-standard.md#husky-lint-staged)》。
+:::
 
 ::: tip
 如果是从 [vue-automation](https://eoner.gitee.io/vue-automation) 转移过来的开发者，可能会有疑问，为什么不使用 Yarn ，而改用 pnpm 做为包管理工具。关于这一点，网上有很多对比的文章，可以同时搜索关键词：**npm yarn pnpm**了解三者的优缺点，这里就不再赘述了。
 :::
+
+## 技术栈
+
+了解并熟悉模板使用到的技术栈，能让你使用本模板更得心应手。
+
+- [Vite](https://cn.vitejs.dev/)
+- [Vue 3](https://v3.cn.vuejs.org/) ([v3 迁移指南](https://v3.cn.vuejs.org/guide/migration/introduction.html))
+- [Vue Router 4](https://next.router.vuejs.org/zh/)
+- [Vuex 4](https://next.vuex.vuejs.org/zh/index.html)
+- [Element Plus](https://element-plus.org/#/zh-CN)
