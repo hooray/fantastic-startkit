@@ -9,7 +9,7 @@ import globalProperties from '@/util/global.properties'
 globalProperties(app)
 
 // 全局组件自动注册
-import { registerGlobalComponent } from '@/components/registerGlobalComponent'
+import registerGlobalComponent from '@/components/registerGlobalComponent'
 registerGlobalComponent(app)
 
 // 加载 svg 图标

@@ -6,6 +6,7 @@ import createSvgIcon from './svg-icon'
 import createMock from './mock'
 import createCompression from './compression'
 import createSpritesmith from './spritesmith'
+import createCdn from './cdn'
 
 export default function createVitePlugins(viteEnv, isBuild = false) {
     const vitePlugins = [vue()]
@@ -15,5 +16,6 @@ export default function createVitePlugins(viteEnv, isBuild = false) {
     vitePlugins.push(createMock())
     isBuild && vitePlugins.push(...createCompression(viteEnv))
     vitePlugins.push(...createSpritesmith())
+    isBuild && vitePlugins.push(createCdn())
     return vitePlugins
 }
