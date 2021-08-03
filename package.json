@@ -44,6 +44,7 @@
         "vite-plugin-compression": "^0.3.0",
         "vite-plugin-html": "^2.0.7",
         "vite-plugin-mock": "^2.7.0",
+        "vite-plugin-restart": "^0.0.2",
         "vite-plugin-spritesmith": "^0.1.0",
         "vite-plugin-svg-icons": "^1.0.0",
         "vue-eslint-parser": "^7.8.0"
