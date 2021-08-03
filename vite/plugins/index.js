@@ -6,6 +6,7 @@ import createSvgIcon from './svg-icon'
 import createMock from './mock'
 import createCompression from './compression'
 import createSpritesmith from './spritesmith'
+import createBanner from './banner'
 import createCdn from './cdn'
 
 export default function createVitePlugins(viteEnv, isBuild = false) {
@@ -16,6 +17,7 @@ export default function createVitePlugins(viteEnv, isBuild = false) {
     vitePlugins.push(createMock())
     isBuild && vitePlugins.push(...createCompression(viteEnv))
     vitePlugins.push(...createSpritesmith())
+    vitePlugins.push(createBanner())
     isBuild && vitePlugins.push(createCdn())
     return vitePlugins
 }
