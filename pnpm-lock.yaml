@@ -24,7 +24,6 @@ specifiers:
   svgo: ^2.3.0
   vite: ^2.3.6
   vite-plugin-banner: ^0.1.3
-  vite-plugin-cdn-import: ^0.3.2
   vite-plugin-compression: ^0.3.0
   vite-plugin-html: ^2.0.7
   vite-plugin-mock: ^2.7.0
@@ -65,7 +64,6 @@ devDependencies:
   svgo: registry.nlark.com/svgo/2.3.1
   vite: registry.nlark.com/vite/2.4.4
   vite-plugin-banner: registry.nlark.com/vite-plugin-banner/0.1.3
-  vite-plugin-cdn-import: registry.nlark.com/vite-plugin-cdn-import/0.3.2
   vite-plugin-compression: registry.nlark.com/vite-plugin-compression/0.3.3_vite@2.4.4
   vite-plugin-html: registry.nlark.com/vite-plugin-html/2.0.7_vite@2.4.4
   vite-plugin-mock: registry.nlark.com/vite-plugin-mock/2.9.4_mockjs@1.1.0+vite@2.4.4
@@ -3871,16 +3869,6 @@ packages:
       picomatch: registry.nlark.com/picomatch/2.3.0
     dev: true
 
-  registry.nlark.com/@rollup/pluginutils/4.1.1:
-    resolution: {integrity: sha1-HU2obdTt7RVlalfZM/2iuaCNR+w=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/@rollup/pluginutils/download/@rollup/pluginutils-4.1.1.tgz}
-    name: '@rollup/pluginutils'
-    version: 4.1.1
-    engines: {node: '>= 8.0.0'}
-    dependencies:
-      estree-walker: 2.0.2
-      picomatch: registry.nlark.com/picomatch/2.3.0
-    dev: true
-
   registry.nlark.com/@trysound/sax/0.1.1:
     resolution: {integrity: sha1-M0hWQEjnotc5jJNdRmwEFOu2pmk=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/@trysound/sax/download/@trysound/sax-0.1.1.tgz}
     name: '@trysound/sax'
@@ -5054,14 +5042,6 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  registry.nlark.com/is-reference/1.2.1:
-    resolution: {integrity: sha1-iy2sCzcfS8mU/eq6nrVC0DAC0Lc=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/is-reference/download/is-reference-1.2.1.tgz}
-    name: is-reference
-    version: 1.2.1
-    dependencies:
-      '@types/estree': registry.nlark.com/@types/estree/0.0.48
-    dev: true
-
   registry.nlark.com/is-stream/2.0.1:
     resolution: {integrity: sha1-+sHj1TuXrVqdCunO8jifWBClwHc=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/is-stream/download/is-stream-2.0.1.tgz?cache=0&sync_timestamp=1627296854752&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fis-stream%2Fdownload%2Fis-stream-2.0.1.tgz}
     name: is-stream
@@ -5584,19 +5564,6 @@ packages:
       global-modules: 1.0.0
     dev: true
 
-  registry.nlark.com/rollup-plugin-external-globals/0.6.1:
-    resolution: {integrity: sha1-hhwmC1cnFE4P0bQksQP58Cgvw2U=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/rollup-plugin-external-globals/download/rollup-plugin-external-globals-0.6.1.tgz}
-    name: rollup-plugin-external-globals
-    version: 0.6.1
-    peerDependencies:
-      rollup: ^2.25.0
-    dependencies:
-      '@rollup/pluginutils': registry.nlark.com/@rollup/pluginutils/4.1.1
-      estree-walker: 2.0.2
-      is-reference: registry.nlark.com/is-reference/1.2.1
-      magic-string: 0.25.7
-    dev: true
-
   registry.nlark.com/rollup/2.55.1:
     resolution: {integrity: sha1-ZqREZI4vtgPY4ynnemHGCKZRD9o=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/rollup/download/rollup-2.55.1.tgz?cache=0&sync_timestamp=1627576099799&other_urls=https%3A%2F%2Fregistry.nlark.com%2Frollup%2Fdownload%2Frollup-2.55.1.tgz}
     name: rollup
@@ -6059,16 +6026,6 @@ packages:
     resolution: {integrity: sha1-09To4oSt3tNf6qVKuMonOp0zSeA=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/vite-plugin-banner/download/vite-plugin-banner-0.1.3.tgz}
     name: vite-plugin-banner
     version: 0.1.3
-    dev: true
-
-  registry.nlark.com/vite-plugin-cdn-import/0.3.2:
-    resolution: {integrity: sha1-LQg3y2JI0rcDiOhaIA3RHVqiqdw=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/vite-plugin-cdn-import/download/vite-plugin-cdn-import-0.3.2.tgz}
-    name: vite-plugin-cdn-import
-    version: 0.3.2
-    dependencies:
-      rollup-plugin-external-globals: registry.nlark.com/rollup-plugin-external-globals/0.6.1
-    transitivePeerDependencies:
-      - rollup
     dev: true
 
   registry.nlark.com/vite-plugin-compression/0.3.3_vite@2.4.4:

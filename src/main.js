@@ -1,9 +1,12 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import router from '@/router'
-import store from './store'
-
 const app = createApp(App)
+
+import router from '@/router'
+app.use(router)
+
+import store from './store'
+app.use(store)
 
 import globalProperties from '@/util/global.properties'
 globalProperties(app)
@@ -18,7 +21,4 @@ import 'vite-plugin-svg-icons/register'
 // 全局样式
 import '@/assets/styles/globals.scss'
 
-app
-    .use(router)
-    .use(store)
-    .mount('#app')
+app.mount('#app')
