@@ -7,7 +7,6 @@ import createMock from './mock'
 import createCompression from './compression'
 import createSpritesmith from './spritesmith'
 import createBanner from './banner'
-import createCdn from './cdn'
 
 export default function createVitePlugins(viteEnv, isBuild = false) {
     const vitePlugins = [vue()]
@@ -18,6 +17,5 @@ export default function createVitePlugins(viteEnv, isBuild = false) {
     isBuild && vitePlugins.push(...createCompression(viteEnv))
     vitePlugins.push(...createSpritesmith())
     vitePlugins.push(createBanner())
-    isBuild && vitePlugins.push(createCdn())
     return vitePlugins
 }
