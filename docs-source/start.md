@@ -29,7 +29,7 @@
 ::: tip
 Vue.js devtools 目前有两个版本，分别是正式版和 beta 版，需要安装的是 beta 版。如果之前有安装过正式版，在进行开发调试的时候，需要禁用或删除正式版，也就是只保留一个 Vue.js devtools 扩展才行。
 
-另外，由于 Vue.js devtools 的 Chrome 扩展需要访问 Chrome 应用商店，如果在大陆地区访问，需要自行准备相关**番羽●土啬**工具，或者也可以访问 [Vue.js devtools 官网](https://devtools.vuejs.org/)安装 Firefox 的扩展，当然同样需要安装 beta 版。
+另外，由于 Vue.js devtools 的 Chrome 扩展需要访问 Chrome 应用商店，如果在大陆地区访问，需要自行准备相关**可访问外网**的工具，或者也可以访问 [Vue.js devtools 官网](https://devtools.vuejs.org/)安装 Firefox 的扩展，当然同样需要安装 beta 版。
 :::
 
 ## 拉取代码
