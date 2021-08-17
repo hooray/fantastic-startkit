@@ -4,7 +4,7 @@ heroText: Fantastic-template
 tagline: 一款开箱即用的 Vue 项目模板
 actions:
 - text: 开始 →
-  link: /start.md
+  link: /start
   type: primary
 features:
 - title: 全面支持 Vue 3
