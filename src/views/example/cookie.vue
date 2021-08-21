@@ -7,25 +7,24 @@
     </div>
 </template>
 
-<script>
-export default {
-    data() {
-        return {
-            cookie: this.$cookies.get('a')
-        }
-    },
-    methods: {
-        setCookie() {
-            this.$cookies.set('a', 'abc')
-            this.cookie = this.$cookies.get('a')
-        },
-        removeCookie() {
-            this.$cookies.remove('a', 'abc')
-            this.cookie = this.$cookies.get('a')
-        },
-        isSetCookie() {
-            alert(!!this.$cookies.get('a'))
-        }
-    }
+<script setup>
+import { ref, getCurrentInstance } from 'vue'
+
+const { proxy } = getCurrentInstance()
+
+let cookie = ref(proxy.$cookies.get('a'))
+
+function setCookie() {
+    proxy.$cookies.set('a', 'abc')
+    cookie.value = proxy.$cookies.get('a')
+}
+
+function removeCookie() {
+    proxy.$cookies.remove('a', 'abc')
+    cookie.value = proxy.$cookies.get('a')
+}
+
+function isSetCookie() {
+    alert(!!proxy.$cookies.get('a'))
 }
 </script>

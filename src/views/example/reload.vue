@@ -9,18 +9,14 @@
     </div>
 </template>
 
-<script>
-export default {
-    inject: ['reload'],
-    data() {
-        return {
-            value: 0
-        }
-    },
-    methods: {
-        plus() {
-            this.value += 1
-        }
-    }
+<script setup>
+import { ref, inject } from 'vue'
+
+const reload = inject('reload')
+
+let value = ref(0)
+
+function plus() {
+    value.value += 1
 }
 </script>

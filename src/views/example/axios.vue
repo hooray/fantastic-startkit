@@ -7,29 +7,26 @@
     </div>
 </template>
 
-<script>
-export default {
-    data() {
-        return {
-            news: []
-        }
-    },
-    methods: {
-        getInfo() {
-            Promise.all([
-                this.$api.get('news/list', {
-                    baseURL: '/mock/'
-                }),
-                this.$api.get('news/list', {
-                    baseURL: '/mock/'
-                })
-            ]).then(res => {
-                this.news = res[0].data.list.concat(
-                    res[1].data.list
-                )
-            })
-        }
-    }
+<script setup>
+import { ref, getCurrentInstance } from 'vue'
+
+const { proxy } = getCurrentInstance()
+
+let news = ref([])
+
+const getInfo = () => {
+    Promise.all([
+        proxy.$api.get('news/list', {
+            baseURL: '/mock/'
+        }),
+        proxy.$api.get('news/list', {
+            baseURL: '/mock/'
+        })
+    ]).then(res => {
+        news.value = res[0].data.list.concat(
+            res[1].data.list
+        )
+    })
 }
 </script>
 

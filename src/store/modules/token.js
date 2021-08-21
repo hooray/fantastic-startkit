@@ -19,15 +19,20 @@ const getters = {
 }
 
 const actions = {
-    login({
-        commit
-    }) {
+    login({ commit }) {
         return new Promise(resolve => {
             // 模拟登录成功，写入 token 信息
             commit('setData', {
                 token: '1234567890',
                 failuretime: Date.parse(new Date()) / 1000 + 24 * 60 * 60
             })
+            resolve()
+        })
+    },
+    logout({ commit }) {
+        return new Promise(resolve => {
+            // 模拟退出登录，清除 token 信息
+            commit('removeData')
             resolve()
         })
     }
@@ -51,6 +56,12 @@ const mutations = {
         localStorage.setItem('failuretime', data.failuretime)
         state.token = data.token
         state.failuretime = data.failuretime
+    },
+    removeData(state) {
+        localStorage.removeItem('token')
+        localStorage.removeItem('failuretime')
+        state.token = null
+        state.failuretime = null
     }
 }
 

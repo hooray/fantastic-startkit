@@ -8,29 +8,25 @@
     </div>
 </template>
 
-<script>
-import { mapGetters, mapActions, mapMutations, mapState } from 'vuex'
+<script setup>
+import { computed } from 'vue'
+import { useStore } from 'vuex'
 
-export default {
-    computed: {
-        ...mapState({
-            news: state => state.example.news
-        }),
-        ...mapGetters({
-            newsCount: 'example/newsCount'
-        })
-    },
-    methods: {
-        ...mapActions({
-            getInfo: 'example/getNews'
-        }),
-        ...mapMutations({
-            removeLast: 'example/removeLast'
-        }),
-        getLength() {
-            alert(this.newsCount)
-        }
-    }
+const store = useStore()
+
+let news = computed(() => store.state.example.news)
+const newsCount = computed(() => store.getters['example/newsCount'])
+
+function getInfo() {
+    return store.dispatch('example/getNews')
+}
+
+function removeLast() {
+    return store.commit('example/removeLast')
+}
+
+function getLength() {
+    alert(newsCount.value)
 }
 </script>
 

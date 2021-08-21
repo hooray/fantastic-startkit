@@ -4,25 +4,28 @@
     </div>
 </template>
 
-<script>
-export default {
-    methods: {
-        login() {
-            this.$store.dispatch('token/login').then(() => {
-                // 登录成功后路由跳回
-                if (this.$route.query.redirect) {
-                    this.$router.replace({
-                        path: this.$route.query.redirect
-                    })
-                } else {
-                    if (window.history.length <= 1) {
-                        this.$router.push({ path: '/' })
-                    } else {
-                        this.$router.go(-1)
-                    }
-                }
+<script setup>
+import { useRouter, useRoute } from 'vue-router'
+import { useStore } from 'vuex'
+
+const router = useRouter()
+const route = useRoute()
+const store = useStore()
+
+function login() {
+    store.dispatch('token/login').then(() => {
+        // 登录成功后路由跳回
+        if (route.query.redirect) {
+            router.replace({
+                path: route.query.redirect
             })
+        } else {
+            if (window.history.length <= 1) {
+                router.push({ path: '/' })
+            } else {
+                router.go(-1)
+            }
         }
-    }
+    })
 }
 </script>
