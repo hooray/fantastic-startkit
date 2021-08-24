@@ -59,7 +59,7 @@ pnpm run dev
 
 ```bash:no-line-numbers
 # 可选择从 github 或 gitee 克隆 template 分支
-git clone -b template https://gitee.com/hooray/fantastic-template.git
+git clone -b template https://github.com/hooray/fantastic-template.git
 # 或者
 git clone -b template https://gitee.com/hooray/fantastic-template.git
 ```
