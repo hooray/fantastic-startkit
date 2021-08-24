@@ -18,18 +18,12 @@
 
 ## page
 
-![](/fantastic-admin/plop-page.gif)
-
 page 模式下，只能在 `./src/views/` 目录下选择指定的文件夹进行生成，生成的文件中，部分关键位置会被替换掉，例如 `<page-header />` 中的 `title` 会按照你输入的中文名称替换，页面的 `name` 会根据当前文件目录和文件名自动生成，确保唯一。
 
 ## component
 
-![](/fantastic-admin/plop-component.gif)
-
 component 模式可以选择生成的是全局组件还是局部组件，全局组件生成目录为 `./src/components/` ，局部组件则在 `./src/views/` 目录下选择指定的文件夹进行生成。
 
 ## store
-
-![](/fantastic-admin/plop-store.gif)
 
 store 模式则会在 `./src/store/modules/` 目录下生成一个空模板。

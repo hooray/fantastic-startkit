@@ -36,7 +36,7 @@ Vue.js devtools 目前有两个版本，分别是正式版和 beta 版，需要�
 
 做好准备工作后，依次执行下面的命令：
 
-```bash
+```bash:no-line-numbers
 # 克隆项目（如果本地已有源码，可跳过这步）
 # 可选择从 github 或 gitee 克隆项目
 git clone https://github.com/hooray/fantastic-template.git
@@ -55,13 +55,22 @@ pnpm run dev
 
 运行成功后，会自动访问页面，默认情况下，地址为 `http://localhost:3000`
 
+如果你已经了解本模板的特性，我们推荐你通过拉取 `template` 分支进行项目开发，该分支不含任何示例代码。
+
+```bash:no-line-numbers
+# 可选择从 github 或 gitee 克隆 template 分支
+git clone -b template https://gitee.com/hooray/fantastic-template.git
+# 或者
+git clone -b template https://gitee.com/hooray/fantastic-template.git
+```
+
 ::: warning 注意
 安装依赖时如果提示 husky 安装失败，请使用 `git init` 对项目进行初始化，然后重新安装依赖即可。
 
 husky 需要项目有 git 环境才能正常安装，详细介绍请阅读《[代码规范 - husky & lint-staged](coding-standard.md#husky-lint-staged)》。
 :::
 
-::: tip
+::: tip 说明
 如果是从 [vue-automation](https://eoner.gitee.io/vue-automation) 转移过来的开发者，可能会有疑问，为什么不使用 Yarn ，而改用 pnpm 做为包管理工具。关于这一点，网上有很多对比的文章，可以同时搜索关键词：**npm yarn pnpm**了解三者的优缺点，这里就不再赘述了。
 :::
 
