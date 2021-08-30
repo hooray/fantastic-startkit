@@ -98,6 +98,10 @@
 
 ### 全局组件
 
+::: tip 并非全局引用
+在 Vue2 版本不同，这里的全局组件并不会注册到全局，而是会在使用的时候自动引入，该特性由 [vite-plugin-components](https://github.com/antfu/vite-plugin-components) 提供支持。
+:::
+
 全局组件存放在 `./src/components/` 目录下，需要注意各个组件按文件夹进行区分。
 
 每个组件的文件夹内至少保留一个文件名为 `index.vue` 的组件入口（可参考 `SvgIcon` 组件），组件必须设置 `name` 并保证其唯一，因为自动注册会将组件的 `name` 设为组件名。
