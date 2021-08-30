@@ -99,7 +99,7 @@
 ### 全局组件
 
 ::: tip 并非全局引用
-在 Vue2 版本不同，这里的全局组件并不会注册到全局，而是会在使用的时候自动引入，该特性由 [vite-plugin-components](https://github.com/antfu/vite-plugin-components) 提供支持。
+全局组件并不会注册到全局，而是会在使用的时候自动引入，该特性由 [vite-plugin-components](https://github.com/antfu/vite-plugin-components) 提供支持。
 :::
 
 全局组件存放在 `./src/components/` 目录下，需要注意各个组件按文件夹进行区分。
