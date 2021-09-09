@@ -12,7 +12,8 @@ module.exports = {
     },
     extends: [
         'plugin:vue/strongly-recommended',
-        'eslint:recommended'
+        'eslint:recommended',
+        './auto-import-eslint-config.js'
     ],
     parser: 'vue-eslint-parser',
     rules: {
