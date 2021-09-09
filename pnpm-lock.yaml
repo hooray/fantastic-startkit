@@ -3,7 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@vitejs/plugin-vue': ^1.6.0
   '@vue/compiler-sfc': ^3.2.8
-  axios: ^0.21.1
+  axios: ^0.21.4
   dayjs: ^1.10.6
   eslint: ^7.32.0
   eslint-plugin-vue: ^7.17.0
@@ -37,7 +37,7 @@ specifiers:
   vuex: ^4.0.2
 
 dependencies:
-  axios: 0.21.1
+  axios: registry.nlark.com/axios/0.21.4
   dayjs: registry.nlark.com/dayjs/1.10.6
   js-cookie: registry.nlark.com/js-cookie/3.0.1
   mitt: registry.nlark.com/mitt/3.0.0
@@ -99,6 +99,8 @@ packages:
       postcss-syntax: 0.36.2_postcss@7.0.36
       remark: registry.nlark.com/remark/13.0.0
       unist-util-find-all-after: registry.nlark.com/unist-util-find-all-after/3.0.2
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /aggregate-error/3.1.0:
@@ -215,12 +217,6 @@ packages:
   /aws4/1.11.0:
     resolution: {integrity: sha1-1h9G2DslGSUOJ4Ta9bCUeai0HFk=, tarball: aws4/download/aws4-1.11.0.tgz}
     dev: true
-
-  /axios/0.21.1:
-    resolution: {integrity: sha1-IlY0gZYvTWvemnbVFu8OXTwJsrg=, tarball: axios/download/axios-0.21.1.tgz?cache=0&sync_timestamp=1608623177223&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Faxios%2Fdownload%2Faxios-0.21.1.tgz}
-    dependencies:
-      follow-redirects: registry.nlark.com/follow-redirects/1.14.3
-    dev: false
 
   /balanced-match/1.0.2:
     resolution: {integrity: sha1-6D46fj8wCzTLnYf2FfoMvzV2kO4=, tarball: balanced-match/download/balanced-match-1.0.2.tgz}
@@ -960,12 +956,6 @@ packages:
     resolution: {integrity: sha1-FQStJSMVjKpA20onh8sBQRmU6k8=, tarball: fs.realpath/download/fs.realpath-1.0.0.tgz}
     dev: true
 
-  /fsevents/2.3.2:
-    resolution: {integrity: sha1-ilJveLj99GI7cJ4Ll1xSwkwC/Ro=, tarball: fsevents/download/fsevents-2.3.2.tgz?cache=0&sync_timestamp=1612537044236&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ffsevents%2Fdownload%2Ffsevents-2.3.2.tgz}
-    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
-    dev: true
-    optional: true
-
   /function-bind/1.1.1:
     resolution: {integrity: sha1-pWiZ0+o8m6uHS7l3O3xe3pL0iV0=, tarball: function-bind/download/function-bind-1.1.1.tgz}
     dev: true
@@ -1075,7 +1065,7 @@ packages:
       source-map: 0.6.1
       wordwrap: 1.0.0
     optionalDependencies:
-      uglify-js: registry.nlark.com/uglify-js/3.14.1
+      uglify-js: registry.nlark.com/uglify-js/3.14.2
     dev: true
 
   /har-schema/2.0.0:
@@ -1183,6 +1173,8 @@ packages:
       eventemitter3: 4.0.7
       follow-redirects: registry.nlark.com/follow-redirects/1.14.3
       requires-port: 1.0.0
+    transitivePeerDependencies:
+      - debug
     dev: true
 
   /icss-replace-symbols/1.1.0:
@@ -3932,6 +3924,16 @@ packages:
     version: 0.7.0
     dev: true
 
+  registry.nlark.com/axios/0.21.4:
+    resolution: {integrity: sha1-xnuQ3AVo5cHPKwuFjEO6KOLtpXU=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/axios/download/axios-0.21.4.tgz?cache=0&sync_timestamp=1630942582656&other_urls=https%3A%2F%2Fregistry.nlark.com%2Faxios%2Fdownload%2Faxios-0.21.4.tgz}
+    name: axios
+    version: 0.21.4
+    dependencies:
+      follow-redirects: registry.nlark.com/follow-redirects/1.14.3
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
   registry.nlark.com/bail/1.0.5:
     resolution: {integrity: sha1-tvoTNASjksvB+MS/Y/WVM1Hnp3Y=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/bail/download/bail-1.0.5.tgz}
     name: bail
@@ -4060,7 +4062,7 @@ packages:
       normalize-path: 3.0.0
       readdirp: 3.6.0
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: registry.nlark.com/fsevents/2.3.2
     dev: true
 
   registry.nlark.com/clean-css/4.2.3:
@@ -4585,6 +4587,11 @@ packages:
     name: follow-redirects
     version: 1.14.3
     engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
 
   registry.nlark.com/fs-extra/10.0.0:
     resolution: {integrity: sha1-n/YbZV3eU/s0qC34S7IUzoAuF8E=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/fs-extra/download/fs-extra-10.0.0.tgz}
@@ -4596,6 +4603,14 @@ packages:
       jsonfile: 6.1.0
       universalify: 2.0.0
     dev: true
+
+  registry.nlark.com/fsevents/2.3.2:
+    resolution: {integrity: sha1-ilJveLj99GI7cJ4Ll1xSwkwC/Ro=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/fsevents/download/fsevents-2.3.2.tgz}
+    name: fsevents
+    version: 2.3.2
+    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
+    dev: true
+    optional: true
 
   registry.nlark.com/get-pixels/3.3.3:
     resolution: {integrity: sha1-ceLf1L77gQtUeKYcY1SACXbOAcc=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/get-pixels/download/get-pixels-3.3.3.tgz}
@@ -4798,6 +4813,8 @@ packages:
       secure-compare: registry.nlark.com/secure-compare/3.0.1
       union: 0.5.0
       url-join: 2.0.5
+    transitivePeerDependencies:
+      - debug
     dev: true
 
   registry.nlark.com/http-signature/1.2.0:
@@ -5032,6 +5049,8 @@ packages:
       micromark: registry.nlark.com/micromark/2.11.4
       parse-entities: 2.0.0
       unist-util-stringify-position: 2.0.3
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.nlark.com/mdast-util-to-markdown/0.6.5:
@@ -5086,6 +5105,8 @@ packages:
     dependencies:
       debug: registry.nlark.com/debug/4.3.2
       parse-entities: 2.0.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.nlark.com/mime-db/1.49.0:
@@ -5514,6 +5535,8 @@ packages:
     version: 9.0.0
     dependencies:
       mdast-util-from-markdown: registry.nlark.com/mdast-util-from-markdown/0.8.5
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.nlark.com/remark-stringify/9.0.1:
@@ -5532,6 +5555,8 @@ packages:
       remark-parse: registry.nlark.com/remark-parse/9.0.0
       remark-stringify: registry.nlark.com/remark-stringify/9.0.1
       unified: registry.nlark.com/unified/9.2.2
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.nlark.com/resolve-dir/1.0.1:
@@ -5571,7 +5596,7 @@ packages:
     engines: {node: '>=10.0.0'}
     hasBin: true
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: registry.nlark.com/fsevents/2.3.2
     dev: true
 
   registry.nlark.com/rxjs/6.6.7:
@@ -6000,10 +6025,10 @@ packages:
     version: 0.0.6
     dev: true
 
-  registry.nlark.com/uglify-js/3.14.1:
-    resolution: {integrity: sha1-4suf4025y0z3410dJt/qKOCafQY=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/uglify-js/download/uglify-js-3.14.1.tgz}
+  registry.nlark.com/uglify-js/3.14.2:
+    resolution: {integrity: sha1-191qRspXIU9UotCkPK0PNduCrJk=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/uglify-js/download/uglify-js-3.14.2.tgz?cache=0&sync_timestamp=1631026519465&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fuglify-js%2Fdownload%2Fuglify-js-3.14.2.tgz}
     name: uglify-js
-    version: 3.14.1
+    version: 3.14.2
     engines: {node: '>=0.8.0'}
     hasBin: true
     dev: true
@@ -6250,7 +6275,7 @@ packages:
       resolve: 1.20.0
       rollup: registry.nlark.com/rollup/2.56.3
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: registry.nlark.com/fsevents/2.3.2
     dev: true
 
   registry.nlark.com/vue-eslint-parser/7.10.0_eslint@7.32.0:
