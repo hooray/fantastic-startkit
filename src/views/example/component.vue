@@ -7,7 +7,6 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
 import ExampleList from './components/ExampleList/index.vue'
 
 let index = ref(1)

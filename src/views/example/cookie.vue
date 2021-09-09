@@ -8,8 +8,6 @@
 </template>
 
 <script setup>
-import { ref, getCurrentInstance } from 'vue'
-
 const { proxy } = getCurrentInstance()
 
 let cookie = ref(proxy.$cookies.get('a'))

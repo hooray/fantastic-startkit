@@ -9,9 +9,6 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
-import { useStore } from 'vuex'
-
 const store = useStore()
 
 let news = computed(() => store.state.example.news)

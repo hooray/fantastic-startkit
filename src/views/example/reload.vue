@@ -10,8 +10,6 @@
 </template>
 
 <script setup>
-import { ref, inject } from 'vue'
-
 const reload = inject('reload')
 
 let value = ref(0)

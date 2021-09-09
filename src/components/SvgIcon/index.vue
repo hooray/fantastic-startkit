@@ -4,16 +4,13 @@
     </svg>
 </template>
 
-<script>
-export default {
-    name: 'SvgIcon',
-    props: {
-        name: {
-            type: String,
-            required: true
-        }
+<script setup>
+defineProps({
+    name: {
+        type: String,
+        required: true
     }
-}
+})
 </script>
 
 <style scoped>
