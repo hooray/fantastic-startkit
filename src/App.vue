@@ -5,10 +5,6 @@
 </template>
 
 <script setup>
-import { provide, ref, watch, nextTick } from 'vue'
-import { useStore } from 'vuex'
-import { useRoute } from 'vue-router'
-
 const store = useStore()
 const route = useRoute()
 const isRouterAlive = ref(true)
