@@ -25,7 +25,7 @@
         text-decoration: none;
         font-size: 14px;
         &::after {
-            content: '|';
+            content: "|";
             margin: 0 10px;
             font-weight: normal;
             font-size: 14px;

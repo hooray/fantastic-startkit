@@ -1,7 +1,8 @@
 {
     "extends": [
         "stylelint-config-standard",
-        "stylelint-config-recommended-scss"
+        "stylelint-config-recommended-scss",
+        "stylelint-config-recommended-vue"
     ],
     "plugins": [
         "stylelint-scss"
@@ -12,7 +13,11 @@
         "at-rule-empty-line-before": "never",
         "no-descending-specificity": null,
         "selector-pseudo-class-no-unknown": null,
-        "selector-pseudo-element-no-unknown": [true, { "ignorePseudoElements": ["v-deep"] }],
-        "property-no-unknown": null
+        "property-no-unknown": null,
+        "font-family-no-missing-generic-family-keyword": null,
+        "selector-id-pattern": null,
+        "selector-class-pattern": null,
+        "scss/no-global-function-names": null,
+        "max-line-length": null
     }
 }
