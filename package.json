@@ -14,7 +14,7 @@
         "prepare": "husky install"
     },
     "dependencies": {
-        "axios": "^0.23.0",
+        "axios": "^0.24.0",
         "dayjs": "^1.10.7",
         "js-cookie": "^3.0.1",
         "mitt": "^3.0.0",
@@ -25,13 +25,13 @@
         "vuex": "^4.0.2"
     },
     "devDependencies": {
-        "@vitejs/plugin-vue": "^1.9.3",
+        "@vitejs/plugin-vue": "^1.9.4",
         "@vue/compiler-sfc": "^3.2.20",
         "eslint": "^8.1.0",
         "eslint-plugin-vue": "^7.20.0",
         "http-server": "^14.0.0",
         "husky": "^7.0.4",
-        "lint-staged": "^11.2.3",
+        "lint-staged": "^11.2.6",
         "plop": "^2.7.6",
         "postcss-px-to-viewport": "^1.1.1",
         "postcss-scss": "^4.0.1",
