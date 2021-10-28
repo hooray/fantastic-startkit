@@ -1,16 +1,16 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@vitejs/plugin-vue': ^1.9.3
+  '@vitejs/plugin-vue': ^1.9.4
   '@vue/compiler-sfc': ^3.2.20
-  axios: ^0.23.0
+  axios: ^0.24.0
   dayjs: ^1.10.7
   eslint: ^8.1.0
   eslint-plugin-vue: ^7.20.0
   http-server: ^14.0.0
   husky: ^7.0.4
   js-cookie: ^3.0.1
-  lint-staged: ^11.2.3
+  lint-staged: ^11.2.6
   mitt: ^3.0.0
   mockjs: ^1.1.0
   nprogress: ^0.2.0
@@ -43,7 +43,7 @@ specifiers:
   vuex: ^4.0.2
 
 dependencies:
-  axios: 0.23.0
+  axios: registry.npmmirror.com/axios/0.24.0
   dayjs: 1.10.7
   js-cookie: 3.0.1
   mitt: 3.0.0
@@ -54,13 +54,13 @@ dependencies:
   vuex: 4.0.2_vue@3.2.20
 
 devDependencies:
-  '@vitejs/plugin-vue': 1.9.3_vite@2.6.10
+  '@vitejs/plugin-vue': registry.npmmirror.com/@vitejs/plugin-vue/1.9.4_vite@2.6.10
   '@vue/compiler-sfc': 3.2.20
   eslint: registry.npmmirror.com/eslint/8.1.0
   eslint-plugin-vue: registry.npmmirror.com/eslint-plugin-vue/7.20.0_eslint@8.1.0
   http-server: registry.npmmirror.com/http-server/14.0.0
   husky: registry.npmmirror.com/husky/7.0.4
-  lint-staged: 11.2.3
+  lint-staged: registry.npmmirror.com/lint-staged/11.2.6
   plop: registry.npmmirror.com/plop/2.7.6
   postcss-px-to-viewport: 1.1.1
   postcss-scss: registry.npmmirror.com/postcss-scss/4.0.1
@@ -291,15 +291,6 @@ packages:
     resolution: {integrity: sha1-4OQs536Je9aurW9upirrE1uKOJU=, tarball: '@types/through/download/@types/through-0.0.30.tgz'}
     dependencies:
       '@types/node': 16.11.1
-    dev: true
-
-  /@vitejs/plugin-vue/1.9.3_vite@2.6.10:
-    resolution: {integrity: sha1-k9YYk85scj0CCa8Eg+yLkaLNgR8=, tarball: '@vitejs/plugin-vue/download/@vitejs/plugin-vue-1.9.3.tgz'}
-    engines: {node: '>=12.0.0'}
-    peerDependencies:
-      vite: ^2.5.10
-    dependencies:
-      vite: registry.npmmirror.com/vite/2.6.10_sass@1.43.3
     dev: true
 
   /@vue/compiler-core/3.2.20:
@@ -555,14 +546,6 @@ packages:
   /aws4/1.11.0:
     resolution: {integrity: sha1-1h9G2DslGSUOJ4Ta9bCUeai0HFk=, tarball: aws4/download/aws4-1.11.0.tgz}
     dev: true
-
-  /axios/0.23.0:
-    resolution: {integrity: sha1-sPpdCUio0ddePVY1I4tsRiWwUUk=, tarball: axios/download/axios-0.23.0.tgz?cache=0&sync_timestamp=1634088108402&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Faxios%2Fdownload%2Faxios-0.23.0.tgz}
-    dependencies:
-      follow-redirects: 1.14.4
-    transitivePeerDependencies:
-      - debug
-    dev: false
 
   /balanced-match/1.0.2:
     resolution: {integrity: sha1-6D46fj8wCzTLnYf2FfoMvzV2kO4=, tarball: balanced-match/download/balanced-match-1.0.2.tgz}
@@ -1531,16 +1514,6 @@ packages:
     resolution: {integrity: sha1-ZL/tXLaP48p4s+shStl7Y77c5WE=, tarball: flatted/download/flatted-3.2.2.tgz}
     dev: true
 
-  /follow-redirects/1.14.4:
-    resolution: {integrity: sha1-g4/fSKi73XnlLuUfsclOPtmLk3k=, tarball: follow-redirects/download/follow-redirects-1.14.4.tgz}
-    engines: {node: '>=4.0'}
-    peerDependencies:
-      debug: '*'
-    peerDependenciesMeta:
-      debug:
-        optional: true
-    dev: false
-
   /for-in/1.0.2:
     resolution: {integrity: sha1-gQaNKVqBQuwKxybG4iAMMPttXoA=, tarball: for-in/download/for-in-1.0.2.tgz}
     engines: {node: '>=0.10.0'}
@@ -2308,26 +2281,6 @@ packages:
 
   /lines-and-columns/1.1.6:
     resolution: {integrity: sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=, tarball: lines-and-columns/download/lines-and-columns-1.1.6.tgz}
-    dev: true
-
-  /lint-staged/11.2.3:
-    resolution: {integrity: sha1-/D9FacxPRlUzCd/BRHuK72n3RPs=, tarball: lint-staged/download/lint-staged-11.2.3.tgz?cache=0&sync_timestamp=1634537198996&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Flint-staged%2Fdownload%2Flint-staged-11.2.3.tgz}
-    hasBin: true
-    dependencies:
-      cli-truncate: 2.1.0
-      colorette: 1.4.0
-      commander: 8.2.0
-      cosmiconfig: 7.0.1
-      debug: 4.3.2_supports-color@8.1.1
-      enquirer: 2.3.6
-      execa: 5.1.1
-      listr2: 3.12.2_enquirer@2.3.6
-      micromatch: 4.0.4
-      normalize-path: 3.0.0
-      please-upgrade-node: 3.2.0
-      string-argv: 0.3.1
-      stringify-object: 3.3.0
-      supports-color: 8.1.1
     dev: true
 
   /listr2/3.12.2_enquirer@2.3.6:
@@ -4959,12 +4912,6 @@ packages:
     name: follow-redirects
     version: 1.14.4
     engines: {node: '>=4.0'}
-    peerDependencies:
-      debug: '*'
-    peerDependenciesMeta:
-      debug:
-        optional: true
-    dev: true
 
   registry.nlark.com/fs.realpath/1.0.0:
     resolution: {integrity: sha1-FQStJSMVjKpA20onh8sBQRmU6k8=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/fs.realpath/download/fs.realpath-1.0.0.tgz}
@@ -5175,8 +5122,6 @@ packages:
       eventemitter3: registry.nlark.com/eventemitter3/4.0.7
       follow-redirects: registry.nlark.com/follow-redirects/1.14.4
       requires-port: registry.nlark.com/requires-port/1.0.0
-    transitivePeerDependencies:
-      - debug
     dev: true
 
   registry.nlark.com/iconv-lite/0.6.3:
@@ -6080,6 +6025,26 @@ packages:
       '@babel/highlight': registry.nlark.com/@babel/highlight/7.14.5
     dev: true
 
+  registry.npmmirror.com/@vitejs/plugin-vue/1.9.4_vite@2.6.10:
+    resolution: {integrity: sha1-T0hIVDLLuYap+50lTcM84w3cy/o=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@vitejs/plugin-vue/download/@vitejs/plugin-vue-1.9.4.tgz}
+    id: registry.npmmirror.com/@vitejs/plugin-vue/1.9.4
+    name: '@vitejs/plugin-vue'
+    version: 1.9.4
+    engines: {node: '>=12.0.0'}
+    peerDependencies:
+      vite: ^2.5.10
+    dependencies:
+      vite: registry.npmmirror.com/vite/2.6.10_sass@1.43.3
+    dev: true
+
+  registry.npmmirror.com/axios/0.24.0:
+    resolution: {integrity: sha1-gE5voeS5xSiFAd2d/1anoJQNINY=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/axios/download/axios-0.24.0.tgz?cache=0&sync_timestamp=1635214243043&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Faxios%2Fdownload%2Faxios-0.24.0.tgz}
+    name: axios
+    version: 0.24.0
+    dependencies:
+      follow-redirects: registry.nlark.com/follow-redirects/1.14.4
+    dev: false
+
   registry.npmmirror.com/camelcase-keys/6.2.2:
     resolution: {integrity: sha1-XnVda6UaoiPsfT1S8ld4IQ+dw8A=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/camelcase-keys/download/camelcase-keys-6.2.2.tgz}
     name: camelcase-keys
@@ -6393,8 +6358,6 @@ packages:
       secure-compare: 3.0.1
       union: registry.nlark.com/union/0.5.0
       url-join: registry.nlark.com/url-join/4.0.1
-    transitivePeerDependencies:
-      - debug
     dev: true
 
   registry.npmmirror.com/husky/7.0.4:
@@ -6435,6 +6398,28 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       is-extglob: registry.nlark.com/is-extglob/2.1.1
+    dev: true
+
+  registry.npmmirror.com/lint-staged/11.2.6:
+    resolution: {integrity: sha1-9HexrwKU2wVOWTfxcWed9juqTEM=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lint-staged/download/lint-staged-11.2.6.tgz}
+    name: lint-staged
+    version: 11.2.6
+    hasBin: true
+    dependencies:
+      cli-truncate: 2.1.0
+      colorette: 1.4.0
+      commander: 8.2.0
+      cosmiconfig: 7.0.1
+      debug: 4.3.2_supports-color@8.1.1
+      enquirer: 2.3.6
+      execa: 5.1.1
+      listr2: 3.12.2_enquirer@2.3.6
+      micromatch: 4.0.4
+      normalize-path: 3.0.0
+      please-upgrade-node: 3.2.0
+      string-argv: 0.3.1
+      stringify-object: 3.3.0
+      supports-color: 8.1.1
     dev: true
 
   registry.npmmirror.com/local-pkg/0.1.0:
