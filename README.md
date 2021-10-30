@@ -26,10 +26,27 @@
 
 [![star](https://gitee.com/hooray/fantastic-template/badge/star.svg?theme=dark)](https://gitee.com/hooray/fantastic-template)
 
-## 推广
+## 生态
 
-[![](https://hooray.gitee.io/fantastic-admin/logo.png)](https://hooray.gitee.io/fantastic-admin)
-
-[Fantastic-admin](https://hooray.gitee.io/fantastic-admin)
-
-一款开箱即用的 Vue 中后台管理系统框架
+<table>
+    <tr>
+        <th colspan="3" align="center">
+            <a href="https://hooray.gitee.io/fantastic-admin" target="_blank">Fantastic-admin</a>
+        </th>
+    </tr>
+    <tr>
+        <th colspan="3" align="center">
+            一款开箱即用的 Vue 中后台管理系统框架
+        </th>
+    </tr>
+    <tr>
+        <td><img src="https://hooray.gitee.io/fantastic-admin/preview1.png" /></td>
+        <td><img src="https://hooray.gitee.io/fantastic-admin/preview2.png" /></td>
+        <td><img src="https://hooray.gitee.io/fantastic-admin/preview3.png" /></td>
+    </tr>
+    <tr>
+        <td><img src="https://hooray.gitee.io/fantastic-admin/preview4.png" /></td>
+        <td><img src="https://hooray.gitee.io/fantastic-admin/preview5.png" /></td>
+        <td><img src="https://hooray.gitee.io/fantastic-admin/preview6.png" /></td>
+    </tr>
+</table>
