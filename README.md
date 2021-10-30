@@ -31,6 +31,19 @@
 <table>
     <tr>
         <th colspan="3" align="center">
+            <a href="https://hooray.gitee.io/fantastic-template" target="_blank">Fantastic-template</a>
+        </th>
+    </tr>
+    <tr>
+        <th colspan="3" align="center">
+            一款开箱即用的 Vue 项目模版
+        </th>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <th colspan="3" align="center">
             <a href="https://hooray.gitee.io/fantastic-admin" target="_blank">Fantastic-admin</a>
         </th>
     </tr>
