@@ -6,6 +6,23 @@ module.exports = {
     themeConfig: {
         // 头部导航
         navbar: [
+			{
+				text: '生态',
+				children: [
+					{
+						text: 'Fantastaic-template',
+						link: 'https://hooray.gitee.io/fantastic-template'
+					},
+					{
+						text: 'Fantastaic-admin',
+						link: 'https://hooray.gitee.io/fantastic-admin'
+					},
+					// {
+					// 	text: 'Fantastaic-admin (探索版)',
+					// 	link: 'https://hooray.gitee.io/fantastic-admin-discovery'
+					// }
+				]
+			},
             {
                 text: 'Gitee',
                 link: 'https://gitee.com/hooray/fantastic-template',
