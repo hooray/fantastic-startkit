@@ -74,6 +74,7 @@ module.exports = {
             'after': true
         }],
         // Vue - https://github.com/vuejs/eslint-plugin-vue
+        'vue/multi-word-component-names': 0,
         'vue/html-indent': [2, 4],
         'vue/max-attributes-per-line': 0,
         'vue/require-default-prop': 0,
@@ -81,6 +82,9 @@ module.exports = {
         'vue/attributes-order': 2,
         'vue/order-in-components': 2,
         'vue/this-in-template': 2,
+        'vue/require-explicit-emits': [2, {
+            'allowProps': true
+        }],
         'vue/script-indent': [2, 4, {
             'switchCase': 1
         }]
