@@ -1,4 +1,5 @@
 import vue from '@vitejs/plugin-vue'
+import vueJsx from '@vitejs/plugin-vue-jsx'
 
 import createRestart from './restart'
 import createHtml from './html'
@@ -12,7 +13,7 @@ import createSpritesmith from './spritesmith'
 import createBanner from './banner'
 
 export default function createVitePlugins(viteEnv, isBuild = false) {
-    const vitePlugins = [vue()]
+    const vitePlugins = [vue(), vueJsx()]
     !isBuild && vitePlugins.push(createRestart())
     vitePlugins.push(createHtml(viteEnv, isBuild))
     vitePlugins.push(createAutoImport())
