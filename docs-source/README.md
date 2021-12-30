@@ -8,7 +8,7 @@ actions:
   type: primary
 features:
 - title: 全面支持 Vue 3
-  details: 使用 Vue + Vite，默认集成 vue-router & Vuex
+  details: 使用 Vue + Vite，默认集成 Vue-router & Pinia
 - title: 全局 scss 资源引入
   details: 支持设置	全局 scss 资源，如：变量、函数、mixin
 - title: SVG 图标 & CSS 精灵图

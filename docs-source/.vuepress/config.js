@@ -42,7 +42,7 @@ module.exports = {
                         'configure.md',
                         'global-resources.md',
                         'router.md',
-                        'vuex.md',
+                        'store.md',
                         'axios.md',
                         'plop.md',
 						'library.md',
