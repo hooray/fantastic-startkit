@@ -6,7 +6,7 @@
 
 ## 特点
 
-- 默认集成 vue-router 和 vuex
+- 默认集成 vue-router 和 pinia
 - 全局 SCSS 资源引入
 - 全局组件自动注册
 - 支持 SVG 图标，CSS 精灵图自动合成

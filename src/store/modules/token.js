@@ -1,74 +1,65 @@
+import { defineStore } from 'pinia'
+import { piniaStore } from '@/store'
 // import api from '@/api'
 
-const state = () => ({
-    token: localStorage.token,
-    failuretime: localStorage.failuretime
-})
-
-const getters = {
-    isLogin: state => {
-        let retn = false
-        if (state.token != null) {
-            let unix = Date.parse(new Date())
-            if (unix < state.failuretime * 1000) {
-                retn = true
+export const useTokenStore = defineStore(
+    // 唯一ID
+    'token',
+    {
+        state: () => ({
+            token: localStorage.token,
+            failuretime: localStorage.failuretime
+        }),
+        getters: {
+            isLogin: state => {
+                let retn = false
+                if (state.token != null) {
+                    let unix = Date.parse(new Date())
+                    if (unix < state.failuretime * 1000) {
+                        retn = true
+                    }
+                }
+                return retn
+            }
+        },
+        actions: {
+            login() {
+                return new Promise(resolve => {
+                    // 模拟登录成功，写入 token 信息
+                    localStorage.setItem('token', '1234567890')
+                    localStorage.setItem('failuretime', Date.parse(new Date()) / 1000 + 24 * 60 * 60)
+                    this.token = '1234567890'
+                    this.failuretime = Date.parse(new Date()) / 1000 + 24 * 60 * 60
+                    resolve()
+                })
+            },
+            // login(data) {
+            //     return new Promise((resolve, reject) => {
+            //         api.post('member/login', data).then(res => {
+            //             localStorage.setItem('token', '1234567890')
+            //             localStorage.setItem('failuretime', Date.parse(new Date()) / 1000 + 24 * 60 * 60)
+            //             this.token = '1234567890'
+            //             this.failuretime = Date.parse(new Date()) / 1000 + 24 * 60 * 60
+            //             resolve(res)
+            //         }).catch(error => {
+            //             reject(error)
+            //         })
+            //     })
+            // },
+            logout() {
+                return new Promise(resolve => {
+                    // 模拟退出登录，清除 token 信息
+                    localStorage.removeItem('token')
+                    localStorage.removeItem('failuretime')
+                    this.token = null
+                    this.failuretime = null
+                    resolve()
+                })
             }
         }
-        return retn
     }
-}
+)
 
-const actions = {
-    login({ commit }) {
-        return new Promise(resolve => {
-            // 模拟登录成功，写入 token 信息
-            commit('setData', {
-                token: '1234567890',
-                failuretime: Date.parse(new Date()) / 1000 + 24 * 60 * 60
-            })
-            resolve()
-        })
-    },
-    logout({ commit }) {
-        return new Promise(resolve => {
-            // 模拟退出登录，清除 token 信息
-            commit('removeData')
-            resolve()
-        })
-    }
-    // login({
-    //     commit
-    // }, data) {
-    //     return new Promise((resolve, reject) => {
-    //         api.post('member/login', data).then(res => {
-    //             commit('setData', res.data)
-    //             resolve(res)
-    //         }).catch(error => {
-    //             reject(error)
-    //         })
-    //     })
-    // }
-}
-
-const mutations = {
-    setData(state, data) {
-        localStorage.setItem('token', data.token)
-        localStorage.setItem('failuretime', data.failuretime)
-        state.token = data.token
-        state.failuretime = data.failuretime
-    },
-    removeData(state) {
-        localStorage.removeItem('token')
-        localStorage.removeItem('failuretime')
-        state.token = null
-        state.failuretime = null
-    }
-}
-
-export default {
-    namespaced: true,
-    state,
-    actions,
-    getters,
-    mutations
+export function useTokenOutsideStore() {
+    return useTokenStore(piniaStore)
 }

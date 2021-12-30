@@ -6,7 +6,7 @@
             <RouterLink to="/example/globalComponent">全局组件</RouterLink>
             <RouterLink to="/example/axios">axios</RouterLink>
             <RouterLink to="/example/cookie">cookie</RouterLink>
-            <RouterLink to="/example/vuex">vuex</RouterLink>
+            <RouterLink to="/example/pinia">pinia</RouterLink>
             <RouterLink to="/example/component">组件</RouterLink>
             <RouterLink :to="{name:'exampleParams',params:{test:'123'}}">路由params</RouterLink>
             <RouterLink :to="{path:'/example/query',query:{test:'123'}}">路由query</RouterLink>

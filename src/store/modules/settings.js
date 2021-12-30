@@ -1,26 +1,22 @@
-/**
- * 存放全局公用状态
- */
+import { defineStore } from 'pinia'
+import { piniaStore } from '@/store'
 
-const state = () => ({
-    title: ''
-})
-
-const getters = {}
-
-const actions = {}
-
-const mutations = {
-    // 设置网页标题
-    setTitle(state, title) {
-        state.title = title
+export const useSettingsStore = defineStore(
+    // 唯一ID
+    'settings',
+    {
+        state: () => ({
+            title: ''
+        }),
+        actions: {
+            // 设置网页标题
+            setTitle(title) {
+                this.title = title
+            }
+        }
     }
-}
+)
 
-export default {
-    namespaced: true,
-    state,
-    actions,
-    getters,
-    mutations
+export function useSettingsOutsideStore() {
+    return useSettingsStore(piniaStore)
 }

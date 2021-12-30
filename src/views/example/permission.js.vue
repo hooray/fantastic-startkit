@@ -7,12 +7,14 @@
 </template>
 
 <script setup>
-const store = useStore()
 const router = useRouter()
 
+import { useTokenStore } from '@/store/modules/token'
+const tokenStore = useTokenStore()
+
 function user() {
-    if (store.getters['token/isLogin']) {
-        alert('token信息：' + store.state.token.token)
+    if (tokenStore.isLogin) {
+        alert('token信息：' + tokenStore.token)
     } else {
         router.push({
             path: '/login',
@@ -24,6 +26,6 @@ function user() {
 }
 
 function remove() {
-    store.dispatch('token/logout')
+    tokenStore.logout()
 }
 </script>

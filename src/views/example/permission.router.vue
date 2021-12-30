@@ -1,3 +1,8 @@
 <template>
-    <div>token信息：{{ $store.state.token.token }}</div>
+    <div>token信息：{{ tokenStore.token }}</div>
 </template>
+
+<script setup>
+import { useTokenStore } from '@/store/modules/token'
+const tokenStore = useTokenStore()
+</script>

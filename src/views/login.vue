@@ -5,15 +5,14 @@
 </template>
 
 <script setup>
-import { useRouter, useRoute } from 'vue-router'
-import { useStore } from 'vuex'
-
 const router = useRouter()
 const route = useRoute()
-const store = useStore()
+
+import { useTokenStore } from '@/store/modules/token'
+const tokenStore = useTokenStore()
 
 function login() {
-    store.dispatch('token/login').then(() => {
+    tokenStore.login().then(() => {
         // 登录成功后路由跳回
         if (route.query.redirect) {
             router.replace({

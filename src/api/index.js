@@ -1,7 +1,7 @@
 import axios from 'axios'
-// import Qs from 'qs'
+// import qs from 'qs'
 import router from '@/router/index'
-import store from '@/store/index'
+import { useTokenOutsideStore } from '@/store/modules/token'
 
 const toLogin = () => {
     router.push({
@@ -20,34 +20,19 @@ const api = axios.create({
 
 api.interceptors.request.use(
     request => {
+        const tokenOutsideStore = useTokenOutsideStore()
         /**
          * 全局拦截请求发送前提交的参数
-         * 以下代码为示例，在登录状态下，分别对 post 和 get 请求加上 token 参数
+         * 以下代码为示例，在请求头里带上 token 信息
          */
-        if (request.method == 'post') {
-            if (request.data instanceof FormData) {
-                if (store.getters['token/isLogin']) {
-                    // 如果是 FormData 类型（上传图片）
-                    request.data.append('token', store.state.token.token)
-                }
-            } else {
-                // 带上 token
-                if (request.data == undefined) {
-                    request.data = {}
-                }
-                if (store.getters['token/isLogin']) {
-                    request.data.token = store.state.token.token
-                }
-                // request.data = Qs.stringify(request.data)
-            }
-        } else {
-            // 带上 token
-            if (request.params == undefined) {
-                request.params = {}
-            }
-            if (store.getters['token/isLogin']) {
-                request.params.token = store.state.token.token
-            }
+        if (tokenOutsideStore.isLogin) {
+            request.headers['Token'] = tokenOutsideStore.token
+        }
+        // 是否将 POST 请求参数进行字符串化处理
+        if (request.method === 'post') {
+            // request.data = qs.stringify(request.data, {
+            //     arrayFormat: 'brackets'
+            // })
         }
         return request
     }
@@ -66,7 +51,7 @@ api.interceptors.response.use(
                 // 请求成功并且没有报错
                 return Promise.resolve(response.data)
             } else {
-                // 这里做错误提示，如果使用了 element ui 则可以使用 Message 进行提示
+                // 这里做错误提示，如果使用了 element plus 则可以使用 Message 进行提示
                 // Message.error(options)
                 return Promise.reject(response.data)
             }

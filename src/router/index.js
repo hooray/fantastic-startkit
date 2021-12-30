@@ -1,7 +1,8 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import store from '@/store/index'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css' // progress bar style
+import { useSettingsOutsideStore } from '@/store/modules/settings'
+import { useTokenOutsideStore } from '@/store/modules/token'
 
 const routes = []
 const routesContext = import.meta.globEager('./modules/*.js')
@@ -23,9 +24,10 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
+    const tokenOutsideStore = useTokenOutsideStore()
     NProgress.start()
     if (to.meta.requireLogin) {
-        if (store.getters['token/isLogin']) {
+        if (tokenOutsideStore.isLogin) {
             next()
         } else {
             next({
@@ -40,8 +42,9 @@ router.beforeEach((to, from, next) => {
     }
 })
 
-router.afterEach(() => {
+router.afterEach(to => {
     NProgress.done()
+    useSettingsOutsideStore().setTitle(typeof to.meta.title === 'function' ? to.meta.title() : to.meta.title || '')
 })
 
 export default router

@@ -9,17 +9,18 @@
 </template>
 
 <script setup>
-const store = useStore()
+import { useExampleStore } from '@/store/modules/example'
+const exampleStore = useExampleStore()
 
-let news = computed(() => store.state.example.news)
-const newsCount = computed(() => store.getters['example/newsCount'])
+let news = computed(() => exampleStore.news)
+const newsCount = computed(() => exampleStore.newsCount)
 
 function getInfo() {
-    return store.dispatch('example/getNews')
+    return exampleStore.getNews()
 }
 
 function removeLast() {
-    return store.commit('example/removeLast')
+    return exampleStore.removeLast()
 }
 
 function getLength() {

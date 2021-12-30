@@ -29,8 +29,8 @@ export default {
             component: () => import('@/views/example/cookie.vue')
         },
         {
-            path: 'vuex',
-            component: () => import('@/views/example/vuex.vue')
+            path: 'pinia',
+            component: () => import('@/views/example/pinia.vue')
         },
         {
             path: 'component',
