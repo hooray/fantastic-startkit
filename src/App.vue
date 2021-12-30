@@ -5,13 +5,10 @@
 </template>
 
 <script setup>
-import { provide, ref, watch, nextTick } from 'vue'
-import { useStore } from 'vuex'
-import { useRoute } from 'vue-router'
-
-const store = useStore()
-const route = useRoute()
 const isRouterAlive = ref(true)
+
+import { useSettingsStore } from '@/store/modules/settings'
+const settingsStore = useSettingsStore()
 
 provide('reload', reload)
 function reload() {
@@ -19,16 +16,8 @@ function reload() {
     nextTick(() => (isRouterAlive.value = true))
 }
 
-watch(() => route, (newVal, oldVal) => routeChange(newVal, oldVal))
-function routeChange(newVal, oldVal) {
-    store.commit('settings/setTitle', route.meta.title)
-    if (newVal.name == oldVal.name) {
-        reload()
-    }
-}
-
-watch(() => store.state.settings.title, () => {
-    let title = store.state.settings.title
+watch(() => settingsStore.title, () => {
+    let title = settingsStore.title
     document.title = title ? `${title} - ${import.meta.env.VITE_APP_TITLE}` : import.meta.env.VITE_APP_TITLE
 }, {
     immediate: true
