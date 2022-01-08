@@ -16,7 +16,7 @@
 
 ## 文档
 
-[点击访问](https://hooray.github.io/fantastic-template/)
+[点击访问](https://hooray.gitee.io/fantastic-template) ([备份地址](https://hooray.github.io/fantastic-template))
 
 ## 支持
 
