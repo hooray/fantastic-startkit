@@ -1,3 +1,13 @@
+<script setup>
+const reload = inject('reload')
+
+let value = ref(0)
+
+function plus() {
+    value.value += 1
+}
+</script>
+
 <template>
     <div>
         <p>可以修改一下 input 框内的值，然后点击刷新按钮查看效果</p>
@@ -8,13 +18,3 @@
         <button type="button" @click="reload">刷新</button>
     </div>
 </template>
-
-<script setup>
-const reload = inject('reload')
-
-let value = ref(0)
-
-function plus() {
-    value.value += 1
-}
-</script>
