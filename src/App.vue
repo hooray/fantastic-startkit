@@ -1,9 +1,3 @@
-<template>
-    <div id="app">
-        <RouterView v-if="isRouterAlive" />
-    </div>
-</template>
-
 <script setup>
 const isRouterAlive = ref(true)
 
@@ -23,3 +17,9 @@ watch(() => settingsStore.title, () => {
     immediate: true
 })
 </script>
+
+<template>
+    <div id="app">
+        <RouterView v-if="isRouterAlive" />
+    </div>
+</template>

@@ -3,23 +3,30 @@ import NProgress from 'nprogress'
 import 'nprogress/nprogress.css' // progress bar style
 import { useSettingsOutsideStore } from '@/store/modules/settings'
 
-const routes = []
+let routes = []
+
 const routesContext = import.meta.globEager('./modules/*.js')
 Object.keys(routesContext).forEach(v => {
     routes.push(routesContext[v].default)
 })
-
 routes.push({
     path: '/:pathMatch(.*)*',
-    component: () => import('@/views/404.vue'),
+    component: () => import('@/views/[...all].vue'),
     meta: {
         title: '找不到页面'
     }
 })
+routes = routes.flat()
+
+// import { setupLayouts } from 'virtual:generated-layouts'
+// import generatedRoutes from 'virtual:generated-pages'
+// generatedRoutes.forEach(v => {
+//     routes.push(v?.meta?.layout != false ? setupLayouts([v])[0] : v)
+// })
 
 const router = createRouter({
     history: createWebHashHistory(),
-    routes: routes.flat()
+    routes
 })
 
 router.beforeEach((to, from, next) => {
