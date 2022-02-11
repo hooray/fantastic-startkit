@@ -17,8 +17,8 @@ export default {
             component: () => import('@/views/example/sprite.vue')
         },
         {
-            path: 'globalComponent',
-            component: () => import('@/views/example/global.component.vue')
+            path: 'global-component',
+            component: () => import('@/views/example/global-component.vue')
         },
         {
             path: 'axios',
@@ -50,15 +50,15 @@ export default {
             component: () => import('@/views/example/reload.vue')
         },
         {
-            path: 'permission/router',
-            component: () => import('@/views/example/permission.router.vue'),
+            path: 'permission-router',
+            component: () => import('@/views/example/permission-router.vue'),
             meta: {
                 requireLogin: true // 鉴权
             }
         },
         {
-            path: 'permission/js',
-            component: () => import('@/views/example/permission.js.vue')
+            path: 'permission-js',
+            component: () => import('@/views/example/permission-js.vue')
         }
     ]
 }
