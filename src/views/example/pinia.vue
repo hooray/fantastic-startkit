@@ -1,3 +1,11 @@
+<route>
+{
+    meta: {
+        layout: 'example'
+    }
+}
+</route>
+
 <script setup>
 import { useExampleStore } from '@/store/modules/example'
 const exampleStore = useExampleStore()

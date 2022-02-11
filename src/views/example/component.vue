@@ -1,3 +1,11 @@
+<route>
+{
+    meta: {
+        layout: 'example'
+    }
+}
+</route>
+
 <script setup>
 import ExampleList from './components/ExampleList/index.vue'
 

@@ -39,7 +39,7 @@ export default {
         {
             path: 'params/:test',
             name: 'exampleParams', // 设置路由的name时，建议加上模块名，避免name和其他模块重名
-            component: () => import('@/views/example/params.vue')
+            component: () => import('@/views/example/params/[test].vue')
         },
         {
             path: 'query',

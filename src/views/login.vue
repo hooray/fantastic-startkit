@@ -1,3 +1,12 @@
+<route>
+{
+    meta: {
+        layout: false,
+        title: '登录'
+    }
+}
+</route>
+
 <script setup>
 const router = useRouter()
 const route = useRoute()

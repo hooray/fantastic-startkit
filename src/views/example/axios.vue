@@ -1,3 +1,11 @@
+<route>
+{
+    meta: {
+        layout: 'example'
+    }
+}
+</route>
+
 <script setup>
 const { proxy } = getCurrentInstance()
 

@@ -1,3 +1,11 @@
+<route>
+{
+    meta: {
+        layout: 'example'
+    }
+}
+</route>
+
 <template>
     <div class="sprites">
         <div class="address" />

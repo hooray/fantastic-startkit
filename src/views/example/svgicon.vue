@@ -1,3 +1,12 @@
+<route>
+{
+    meta: {
+        layout: 'example',
+        title: 'Svg Icon'
+    }
+}
+</route>
+
 <template>
     <div>
         <p>这是两个 Svg Icon 图标</p>
