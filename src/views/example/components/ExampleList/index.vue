@@ -1,3 +1,9 @@
+<script setup name="ExampleList">
+defineProps({
+    list: Array
+})
+</script>
+
 <template>
     <div>
         <ul>
@@ -5,12 +11,3 @@
         </ul>
     </div>
 </template>
-
-<script>
-export default {
-    name: 'ExampleList',
-    props: {
-        list: Array
-    }
-}
-</script>

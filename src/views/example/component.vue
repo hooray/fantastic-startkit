@@ -1,10 +1,10 @@
-<template>
-    <div>
-        <p>这是一个非全局组件，需要在页面上引用该组件才能使用</p>
-        <ExampleList :list="list" />
-        <button @click="add">添加一列</button>
-    </div>
-</template>
+<route>
+{
+    meta: {
+        layout: 'example'
+    }
+}
+</route>
 
 <script setup>
 import ExampleList from './components/ExampleList/index.vue'
@@ -15,3 +15,11 @@ const add = () => {
     list.value.push('这是新添加的' + index.value++)
 }
 </script>
+
+<template>
+    <div>
+        <p>这是一个非全局组件，需要在页面上引用该组件才能使用</p>
+        <ExampleList :list="list" />
+        <button @click="add">添加一列</button>
+    </div>
+</template>

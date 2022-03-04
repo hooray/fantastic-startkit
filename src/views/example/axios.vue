@@ -1,11 +1,10 @@
-<template>
-    <div>
-        <button type="button" @click="getInfo">获取 mock 数据</button>
-        <div>
-            <p v-for="(item, index) in news" :key="index">{{ item.title }}</p>
-        </div>
-    </div>
-</template>
+<route>
+{
+    meta: {
+        layout: 'example'
+    }
+}
+</route>
 
 <script setup>
 const { proxy } = getCurrentInstance()
@@ -27,6 +26,15 @@ const getInfo = () => {
     })
 }
 </script>
+
+<template>
+    <div>
+        <button type="button" @click="getInfo">获取 mock 数据</button>
+        <div>
+            <p v-for="(item, index) in news" :key="index">{{ item.title }}</p>
+        </div>
+    </div>
+</template>
 
 <style lang="scss" scoped>
 img {

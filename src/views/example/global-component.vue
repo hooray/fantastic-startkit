@@ -1,3 +1,11 @@
+<route>
+{
+    meta: {
+        layout: 'example'
+    }
+}
+</route>
+
 <template>
     <div>
         <p>全局组件无需手动引入，可直接使用</p>

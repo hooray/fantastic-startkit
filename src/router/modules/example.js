@@ -17,8 +17,8 @@ export default {
             component: () => import('@/views/example/sprite.vue')
         },
         {
-            path: 'globalComponent',
-            component: () => import('@/views/example/global.component.vue')
+            path: 'global-component',
+            component: () => import('@/views/example/global-component.vue')
         },
         {
             path: 'axios',
@@ -39,7 +39,7 @@ export default {
         {
             path: 'params/:test',
             name: 'exampleParams', // 设置路由的name时，建议加上模块名，避免name和其他模块重名
-            component: () => import('@/views/example/params.vue')
+            component: () => import('@/views/example/params/[test].vue')
         },
         {
             path: 'query',
@@ -50,15 +50,15 @@ export default {
             component: () => import('@/views/example/reload.vue')
         },
         {
-            path: 'permission/router',
-            component: () => import('@/views/example/permission.router.vue'),
+            path: 'permission-router',
+            component: () => import('@/views/example/permission-router.vue'),
             meta: {
                 requireLogin: true // 鉴权
             }
         },
         {
-            path: 'permission/js',
-            component: () => import('@/views/example/permission.js.vue')
+            path: 'permission-js',
+            component: () => import('@/views/example/permission-js.vue')
         }
     ]
 }

@@ -1,8 +1,11 @@
-<template>
-    <div>
-        <button @click="login">模拟登录</button>
-    </div>
-</template>
+<route>
+{
+    meta: {
+        layout: false,
+        title: '登录'
+    }
+}
+</route>
 
 <script setup>
 const router = useRouter()
@@ -28,3 +31,9 @@ function login() {
     })
 }
 </script>
+
+<template>
+    <div>
+        <button @click="login">模拟登录</button>
+    </div>
+</template>
