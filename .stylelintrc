@@ -1,8 +1,13 @@
 {
     "extends": [
         "stylelint-config-standard",
-        "stylelint-config-recommended-scss",
-        "stylelint-config-recommended-vue"
+        "stylelint-config-recommended-vue/scss"
+    ],
+    "overrides": [
+        {
+            "files": ["**/*.scss"],
+            "customSyntax": "postcss-scss"
+        }
     ],
     "plugins": [
         "stylelint-scss"
