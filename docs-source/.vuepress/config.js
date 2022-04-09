@@ -7,6 +7,10 @@ module.exports = {
         // 头部导航
         navbar: [
 			{
+				text: '交流社区',
+				link: '/channel.md'
+			},
+			{
 				text: '生态',
 				children: [
 					{
@@ -33,7 +37,7 @@ module.exports = {
             }
         ],
         sidebar: {
-            '/': [
+            '/guide/': [
                 {
                     text: '指南',
                     children: [
