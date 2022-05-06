@@ -1,9 +1,13 @@
+const { viteBundler, defaultTheme } = require('vuepress')
+
 module.exports = {
+	bundler: viteBundler(),
+	lang: 'zh-CN',
     title: 'Fantastic-template 官网',
     description: '一款开箱即用的 Vue 项目模板，基于 Vue(3.x) & Vite(2.x)',
 	base: '/fantastic-template/',
 	dest: 'docs',
-    themeConfig: {
+    theme: defaultTheme({
         // 头部导航
         navbar: [
 			{
@@ -56,5 +60,5 @@ module.exports = {
                 }
             ]
         }
-    }
+    })
 }

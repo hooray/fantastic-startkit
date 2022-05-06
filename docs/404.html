@@ -1,15 +1,33 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="zh-CN">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="generator" content="VuePress 2.0.0-beta.26">
+    <meta name="generator" content="VuePress 2.0.0-beta.43">
+    <style>
+      :root {
+        --c-bg: #fff;
+      }
+      html.dark {
+        --c-bg: #22272e;
+      }
+      html, body {
+        background-color: var(--c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem('vuepress-color-scheme');
+			const systemDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+			if (userMode === 'dark' || (userMode !== 'light' && systemDarkMode)) {
+				document.documentElement.classList.toggle('dark', true);
+			}
+    </script>
     <title>Fantastic-template 官网</title><meta name="description" content="一款开箱即用的 Vue 项目模板，基于 Vue(3.x) & Vite(2.x)">
-    <link rel="preload" href="/fantastic-template/assets/js/runtime~app.7bc3f794.js" as="script"><link rel="preload" href="/fantastic-template/assets/css/styles.de135724.css" as="style"><link rel="preload" href="/fantastic-template/assets/js/850.5555b36b.js" as="script"><link rel="preload" href="/fantastic-template/assets/js/app.f63dd0fd.js" as="script">
-    <link rel="stylesheet" href="/fantastic-template/assets/css/styles.de135724.css">
+    <link rel="modulepreload" href="/fantastic-template/assets/app.50988c2e.js"><link rel="modulepreload" href="/fantastic-template/assets/404.html.9d139399.js"><link rel="modulepreload" href="/fantastic-template/assets/404.html.b35b5587.js"><link rel="prefetch" href="/fantastic-template/assets/channel.html.ce3e50a9.js"><link rel="prefetch" href="/fantastic-template/assets/index.html.fece4702.js"><link rel="prefetch" href="/fantastic-template/assets/axios.html.1a3244e7.js"><link rel="prefetch" href="/fantastic-template/assets/build.html.0d8c5eed.js"><link rel="prefetch" href="/fantastic-template/assets/coding-standard.html.fe537f80.js"><link rel="prefetch" href="/fantastic-template/assets/configure.html.d6957bbe.js"><link rel="prefetch" href="/fantastic-template/assets/global-resources.html.ceeb72cc.js"><link rel="prefetch" href="/fantastic-template/assets/library.html.f76467ac.js"><link rel="prefetch" href="/fantastic-template/assets/mobile-support.html.84a8269d.js"><link rel="prefetch" href="/fantastic-template/assets/plop.html.9fa86fb4.js"><link rel="prefetch" href="/fantastic-template/assets/router.html.f568965a.js"><link rel="prefetch" href="/fantastic-template/assets/start.html.090c0877.js"><link rel="prefetch" href="/fantastic-template/assets/store.html.05adc5dc.js"><link rel="prefetch" href="/fantastic-template/assets/channel.html.fbe65abf.js"><link rel="prefetch" href="/fantastic-template/assets/index.html.c3f4c449.js"><link rel="prefetch" href="/fantastic-template/assets/axios.html.5870be9d.js"><link rel="prefetch" href="/fantastic-template/assets/build.html.da9a986a.js"><link rel="prefetch" href="/fantastic-template/assets/coding-standard.html.158deff6.js"><link rel="prefetch" href="/fantastic-template/assets/configure.html.08e38d35.js"><link rel="prefetch" href="/fantastic-template/assets/global-resources.html.3e5461cd.js"><link rel="prefetch" href="/fantastic-template/assets/library.html.e19756d5.js"><link rel="prefetch" href="/fantastic-template/assets/mobile-support.html.32109cae.js"><link rel="prefetch" href="/fantastic-template/assets/plop.html.74059e1d.js"><link rel="prefetch" href="/fantastic-template/assets/router.html.f2730a7c.js"><link rel="prefetch" href="/fantastic-template/assets/start.html.29571ee0.js"><link rel="prefetch" href="/fantastic-template/assets/store.html.d7f1eab6.js"><link rel="prefetch" href="/fantastic-template/assets/404.65cbc27a.js"><link rel="prefetch" href="/fantastic-template/assets/Layout.99197ffd.js">
+    <link rel="stylesheet" href="/fantastic-template/assets/style.6224683c.css">
   </head>
   <body>
-    <div id="app"><!--[--><div class="theme-container"><div class="theme-default-content"><h1>404</h1><blockquote>That&#39;s a Four-Oh-Four.</blockquote><a href="/fantastic-template/" class="">Take me home</a></div></div><!----><!--]--></div>
-    <script src="/fantastic-template/assets/js/runtime~app.7bc3f794.js" defer></script><script src="/fantastic-template/assets/js/850.5555b36b.js" defer></script><script src="/fantastic-template/assets/js/app.f63dd0fd.js" defer></script>
+    <div id="app"><!--[--><div class="theme-container"><div class="theme-default-content"><h1>404</h1><blockquote>How did we get here?</blockquote><a href="/fantastic-template/" class="">Take me home</a></div></div><!----><!--]--></div>
+    <script type="module" src="/fantastic-template/assets/app.50988c2e.js" defer></script>
   </body>
 </html>
