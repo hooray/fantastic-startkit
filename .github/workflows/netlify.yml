@@ -1,4 +1,3 @@
-# .github/workflows/netlify.yml
 name: Build and Deploy to Netlify
 on:
   push:
@@ -14,7 +13,7 @@ jobs:
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2
         with:
-          publish-dir: './docs'
+          # publish-dir: './docs'
           production-branch: docs
           production-deploy: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
