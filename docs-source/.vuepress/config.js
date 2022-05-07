@@ -27,7 +27,7 @@ module.exports = {
 					},
 					{
 						text: 'One-step-admin',
-						link: 'https://hooray.gitee.io/one-step-admin'
+						link: 'https://one-step-admin.netlify.app'
 					}
 				]
 			},
