@@ -38,6 +38,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
+      - name: Set npm mirror
+        run: pnpm config set registry https://registry.npmmirror.com/
+
       - name: Install dependencies
         run: pnpm install
 
