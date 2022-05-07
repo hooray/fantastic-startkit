@@ -50,5 +50,5 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
-          branch: docs
+          branch: gh-pages
           folder: docs
