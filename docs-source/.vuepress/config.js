@@ -5,7 +5,7 @@ module.exports = {
 	lang: 'zh-CN',
     title: 'Fantastic-template 官网',
     description: '一款开箱即用的 Vue 项目模板，基于 Vue(3.x) & Vite(2.x)',
-	base: '/fantastic-template/',
+	base: '/',
 	dest: 'docs',
     theme: defaultTheme({
         // 头部导航
@@ -19,7 +19,7 @@ module.exports = {
 				children: [
 					{
 						text: 'Fantastaic-template',
-						link: 'https://hooray.gitee.io/fantastic-template'
+						link: 'https://fantastic-template.netlify.app'
 					},
 					{
 						text: 'Fantastaic-admin',
