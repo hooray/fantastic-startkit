@@ -3,7 +3,7 @@
 <p align="center">一款<b>开箱即用</b>的 Vue 项目模版，基于 Vue(3.x) & Vite(2.x)</p>
 
 <p align="center">
-    <a href="https://fantastic-admin.netlify.app" target="_blank">官网</a>
+    <a href="https://fantastic-template.netlify.app" target="_blank">官网</a>
     ( <a href="https://gitee.com/hooray/fantastic-template/tree/docs" target="_blank">备用</a> )
 <p>
 
