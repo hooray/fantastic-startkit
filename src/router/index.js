@@ -1,7 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css' // progress bar style
-import { useSettingsOutsideStore } from '@/store/modules/settings'
+import useTokenStore from '@/store/modules/settings'
 
 let routes = []
 
@@ -36,7 +36,7 @@ router.beforeEach((to, from, next) => {
 
 router.afterEach(to => {
     NProgress.done()
-    useSettingsOutsideStore().setTitle(typeof to.meta.title === 'function' ? to.meta.title() : to.meta.title || '')
+    useTokenStore().setTitle(typeof to.meta.title === 'function' ? to.meta.title() : to.meta.title || '')
 })
 
 export default router

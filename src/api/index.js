@@ -1,7 +1,7 @@
 import axios from 'axios'
 // import qs from 'qs'
 import router from '@/router/index'
-import { useTokenOutsideStore } from '@/store/modules/token'
+import useTokenStore from '@/store/modules/token'
 
 const toLogin = () => {
     router.push({
@@ -20,7 +20,7 @@ const api = axios.create({
 
 api.interceptors.request.use(
     request => {
-        const tokenOutsideStore = useTokenOutsideStore()
+        const tokenOutsideStore = useTokenStore()
         /**
          * 全局拦截请求发送前提交的参数
          * 以下代码为示例，在请求头里带上 token 信息
