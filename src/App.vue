@@ -1,7 +1,7 @@
 <script setup>
 const isRouterAlive = ref(true)
 
-import { useSettingsStore } from '@/store/modules/settings'
+import useSettingsStore from '@/store/modules/settings'
 const settingsStore = useSettingsStore()
 
 provide('reload', reload)

@@ -7,7 +7,7 @@
 </route>
 
 <script setup>
-import { useExampleStore } from '@/store/modules/example'
+import useExampleStore from '@/store/modules/example'
 const exampleStore = useExampleStore()
 
 let news = computed(() => exampleStore.news)

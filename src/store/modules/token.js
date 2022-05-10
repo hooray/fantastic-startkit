@@ -1,8 +1,6 @@
-import { defineStore } from 'pinia'
-import { piniaStore } from '@/store'
 // import api from '@/api'
 
-export const useTokenStore = defineStore(
+const useTokenStore = defineStore(
     // 唯一ID
     'token',
     {
@@ -60,6 +58,4 @@ export const useTokenStore = defineStore(
     }
 )
 
-export function useTokenOutsideStore() {
-    return useTokenStore(piniaStore)
-}
+export default useTokenStore

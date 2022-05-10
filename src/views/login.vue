@@ -11,7 +11,7 @@
 const router = useRouter()
 const route = useRoute()
 
-import { useTokenStore } from '@/store/modules/token'
+import useTokenStore from '@/store/modules/token'
 const tokenStore = useTokenStore()
 
 function login() {

@@ -2,11 +2,11 @@ import { createApp } from 'vue'
 import App from './App.vue'
 const app = createApp(App)
 
+import pinia from './store'
+app.use(pinia)
+
 import router from './router'
 app.use(router)
-
-import { piniaStore } from './store'
-app.use(piniaStore)
 
 import globalProperties from '@/util/global.properties'
 globalProperties(app)

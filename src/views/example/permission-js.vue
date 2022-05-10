@@ -9,7 +9,7 @@
 <script setup>
 const router = useRouter()
 
-import { useTokenStore } from '@/store/modules/token'
+import useTokenStore from '@/store/modules/token'
 const tokenStore = useTokenStore()
 
 function user() {

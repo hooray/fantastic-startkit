@@ -8,7 +8,7 @@
 </route>
 
 <script setup>
-import { useTokenStore } from '@/store/modules/token'
+import useTokenStore from '@/store/modules/token'
 const tokenStore = useTokenStore()
 </script>
 
