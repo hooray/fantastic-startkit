@@ -1,8 +1,11 @@
-# Fantastic-template
+<h1 align="center">Fantastic-template</h1>
 
-## 这是什么
+<p align="center">一款<b>开箱即用</b>的 Vue 项目模版，基于 Vue(3.x) & Vite(2.x)</p>
 
-一款开箱即用的 Vue 项目模版，基于 Vue(3.x) & Vite(2.x)
+<p align="center">
+    <a href="https://fantastic-template.netlify.app" target="_blank">官网</a>
+    ( <a href="https://gitee.com/hooray/fantastic-template/tree/docs" target="_blank">备用</a> )
+<p>
 
 ## 特点
 
@@ -14,10 +17,6 @@
 - 支持 mock 数据，可摆脱后端束缚独立开发
 - 支持 gzip / brotli 优化项目体积，提高加载速度
 - 结合 IDE 插件、ESlint 、stylelint 、Git 钩子，轻松实现团队代码规范
-
-## 文档
-
-[点击访问](https://fantastic-template.netlify.app)
 
 ## 支持
 
