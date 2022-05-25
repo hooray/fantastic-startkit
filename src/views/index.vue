@@ -8,6 +8,6 @@
 
 <template>
     <div>
-        欢迎使用 Fantastic-template ！
+        欢迎使用 Fantastic-startkit ！
     </div>
 </template>
