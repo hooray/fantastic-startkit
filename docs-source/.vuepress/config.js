@@ -3,8 +3,8 @@ const { viteBundler, defaultTheme } = require('vuepress')
 module.exports = {
 	bundler: viteBundler(),
 	lang: 'zh-CN',
-    title: 'Fantastic-template 官网',
-    description: '一款开箱即用的 Vue 项目模板，基于 Vue(3.x) & Vite(2.x)',
+    title: 'Fantastic-startkit 官网',
+    description: '一款开箱即用的 Vue 项目启动套件，基于 Vue(3.x) & Vite(2.x)',
 	base: '/',
 	dest: 'docs',
     theme: defaultTheme({
@@ -18,8 +18,8 @@ module.exports = {
 				text: '生态',
 				children: [
 					{
-						text: 'Fantastaic-template',
-						link: 'https://fantastic-template.netlify.app'
+						text: 'Fantastaic-startkit',
+						link: 'https://fantastic-startkit.netlify.app'
 					},
 					{
 						text: 'Fantastaic-admin',
