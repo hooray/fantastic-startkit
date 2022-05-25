@@ -1,6 +1,6 @@
 # 与服务端交互
 
-模板使用 [Axios](https://axios-http.com/) 做为异步请求工具，并进行了简单的封装。
+本套件使用 [Axios](https://axios-http.com/) 做为异步请求工具，并进行了简单的封装。
 
 ## 接口请求
 
@@ -90,7 +90,7 @@ server: {
 Mock 数据是前端开发过程中必不可少的一环，是分离前后端开发的关键链路。通过预先跟服务器端约定好的接口，模拟请求数据甚至逻辑，能够让前端开发独立自主，不会被服务端的开发所阻塞。
 
 :::tip
-模板使用 [vite-plugin-mock](https://github.com/anncwb/vite-plugin-mock) 提供开发和生产模拟服务。
+本套件使用 [vite-plugin-mock](https://github.com/anncwb/vite-plugin-mock) 提供开发和生产模拟服务。
 
 Mock 数据编写规则请阅读 [Mockjs](https://github.com/nuysoft/Mock) 官方文档。
 :::
@@ -157,7 +157,7 @@ this.$api.post('news/create', {
 生产环境一般都是调用真实接口，如果需要使用 mock 也只适用于一些简单的示例网站及预览网站。
 :::
 
-模板默认已经配置好生产环境 mock ，如果不想让生产环境里的请求走 mock ，可在接口调用处删除 baseURL 设置，或直接删除 mock 接口文件。
+本套件默认已经配置好生产环境 mock ，如果不想让生产环境里的请求走 mock ，可在接口调用处删除 baseURL 设置，或直接删除 mock 接口文件。
 
 需要注意一点，如果项目中有涉及到上传功能，请彻底关闭线上环境 mock ，在环境配置里设置 `VITE_BUILD_MOCK = false` ，不然线上环境将会报错。
 

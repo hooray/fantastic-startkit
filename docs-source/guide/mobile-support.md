@@ -1,6 +1,6 @@
 # 移动端支持
 
-模板支持使用 vw/vh 做为移动端的布局单位，并默认集成了 [postcss-px-to-viewport](https://www.npmjs.com/package/postcss-px-to-viewport) 插件。
+本套件支持使用 vw/vh 做为移动端的布局单位，并默认集成了 [postcss-px-to-viewport](https://www.npmjs.com/package/postcss-px-to-viewport) 插件。
 
 使用也很简单，只需将根目录下的 `.postcss.config.js` 文件修改为 `postcss.config.js` 即可，文件内具体配置信息可根据项目实际调整：
 

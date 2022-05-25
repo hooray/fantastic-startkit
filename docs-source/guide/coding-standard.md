@@ -6,11 +6,11 @@
 请确保已阅读《[准备工作 - 开发环境](start.md#开发环境)》，并且按照文档说明安装好相关软件及扩展。
 :::
 
-为保证代码风格统一，请使用 [Visual Studio Code](https://code.visualstudio.com/) 做为开发 IDE ，模板源码里已提供相关配置文件，可直接测试效果：在保存代码时，会自动对当前文件进行代码格式化操作。
+为保证代码风格统一，请使用 [Visual Studio Code](https://code.visualstudio.com/) 做为开发 IDE ，本套件已提供相关配置文件，可直接测试效果：在保存代码时，会自动对当前文件进行代码格式化操作。
 
 ## husky & lint-staged
 
-IDE 能做的事比较有限，仅对代码的写法规范进行格式化，对于用户没发现的错误代码，则需要借助 [husky](https://github.com/typicode/husky) 和 [lint-staged](https://github.com/okonet/lint-staged) 这两个依赖来解决，模板已默认集成该依赖。
+IDE 能做的事比较有限，仅对代码的写法规范进行格式化，对于用户没发现的错误代码，则需要借助 [husky](https://github.com/typicode/husky) 和 [lint-staged](https://github.com/okonet/lint-staged) 这两个依赖来解决，本套件已默认集成该依赖。
 
 在提交代码时，husky 会通过 lint-staged 对 `./src` 目录下的 js vue scss 文件进行分别进行 eslint 和 stylelint 检测，如果有报错，则会阻止本次代码提交，直到开发者修改完所有错误代码后，才允许提交到 git 仓库。
 
@@ -24,7 +24,7 @@ IDE 能做的事比较有限，仅对代码的写法规范进行格式化，对�
 
 配置文件主要有 3 处，分别为 IDE 配置（`.editorconfig`）、ESLint 配置（`.eslintrc.js` 和 `.eslintignore`）、StyleLint 配置（`.stylelintrc` 和 `.stylelintignore`）。
 
-以代码缩进举例，模板默认是以 4 空格进行缩进，如果要调整为 2 空格，则需要在 `.editorconfig` 里修改：
+以代码缩进举例，默认是以 4 空格进行缩进，如果要调整为 2 空格，则需要在 `.editorconfig` 里修改：
 
 ```
 indent_size = 2

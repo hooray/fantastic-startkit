@@ -2,7 +2,7 @@
 
 ## 开发环境
 
-使用本模板前，需要在本地依次安装好 [Node.js](https://nodejs.org/zh-cn/), [pnpm](https://pnpm.io/zh/), [Git](https://git-scm.com/) 和 [Visual Studio Code](https://code.visualstudio.com/)，并且在 Visual Studio Code 里安装好以下扩展：
+使用本套件前，需要在本地依次安装好 [Node.js](https://nodejs.org/zh-cn/), [pnpm](https://pnpm.io/zh/), [Git](https://git-scm.com/) 和 [Visual Studio Code](https://code.visualstudio.com/)，并且在 Visual Studio Code 里安装好以下扩展：
 
 - [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 - [DotENV](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv)
@@ -30,13 +30,13 @@
 
 ```bash:no-line-numbers
 # 克隆项目（如果本地已有源码，可跳过这步）
-# 可选择从 github 或 gitee 克隆项目
-git clone https://github.com/hooray/fantastic-template.git
+# 可选择从 github 或 gitee 克隆 example 分支
+git clone -b example https://github.com/hooray/fantastic-startkit.git
 # 或者
-git clone https://gitee.com/hooray/fantastic-template.git
+git clone -b example https://gitee.com/hooray/fantastic-startkit.git
 
 # 进入项目目录
-cd fantastic-template
+cd fantastic-startkit
 
 # 安装项目依赖
 pnpm install
@@ -47,13 +47,13 @@ pnpm run dev
 
 运行成功后，会自动访问页面，默认情况下，地址为 `http://localhost:3000`
 
-如果你已经了解本模板的特性，我们推荐你通过拉取 `template` 分支进行项目开发，该分支不含任何示例代码。
+如果你已经了解本套件的特性，我们推荐你通过拉取默认 `master` 分支进行项目开发，该分支不含任何示例代码。
 
 ```bash:no-line-numbers
-# 可选择从 github 或 gitee 克隆 template 分支
-git clone -b template https://github.com/hooray/fantastic-template.git
+# 可选择从 github 或 gitee 克隆
+git clone https://github.com/hooray/fantastic-startkit.git
 # 或者
-git clone -b template https://gitee.com/hooray/fantastic-template.git
+git clone https://gitee.com/hooray/fantastic-startkit.git
 ```
 
 ::: warning 注意
@@ -62,13 +62,9 @@ git clone -b template https://gitee.com/hooray/fantastic-template.git
 husky 需要项目有 git 环境才能正常安装，详细介绍请阅读《[代码规范 - husky & lint-staged](coding-standard.md#husky-lint-staged)》。
 :::
 
-::: tip 说明
-如果是从 [vue-automation](https://eoner.gitee.io/vue-automation) 转移过来的开发者，可能会有疑问，为什么不使用 Yarn ，而改用 pnpm 做为包管理工具。关于这一点，网上有很多对比的文章，可以同时搜索关键词：**npm yarn pnpm**了解三者的优缺点，这里就不再赘述了。
-:::
-
 ## 技术栈
 
-了解并熟悉模板使用到的技术栈，能让你使用本模板更得心应手。
+了解并熟悉本套件使用到的技术栈，能让你更得心应手。
 
 - [Vite](https://cn.vitejs.dev/)
 - [Vue 3](https://v3.cn.vuejs.org/) ([v3 迁移指南](https://v3.cn.vuejs.org/guide/migration/introduction.html))

@@ -1,7 +1,7 @@
 ---
 home: true
-heroText: Fantastic-template
-tagline: 一款开箱即用的 Vue 项目模板
+heroText: Fantastic-startkit
+tagline: 一款开箱即用的 Vue 项目启动套件
 actions:
 - text: 开始 →
   link: /guide/start
@@ -19,5 +19,5 @@ features:
   details: 支持 gzip / brotli 优化项目体积，提高加载速度
 - title: 代码规范
   details: 结合 IDE 插件、ESlint 、stylelint 、Git 钩子，轻松实现团队代码规范
-footer: Copyright © Fantastic-template
+footer: Copyright © Fantastic-startkit
 ---
