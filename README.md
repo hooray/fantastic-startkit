@@ -1,10 +1,10 @@
-<h1 align="center">Fantastic-template</h1>
+<h1 align="center">Fantastic-startkit</h1>
 
-<p align="center">一款<b>开箱即用</b>的 Vue 项目模版，基于 Vue(3.x) & Vite(2.x)</p>
+<p align="center">一款<b>开箱即用</b>的 Vue 项目启动套件，基于 Vue(3.x) & Vite(2.x)</p>
 
 <p align="center">
-    <a href="https://fantastic-template.netlify.app" target="_blank">官网</a>
-    ( <a href="https://gitee.com/hooray/fantastic-template/tree/docs" target="_blank">备用</a> )
+    <a href="https://fantastic-startkit.netlify.app" target="_blank">官网</a>
+    ( <a href="https://gitee.com/hooray/fantastic-startkit/tree/docs" target="_blank">备用</a> )
 <p>
 
 ## 特点
@@ -22,9 +22,9 @@
 
 如果觉得模版不错，或者已经在使用了，希望你可以去 **Github** 或者 **Gitee(码云)** 帮我点个 ⭐ ，这将对我是极大的鼓励。
 
-[![star](https://img.shields.io/github/stars/hooray/fantastic-template?style=social)](https://github.com/hooray/fantastic-template)
+[![star](https://img.shields.io/github/stars/hooray/fantastic-startkit?style=social)](https://github.com/hooray/fantastic-startkit)
 
-[![star](https://gitee.com/hooray/fantastic-template/badge/star.svg?theme=dark)](https://gitee.com/hooray/fantastic-template)
+[![star](https://gitee.com/hooray/fantastic-startkit/badge/star.svg?theme=dark)](https://gitee.com/hooray/fantastic-startkit)
 
 ## 生态
 
