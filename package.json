@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "docs:dev": "vuepress dev docs-source",
-    "docs:build": "vuepress build docs-source"
+    "dev": "vuepress dev docs-source",
+    "build": "vuepress build docs-source"
   },
   "author": "hooray",
   "license": "MIT",
