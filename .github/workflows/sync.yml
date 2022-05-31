@@ -1,11 +1,9 @@
 name: branches-sync
 
 on:
-  # 每当 push 到 master 和 example 分支时触发部署
+  # 每当 push 到 master 分支时触发部署
   push:
-    branches:
-      - master
-      - example
+    branches: [master]
   # 手动触发部署
   workflow_dispatch:
 
