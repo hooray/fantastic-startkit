@@ -6,7 +6,6 @@ module.exports = {
     title: 'Fantastic-startkit 官网',
     description: '一款开箱即用的 Vue 项目启动套件，基于 Vue(3.x) & Vite(2.x)',
 	base: '/fantastic-startkit/',
-	dest: 'dist',
     theme: defaultTheme({
         // 头部导航
         navbar: [
