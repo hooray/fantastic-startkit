@@ -18,7 +18,7 @@ module.exports = {
 				children: [
 					{
 						text: 'Fantastaic-startkit',
-						link: 'https://fantastic-startkit.netlify.app'
+						link: 'https://hooray.gitee.io/fantastic-startkit/'
 					},
 					{
 						text: 'Fantastaic-admin',
