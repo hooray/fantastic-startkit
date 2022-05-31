@@ -4,7 +4,7 @@
 
 <p align="center">
     <a href="https://hooray.gitee.io/fantastic-startkit/" target="_blank">官网</a>
-    ( <a href="https://gitee.com/hooray/fantastic-startkit/tree/docs" target="_blank">备用</a> )
+    ( <a href="https://hooray.github.io/fantastic-startkit/" target="_blank">备用</a> )
 <p>
 
 ## 特点
