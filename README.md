@@ -3,7 +3,7 @@
 <p align="center">一款<b>开箱即用</b>的 Vue 项目启动套件，基于 Vue(3.x) & Vite(2.x)</p>
 
 <p align="center">
-    <a href="https://fantastic-startkit.netlify.app" target="_blank">官网</a>
+    <a href="https://hooray.gitee.io/fantastic-startkit/" target="_blank">官网</a>
     ( <a href="https://gitee.com/hooray/fantastic-startkit/tree/docs" target="_blank">备用</a> )
 <p>
 
