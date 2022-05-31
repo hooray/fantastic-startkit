@@ -1,4 +1,4 @@
-name: branch-sync
+name: branches-sync
 
 on:
   # 每当 push 到 master 和 example 分支时触发部署
