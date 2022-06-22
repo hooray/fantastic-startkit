@@ -22,11 +22,11 @@ module.exports = {
 					},
 					{
 						text: 'Fantastaic-admin',
-						link: 'https://hooray.gitee.io/fantastic-admin'
+						link: 'https://hooray.gitee.io/fantastic-admin/'
 					},
 					{
 						text: 'One-step-admin',
-						link: 'https://one-step-admin.netlify.app'
+						link: 'https://hooray.gitee.io/one-step-admin/'
 					}
 				]
 			},
