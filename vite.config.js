@@ -36,12 +36,7 @@ export default ({ mode, command }) => {
         // 构建选项 https://cn.vitejs.dev/config/#server-fsserve-root
         build: {
             outDir: mode == 'production' ? 'dist' : `dist-${mode}`,
-            sourcemap: env.VITE_BUILD_SOURCEMAP == 'true',
-            terserOptions: {
-                compress: {
-                    drop_console: env.VITE_BUILD_DROP_CONSOLE == 'true'
-                }
-            }
+            sourcemap: env.VITE_BUILD_SOURCEMAP == 'true'
         },
         plugins: createVitePlugins(env, command === 'build'),
         resolve: {
