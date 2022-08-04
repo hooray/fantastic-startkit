@@ -12,20 +12,18 @@
 
 默认未开启该模式，如果需要启用，到 `/src/router/index.js` 文件里找到下面代码片段，通过开启/关闭注释修改成下面这样：
 
-```js:no-line-numbers {4-15,18-22}
-let routes = []
-
+```ts {2-13,16-20}
 // 注释以下代码
-// const routesContext = import.meta.globEager('./modules/*.js')
-// Object.keys(routesContext).forEach(v => {
-//     routes.push(routesContext[v].default)
+// const routesContext: any = import.meta.glob('./modules/*.ts', { eager: true })
+// Object.keys(routesContext).forEach((v) => {
+//   routes.push(routesContext[v].default)
 // })
 // routes.push({
-//     path: '/:pathMatch(.*)*',
-//     component: () => import('@/views/[...all].vue'),
-//     meta: {
-//         title: '找不到页面'
-//     }
+//   path: '/:pathMatch(.*)*',
+//   component: () => import('@/views/[...all].vue'),
+//   meta: {
+//     title: '找不到页面',
+//   },
 // })
 // routes = routes.flat()
 
@@ -39,7 +37,7 @@ generatedRoutes.forEach(v => {
 
 启用基于文件系统的路由后，`/src/router/modules/` 目录将不再被需要，而 `/src/views/` 目录下的文件会自动被注册成路由。
 
-```:no-line-numbers
+```
 文件系统                           路由地址                          路由 name
 
 views
@@ -68,83 +66,83 @@ views
 
 默认生成的所有路由均为嵌套路由，父级 component 指向 `/src/layout/index.vue` 组件，即：
 
-```js:no-line-numbers
+```ts
 // 生成的路由
 {
-    path: '/login',
-    component: () => import('/src/layout/index.vue'),
-    children: [
-        {
-            path: '',
-            component: () => import('/src/views/login.vue'),
-            name: 'login',
-            meta: {
-                layout: 'index'
-            }
-        }
-    ]
+  path: '/login',
+  component: () => import('/src/layout/index.vue'),
+  children: [
+    {
+      path: '',
+      component: () => import('/src/views/login.vue'),
+      name: 'login',
+      meta: {
+        layout: 'index',
+      },
+    },
+  ],
 }
 ```
 
 你可以在 SFC 单文件组件里设置 layout ：
 
-```vue:no-line-numbers {1-7}
+```vue {1-7}
 <route>
 {
-    meta: {
-        layout: 'example'
-    }
+  meta: {
+    layout: 'example'
+  }
 }
 </route>
 
 <template>
-    <div>login 页面</div>
+  <div>login 页面</div>
 </template>
 ```
 
-```js:no-line-numbers {4,11}
+```ts {4,11}
 // 生成的路由
 {
-    path: '/login',
-    component: () => import('/src/layout/example.vue'),
-    children: [
-        {
-            path: '',
-            component: () => import('/src/views/login.vue'),
-            name: 'login',
-            meta: {
-                layout: 'example'
-            }
-        }
-    ]
+  path: '/login',
+  component: () => import('/src/layout/example.vue'),
+  children: [
+    {
+      path: '',
+      component: () => import('/src/views/login.vue'),
+      name: 'login',
+      meta: {
+        layout: 'example',
+      },
+    },
+  ],
 }
 ```
 
 同样也可以设置成 `layout: false` ，这样该路由就不会生成嵌套路由。
 
-```vue:no-line-numbers {1-7}
+```vue {1-7}
 <route>
 {
-    meta: {
-        layout: false
-    }
+  meta: {
+    layout: false
+  }
 }
 </route>
 
 <template>
-    <div>login 页面</div>
+  <div>login 页面</div>
 </template>
 ```
 
-```js:no-line-numbers
+```ts
 // 生成的路由
 {
-    path: '/login',
-    component: () => import('/src/views/login.vue'),
-    name: 'login',
-    meta: {
-        layout: false
-    }
+  path: '/login',
+  component: () => import('/src/views/login.vue'),
+  name: 'login',
+  meta: {
+    layout: false,
+  },
 }
 ```
 
@@ -152,38 +150,38 @@ views
 
 SFC 单文件组件里的 `<route></route>` 接收标准路由配置数据，所以你可以在里面配置符合路由规则的参数，例如：
 
-```vue:no-line-numbers
+```vue
 <!-- /src/views/example/params.vue -->
 <route>
 {
-    path: '/example/params/:id',
-    name: 'exampleParams',
-    meta: {
-        layout: 'example',
-        title: '这是 params 页面',
-        requireLogin: true
-    }
+  path: '/example/params/:id',
+  name: 'exampleParams',
+  meta: {
+    layout: 'example',
+    title: '这是 params 页面',
+    requireLogin: true
+  }
 }
 </route>
 ```
 
-```js:no-line-numbers
+```ts
 // 生成的路由
 {
-    path: '/example/params/:id',
-    component: () => import('/src/layout/example.vue'),
-    children: [
-        {
-            path: '',
-            component: () => import('/src/views/example/params.vue'),
-            name: 'exampleParams',
-            meta: {
-                layout: 'example',
-                title: '这是 params 页面',
-                requireLogin: true
-            }
-        }
-    ]
+  path: '/example/params/:id',
+  component: () => import('/src/layout/example.vue'),
+  children: [
+    {
+      path: '',
+      component: () => import('/src/views/example/params.vue'),
+      name: 'exampleParams',
+      meta: {
+        layout: 'example',
+        title: '这是 params 页面',
+        requireLogin: true,
+      },
+    },
+  ],
 }
 ```
 

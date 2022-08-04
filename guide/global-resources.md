@@ -6,7 +6,7 @@
 
 使用 SVG 图标也很简单，首先将 svg 文件放到 `/src/assets/icons/` 目录下，然后在页面中就可以通过 `<svg-icon />` 组件使用了，name 就是 svg 文件名，如下：
 
-```html:no-line-numbers
+```html
 <!-- <svg-icon /> 组件无需手动注册即可使用 -->
 <svg-icon name="example" />
 ```
@@ -31,54 +31,53 @@
 
 可通过 `@include` 直接使用精灵图，无需手动引入 `.scss` 文件，使用方法如下：
 
-:::: code-group
-::: code-group-item 方法 1
-```scss:no-line-numbers
+```scss
+// 方法 1
+
 // @include [文件夹名称]-sprite([文件名称]);
 .icon {
-    @include example-sprite(address);
+  @include example-sprite(address);
 }
 
 // 输出
 .icon {
-    background-image: url(img/example.326b35aec20837b9c08563c654422fe6.326b35ae.png);
-    background-position: 0px 0px;
-    background-size: 210px 210px;
-    width: 100px;
-    height: 100px;
+  background-image: url(img/example.326b35aec20837b9c08563c654422fe6.326b35ae.png);
+  background-position: 0px 0px;
+  background-size: 210px 210px;
+  width: 100px;
+  height: 100px;
 }
 ```
-:::
-::: code-group-item 方法 2
-```scss:no-line-numbers
+
+```scss
+// 方法 2
+
 // @include all-[文件夹名称]-sprites;
 @include all-example-sprites;
 
 // 输出
 .example-address-sprites {
-    background-image: url(img/example.326b35aec20837b9c08563c654422fe6.326b35ae.png);
-    background-position: 0 0;
-    background-size: 210px 210px;
-    width: 100px;
-    height: 100px;
+  background-image: url(img/example.326b35aec20837b9c08563c654422fe6.326b35ae.png);
+  background-position: 0 0;
+  background-size: 210px 210px;
+  width: 100px;
+  height: 100px;
 }
 .example-feedback-sprites {
-    background-image: url(img/example.326b35aec20837b9c08563c654422fe6.326b35ae.png);
-    background-position: -110px 0;
-    background-size: 210px 210px;
-    width: 100px;
-    height: 100px;
+  background-image: url(img/example.326b35aec20837b9c08563c654422fe6.326b35ae.png);
+  background-position: -110px 0;
+  background-size: 210px 210px;
+  width: 100px;
+  height: 100px;
 }
 .example-payment-sprites {
-    background-image: url(img/example.326b35aec20837b9c08563c654422fe6.326b35ae.png);
-    background-position: 0 -110px;
-    background-size: 210px 210px;
-    width: 100px;
-    height: 100px;
+  background-image: url(img/example.326b35aec20837b9c08563c654422fe6.326b35ae.png);
+  background-position: 0 -110px;
+  background-size: 210px 210px;
+  width: 100px;
+  height: 100px;
 }
 ```
-:::
-::::
 
 如果是小型项目，静态图片不多，可全部放在一个文件夹内；如果是中大型项目，文件夹可按模块来划分，这样不同的模块最终会生成各自的精灵图文件。
 

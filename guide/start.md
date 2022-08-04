@@ -28,7 +28,7 @@
 
 做好准备工作后，依次执行下面的命令：
 
-```bash:no-line-numbers
+```bash
 # 克隆项目（如果本地已有源码，可跳过这步）
 # 可选择从 github 或 gitee 克隆 example 分支
 git clone -b example https://github.com/hooray/fantastic-startkit.git
@@ -49,7 +49,7 @@ pnpm run dev
 
 如果你已经了解本套件的特性，我们推荐你通过拉取默认 `master` 分支进行项目开发，该分支不含任何示例代码。
 
-```bash:no-line-numbers
+```bash
 # 可选择从 github 或 gitee 克隆
 git clone https://github.com/hooray/fantastic-startkit.git
 # 或者

@@ -1,16 +1,10 @@
 {
-  "name": "fantastic-startkit-docs",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-    "dev": "vuepress dev docs-source",
-    "build": "vuepress build docs-source"
+    "dev": "vitepress dev .",
+    "build": "vitepress build ."
   },
-  "author": "hooray",
-  "license": "MIT",
   "devDependencies": {
-    "vuepress": "2.0.0-beta.45",
-    "vuepress-vite": "^2.0.0-beta.45"
+    "vitepress": "1.0.0-alpha.4",
+    "vue": "^3.2.37"
   }
 }

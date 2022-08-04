@@ -10,17 +10,17 @@
 
 全局状态文件存放在 `/src/store/modules/` 目录下，请按模块进行区分。同时请保证文件名和文件内唯一ID保持一致，建议使用 `pnpm new` 指令进行创建。
 
-例如新建一个 `example.js` 的文件：
+例如新建一个 `example.ts` 的文件：
 
-```js:no-line-numbers
+```ts
 const useExampleStore = defineStore(
-    // 唯一ID
-    'example',
-    {
-        state: () => ({}),
-        getters: {},
-        actions: {}
-    }
+  // 唯一ID
+  'example',
+  {
+    state: () => ({}),
+    getters: {},
+    actions: {},
+  },
 )
 
 export default useExampleStore
@@ -28,7 +28,7 @@ export default useExampleStore
 
 使用方法：
 
-```js:no-line-numbers
+```ts
 import useExampleStore from '@/store/modules/example'
 const exampleStore = useExampleStore()
 

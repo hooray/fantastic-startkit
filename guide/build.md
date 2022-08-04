@@ -14,23 +14,16 @@
 
 在环境配置文件里设置 `VITE_BUILD_COMPRESS` 即可在构建时生成 `.gz` 或 `.br` 文件。
 
-:::: code-group
-::: code-group-item 开启 gzip
-```dot:no-line-numbers
+```
+# 单独开启 gzip
 VITE_BUILD_COMPRESS = gzip
-```
-:::
-::: code-group-item 开启 brotli
-```dot:no-line-numbers
+
+# 单独开启 brotli ，brotli 是比 gzip 压缩率更高的算法
 VITE_BUILD_COMPRESS = brotli
-```
-:::
-::: code-group-item 同时开启 gzip 和 brotli
-```dot:no-line-numbers
+
+# 或者也可以都开启，两者可以共存
 VITE_BUILD_COMPRESS = gzip,brotli
 ```
-:::
-::::
 
 brotli 是比 gzip 压缩率更高的算法，可以与 gzip 共存不会冲突。
 
@@ -40,9 +33,7 @@ brotli 是比 gzip 压缩率更高的算法，可以与 gzip 共存不会冲突�
 
 在环境配置文件里除了可以设置压缩选项，还可设置：
 
-```dot:no-line-numbers
+```
 # 是否在打包时生成 sourcemap
 VITE_BUILD_SOURCEMAP = true
-# 是否在打包时删除 console 代码
-VITE_BUILD_DROP_CONSOLE = true
 ```

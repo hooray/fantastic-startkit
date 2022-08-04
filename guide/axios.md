@@ -20,30 +20,27 @@
 
 常用的 get 和 post 请求可使用以下的方法：
 
-:::: code-group
-::: code-group-item get
-```js:no-line-numbers
-this.$api.get('news/list', {
-    params: {
-        page: 1,
-        size: 10
-    }
+```ts
+import api from '@/api'
+
+// GET 请求
+api.get('news/list', {
+  params: {
+    page: 1,
+    size: 10,
+  },
 }).then(res => {
-    // 后续业务代码
+  // 后续业务代码
+})
+
+// POST 请求
+api.post('news/create', {
+  title: '新闻标题',
+  content: '新闻内容',
+}).then(res => {
+  // 后续业务代码
 })
 ```
-:::
-::: code-group-item post
-```js:no-line-numbers
-this.$api.post('news/create', {
-    title: '新闻标题',
-    content: '新闻内容'
-}).then(res=>{
-    // 后续业务代码
-})
-```
-:::
-::::
 
 ### 拦截器
 
@@ -57,31 +54,25 @@ this.$api.post('news/create', {
 
 生产环境的跨域需要服务端去解决，开发环境的跨域问题可在本地设置代理解决。如果本地开发环境请求接口提示跨域，可以设置 `.env.development` 文件里 `VITE_OPEN_PROXY = true` 开启代理。
 
-:::: code-group
-::: code-group-item get
-```js:no-line-numbers
-this.$api.get('news/list')  // http://localhost:3000/proxy/news/list
-```
-:::
-::: code-group-item post
-```js:no-line-numbers
-this.$api.post('news/add')  // http://localhost:3000/proxy/news/add
-```
-:::
-::::
+```ts
+import api from '@/api'
 
-开启代理后，原有请求都会被指向到本地 `http://localhost:3000/proxy` ，因为 `/proxy` 匹配到了 vite.config.js 里代理部分的设置，所以实际是请求依旧是 `VITE_APP_API_BASEURL` 所设置的地址。
+api.get('news/list')  // http://localhost:3000/proxy/news/list
+api.post('news/add')  // http://localhost:3000/proxy/news/add
+```
 
-```js:no-line-numbers
-// vite.config.js 中 proxy 配置，该配置即用于代理 API 请求
+开启代理后，原有请求都会被指向到本地 `http://localhost:3000/proxy` ，因为 `/proxy` 匹配到了 vite.config.ts 里代理部分的设置，所以实际是请求依旧是 `VITE_APP_API_BASEURL` 所设置的地址。
+
+```ts
+// vite.config.ts 中 proxy 配置，该配置即用于代理 API 请求
 server: {
-    proxy: {
-        '/proxy': {
-            target: loadEnv(mode, process.cwd()).VITE_APP_API_BASEURL,
-            changeOrigin: command === 'serve' && loadEnv(mode, process.cwd()).VITE_OPEN_PROXY == 'true',
-            rewrite: path => path.replace(/\/proxy/, '')
-        }
-    }
+  proxy: {
+    '/proxy': {
+      target: loadEnv(mode, process.cwd()).VITE_APP_API_BASEURL,
+      changeOrigin: command === 'serve' && loadEnv(mode, process.cwd()).VITE_OPEN_PROXY == 'true',
+      rewrite: path => path.replace(/\/proxy/, ''),
+    },
+  },
 }
 ```
 
@@ -101,25 +92,25 @@ mock 文件存放在 `/src/mock/` 下，建议按照不同模块区分文件夹�
 
 以下为示例代码：
 
-```js
+```ts
 export default [
-    {
-        url: '/mock/news/list',
-        method: 'get',
-        response: ({ query }) => {
-            return {
-                error: '',
-                status: 1,
-                data: {
-                    'list|5-10': [
-                        {
-                            'title': '@ctitle'
-                        }
-                    ]
-                }
-            }
-        }
-    }
+  {
+    url: '/mock/news/list',
+    method: 'get',
+    response: ({ query }) => {
+      return {
+        error: '',
+        status: 1,
+        data: {
+          'list|5-10': [
+            {
+              'title': '@ctitle',
+            },
+          ],
+        },
+      }
+    },
+  },
 ]
 ```
 
@@ -132,22 +123,24 @@ export default [
 
 如下所示，其中 `news/list` 会请求本地的 mock 接口，而 `news/add` 依旧请求真实接口，即使开启跨域代理也不影响。
 
-```js:no-line-numbers {2}
-this.$api.get('news/list', {
-	baseURL: '/mock/',
-    params: {
-        page: 1,
-        size: 10
-    }
+```ts {4}
+import api from '@/api'
+
+api.get('news/list', {
+  baseURL: '/mock/',
+  params: {
+    page: 1,
+    size: 10,
+  },
 }).then(res => {
-    // 后续业务代码
+  // 后续业务代码
 })
 
-this.$api.post('news/create', {
-    title: '新闻标题',
-    content: '新闻内容'
+api.post('news/create', {
+  title: '新闻标题',
+  content: '新闻内容',
 }).then(res => {
-    // 后续业务代码
+  // 后续业务代码
 })
 ```
 
