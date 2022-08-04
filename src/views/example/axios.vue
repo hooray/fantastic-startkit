@@ -1,44 +1,50 @@
 <route>
 {
-    meta: {
-        layout: 'example'
-    }
+  meta: {
+    layout: 'example'
+  }
 }
 </route>
 
-<script setup>
-const { proxy } = getCurrentInstance()
+<script lang="ts" setup>
+import api from '@/api'
 
-let news = ref([])
+const news = ref<any[]>([])
+
+const proxy = useCurrentInstance()
 
 const getInfo = () => {
-    Promise.all([
-        proxy.$api.get('news/list', {
-            baseURL: '/mock/'
-        }),
-        proxy.$api.get('news/list', {
-            baseURL: '/mock/'
-        })
-    ]).then(res => {
-        news.value = res[0].data.list.concat(
-            res[1].data.list
-        )
-    })
+  Promise.all([
+    api.get('news/list', {
+      baseURL: '/mock/',
+    }),
+    api.get('news/list', {
+      baseURL: '/mock/',
+    }),
+  ]).then((res) => {
+    news.value = res[0].data.list.concat(
+      res[1].data.list,
+    )
+  })
 }
 </script>
 
 <template>
+  <div>
+    <button type="button" @click="getInfo">
+      获取 mock 数据
+    </button>
     <div>
-        <button type="button" @click="getInfo">获取 mock 数据</button>
-        <div>
-            <p v-for="(item, index) in news" :key="index">{{ item.title }}</p>
-        </div>
+      <p v-for="(item, index) in news" :key="index">
+        {{ item.title }}
+      </p>
     </div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
 img {
-    display: block;
-    width: 300px;
+  display: block;
+  width: 300px;
 }
 </style>

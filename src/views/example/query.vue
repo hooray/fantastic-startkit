@@ -1,13 +1,13 @@
 <route>
 {
-    meta: {
-        layout: 'example'
-    }
+  meta: {
+    layout: 'example'
+  }
 }
 </route>
 
 <template>
-    <div>
-        <div>query:{{ $route.query.test }}</div>
-    </div>
+  <div>
+    <div>query:{{ $route.query.test }}</div>
+  </div>
 </template>

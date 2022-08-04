@@ -1,14 +1,14 @@
 <route>
 {
-    name: 'exampleParams',
-    meta: {
-        layout: 'example'
-    }
+  name: 'exampleParams',
+  meta: {
+    layout: 'example'
+  }
 }
 </route>
 
 <template>
-    <div>
-        <div>params:{{ $route.params.test }}</div>
-    </div>
+  <div>
+    <div>params:{{ $route.params.test }}</div>
+  </div>
 </template>
