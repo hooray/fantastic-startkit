@@ -9,6 +9,7 @@
 
 ## 特点
 
+- 支持 TypeScript
 - 默认集成 vue-router 和 pinia
 - 支持基于文件系统的路由
 - 全局 SCSS 资源引入
