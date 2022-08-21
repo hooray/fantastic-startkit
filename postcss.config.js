@@ -22,5 +22,6 @@ module.exports = {
     //   // 允许在媒体查询中转换 px
     //   mediaQuery: false,
     // },
+    autoprefixer: {},
   },
 }
