@@ -19,6 +19,17 @@
 - 支持 gzip / brotli 优化项目体积，提高加载速度
 - 结合 IDE 插件、ESlint 、stylelint 、Git 钩子，轻松实现团队代码规范
 
+## 使用方式
+
+  ```s
+  git clone https://github.com/hooray/fantastic-startkit
+  cd ./fantastic-startkit
+  pnpm i
+  pnpm dev
+  ```
+  如果没有pnpm, 需要全局安装 `npm i -g pnpm`   
+  如果 pnpm i 报404错误，可以设置更换为国内镜像源 `pnpm config set registry https://registry.npmmirror.com`  
+
 ## 支持
 
 如果觉得模版不错，或者已经在使用了，希望你可以去 **Github** 或者 **Gitee(码云)** 帮我点个 ⭐ ，这将对我是极大的鼓励。
