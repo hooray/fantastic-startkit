@@ -2,7 +2,13 @@
 
 ## 开发环境
 
-使用本套件前，需要在本地依次安装好 [Node.js](https://nodejs.org/zh-cn/), [pnpm](https://pnpm.io/zh/), [Git](https://git-scm.com/) 和 [Visual Studio Code](https://code.visualstudio.com/)，并且在 Visual Studio Code 里安装好以下扩展：
+使用本套件前，需要在本地依次安装好 [Node.js](https://nodejs.org/zh-cn/), [pnpm](https://pnpm.io/zh/), [Git](https://git-scm.com/) 和 [Visual Studio Code](https://code.visualstudio.com/)。
+
+:::warning 注意
+Node.js 版本需 >= 14.18.0 ，建议为 16.x
+:::
+
+然后在 Visual Studio Code 里安装好以下扩展：
 
 - [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 - [DotENV](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv)
