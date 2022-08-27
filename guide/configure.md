@@ -4,7 +4,7 @@
 
 ## 开发环境 `.env.development`
 
-``` {1-6}
+```
 # 页面标题
 VITE_APP_TITLE = 页面标题(development)
 # 接口请求地址，会设置到 axios 的 baseURL 参数上
@@ -18,7 +18,7 @@ VITE_OPEN_PROXY = true
 
 ## 测试环境 `.env.test`
 
-``` {3-8}
+```
 NODE_ENV = production
 
 # 页面标题
@@ -38,7 +38,7 @@ VITE_BUILD_COMPRESS =
 
 ## 生产环境 `.env.production`
 
-``` {3-8}
+```
 NODE_ENV = production
 
 # 页面标题
@@ -56,7 +56,7 @@ VITE_BUILD_SOURCEMAP = false
 VITE_BUILD_COMPRESS = gzip,brotli
 ```
 
-其中高亮部分为必要配置，即不管是在开发、测试，还是生产环境都需要使用到。而其余配置则在不同环境下有不同用途，如开发环境用于本地开发使用，测试环境和生产环境用于构建使用。
+其中 `VITE_APP_TITLE` `VITE_APP_API_BASEURL` `VITE_APP_DEBUG_TOOL` 为必要配置，即不管是在开发、测试，还是生产环境都需要使用到。而其余配置则在不同环境下有不同用途，如开发环境用于本地开发使用，测试环境和生产环境用于构建使用。
 
 开发者可根据实际业务需求进行扩展，如果对这块不熟悉，请阅读 [Vite - 环境变量和模式](https://cn.vitejs.dev/guide/env-and-mode.html) 章节。
 
