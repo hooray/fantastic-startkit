@@ -81,6 +81,6 @@ husky 需要项目有 git 环境才能正常安装，详细介绍请阅读《[�
 了解并熟悉本套件使用到的技术栈，能让你更得心应手。
 
 - [Vite](https://cn.vitejs.dev/)
-- [Vue 3](https://v3.cn.vuejs.org/) ([v3 迁移指南](https://v3.cn.vuejs.org/guide/migration/introduction.html))
+- [Vue 3](https://cn.vuejs.org/) ([v3 迁移指南](https://v3-migration.vuejs.org/))
 - [Vue Router 4](https://next.router.vuejs.org/zh/)
 - [Pinia](https://pinia.vuejs.org/)
