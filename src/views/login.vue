@@ -23,11 +23,12 @@ function login() {
       })
     }
     else {
-      if (window.history.length <= 1)
+      if (window.history.length <= 1) {
         router.push({ path: '/' })
-
-      else
+      }
+      else {
         router.go(-1)
+      }
     }
   })
 }
