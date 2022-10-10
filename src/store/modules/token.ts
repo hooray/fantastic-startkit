@@ -13,8 +13,9 @@ const useTokenStore = defineStore(
         let retn = false
         if (state.token != null) {
           const unix = Date.parse(new Date().toString())
-          if (unix < state.failuretime * 1000)
+          if (unix < state.failuretime * 1000) {
             retn = true
+          }
         }
         return retn
       },
