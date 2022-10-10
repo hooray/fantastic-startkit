@@ -1,7 +1,7 @@
 import { createProdMockServer } from 'vite-plugin-mock/es/createProdMockServer'
 
 const mocks: any[] = []
-const mockContext: any = import.meta.glob('./mock/*.js', { eager: true })
+const mockContext: any = import.meta.glob('./mock/*.ts', { eager: true })
 Object.keys(mockContext).forEach((v) => {
   mocks.push(...mockContext[v].default)
 })
