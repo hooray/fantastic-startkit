@@ -4,6 +4,7 @@ import router from '@/router/index'
 import useTokenStore from '@/store/modules/token'
 
 const toLogin = () => {
+  useTokenStore().logout()
   router.push({
     path: '/login',
     query: {
@@ -14,19 +15,19 @@ const toLogin = () => {
 
 const api = axios.create({
   baseURL: import.meta.env.DEV && import.meta.env.VITE_OPEN_PROXY === 'true' ? '/proxy/' : import.meta.env.VITE_APP_API_BASEURL,
-  timeout: 10000,
+  timeout: 1000 * 60,
   responseType: 'json',
 })
 
 api.interceptors.request.use(
   (config) => {
-    const tokenOutsideStore = useTokenStore()
+    const tokenStore = useTokenStore()
     /**
      * 全局拦截请求发送前提交的参数
      * 以下代码为示例，在请求头里带上 token 信息
      */
-    if (tokenOutsideStore.isLogin && config.headers) {
-      config.headers.Token = tokenOutsideStore.token
+    if (tokenStore.isLogin && config.headers) {
+      config.headers.Token = tokenStore.token
     }
     // 是否将 POST 请求参数进行字符串化处理
     if (config.method === 'post') {
@@ -47,11 +48,7 @@ api.interceptors.response.use(
      * 请求出错时 error 会返回错误信息
      */
     if (response.data.status === 1) {
-      if (response.data.error === '') {
-        // 请求成功并且没有报错
-        return Promise.resolve(response.data)
-      }
-      else {
+      if (response.data.error !== '') {
         // 这里做错误提示，如果使用了 element plus 则可以使用 Message 进行提示
         // Message.error(options)
         return Promise.reject(response.data)
@@ -60,6 +57,7 @@ api.interceptors.response.use(
     else {
       toLogin()
     }
+    return Promise.resolve(response.data)
   },
   (error) => {
     let message = error.message
