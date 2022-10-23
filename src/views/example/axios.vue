@@ -11,8 +11,6 @@ import api from '@/api'
 
 const news = ref<any[]>([])
 
-const proxy = useCurrentInstance()
-
 const getInfo = () => {
   Promise.all([
     api.get('news/list', {
