@@ -7,7 +7,7 @@
 </route>
 
 <script lang="ts" setup>
-const reload = inject('reload')
+const reload = inject('reload') as any
 
 const value = ref(0)
 
