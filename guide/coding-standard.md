@@ -24,11 +24,11 @@
 
 如果不想使用，可将 `src/` 目录加入 `.stylelintignore` 中进行忽略。
 
-## husky & lint-staged
+## simple-git-hooks & lint-staged
 
-IDE 能做的事比较有限，仅对代码的写法规范进行格式化，对于用户没发现的错误代码，则需要借助 [husky](https://github.com/typicode/husky) 和 [lint-staged](https://github.com/okonet/lint-staged) 这两个依赖来解决，本套件已默认集成该依赖。
+IDE 能做的事比较有限，仅对代码的写法规范进行格式化，对于用户没发现的错误代码，则需要借助 [simple-git-hooks](https://github.com/toplenboren/simple-git-hooks) 和 [lint-staged](https://github.com/okonet/lint-staged) 这两个依赖来解决，本套件已默认集成该依赖。
 
-在提交代码时，husky 会通过 lint-staged 对 `./src` 目录下的 js vue scss 文件进行分别进行 eslint 和 stylelint 检测，如果有报错，则会阻止本次代码提交，直到开发者修改完所有错误代码后，才允许提交到 git 仓库。
+在提交代码时， simple-git-hooks 会通过 lint-staged 对 `./src` 目录下的 ts vue scss 文件进行分别进行 eslint 和 stylelint 检测，如果有报错，则会阻止本次代码提交，直到开发者修改完所有错误代码后，才允许提交到 git 仓库。
 
 这样可以确保 git 仓库里的代码不会有语法错误，在多人协作开发时尤为重要。
 

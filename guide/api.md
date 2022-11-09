@@ -15,7 +15,7 @@ api.post()
 
 基于 [mitt](https://github.com/developit/mitt) 简单封装，使用方法请查阅官方文档。
 
-```js
+```ts
 import eventBus from '@/utils/eventBus'
 
 eventBus.on()
@@ -27,7 +27,7 @@ eventBus.off()
 
 基于 [dayjs](https://day.js.org/zh-CN/) 简单封装，使用方法请查阅官方文档。
 
-```js
+```ts
 import dayjs from '@/utils/dayjs'
 
 dayjs()
