@@ -9,8 +9,9 @@ export default ({ mode, command }) => {
   // 全局 scss 资源
   const scssResources = []
   fs.readdirSync('src/assets/styles/resources').forEach((dirname) => {
-    if (fs.statSync(`src/assets/styles/resources/${dirname}`).isFile())
+    if (fs.statSync(`src/assets/styles/resources/${dirname}`).isFile()) {
       scssResources.push(`@import "src/assets/styles/resources/${dirname}";`)
+    }
   })
   // css 精灵图相关
   fs.readdirSync('src/assets/sprites').forEach((dirname) => {
@@ -41,6 +42,7 @@ export default ({ mode, command }) => {
     resolve: {
       alias: {
         '@': path.resolve(__dirname, 'src'),
+        '#': path.resolve(__dirname, 'src/types'),
       },
     },
     css: {
