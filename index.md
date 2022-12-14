@@ -2,12 +2,12 @@
 layout: home
 
 title: Fantastic-startkit
-titleTemplate: 一款开箱即用的 Vue 项目启动套件
+titleTemplate: 一款简单好用的 Vue 项目启动套件
 
 hero:
   name: Fantastic-startkit
   text: Vue 项目启动套件
-  tagline: 开箱即用，为开发提供舒适体验
+  tagline: 简单好用，就足够了
   actions:
     - theme: brand
       text: 开始
