@@ -4,6 +4,7 @@ import 'nprogress/nprogress.css'
 // import { setupLayouts } from 'virtual:generated-layouts'
 // import generatedRoutes from 'virtual:generated-pages'
 import useSettingsStore from '@/store/modules/settings'
+import useTokenStore from '@/store/modules/token'
 
 let routes = []
 
@@ -30,13 +31,29 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
+  const tokenOutsideStore = useTokenStore()
   NProgress.start()
-  next()
+  if (to.meta.requireLogin) {
+    if (tokenOutsideStore.isLogin) {
+      next()
+    }
+    else {
+      next({
+        path: '/login',
+        query: {
+          redirect: to.fullPath,
+        },
+      })
+    }
+  }
+  else {
+    next()
+  }
 })
 
 router.afterEach((to) => {
   NProgress.done()
-  useSettingsStore().setTitle(typeof to.meta.title === 'function' ? to.meta.title() : to.meta.title || '')
+  useSettingsStore().setTitle((typeof to.meta.title === 'function' ? to.meta.title() : to.meta.title) || '')
 })
 
 export default router
