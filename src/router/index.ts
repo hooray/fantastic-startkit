@@ -53,7 +53,7 @@ router.beforeEach((to, from, next) => {
 
 router.afterEach((to) => {
   NProgress.done()
-  useSettingsStore().setTitle(typeof to.meta.title === 'function' ? to.meta.title() : to.meta.title || '')
+  useSettingsStore().setTitle((typeof to.meta.title === 'function' ? to.meta.title() : to.meta.title) || '')
 })
 
 export default router
