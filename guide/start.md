@@ -5,7 +5,7 @@
 使用本套件前，需要在本地依次安装好 [Node.js](https://nodejs.org/zh-cn/), [pnpm](https://pnpm.io/zh/), [Git](https://git-scm.com/) 和 [Visual Studio Code](https://code.visualstudio.com/)。
 
 :::warning 注意
-Node.js 版本需 >= 14.18.0 ，建议为 16.x
+Node.js 需要使用 14.18+ / 16+ 版本，建议为 18.12+ 版本。
 :::
 
 然后在 Visual Studio Code 里安装好以下扩展：
