@@ -1,6 +1,8 @@
+import type { RouteRecordRaw } from 'vue-router'
+
 const ExampleLayout = () => import('@/layouts/example.vue')
 
-export default {
+const routes: RouteRecordRaw = {
   path: '/example',
   redirect: '/example/svgicon',
   component: ExampleLayout,
@@ -58,3 +60,5 @@ export default {
     },
   ],
 }
+
+export default routes
