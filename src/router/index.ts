@@ -1,3 +1,4 @@
+import type { RouteRecordRaw } from 'vue-router'
 import { createRouter, createWebHashHistory } from 'vue-router'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
@@ -6,7 +7,7 @@ import 'nprogress/nprogress.css'
 import useSettingsStore from '@/store/modules/settings'
 import useTokenStore from '@/store/modules/token'
 
-let routes = []
+let routes: RouteRecordRaw[] = []
 
 const routesContext: any = import.meta.glob('./modules/*.ts', { eager: true })
 Object.keys(routesContext).forEach((v) => {
@@ -53,7 +54,7 @@ router.beforeEach((to, from, next) => {
 
 router.afterEach((to) => {
   NProgress.done()
-  useSettingsStore().setTitle((typeof to.meta.title === 'function' ? to.meta.title() : to.meta.title) || '')
+  useSettingsStore().setTitle(to.meta.title ?? '')
 })
 
 export default router

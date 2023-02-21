@@ -1,3 +1,4 @@
+import './utils/system.copyright'
 import App from './App.vue'
 import pinia from './store'
 import router from './router'
