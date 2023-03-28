@@ -1,9 +1,6 @@
-<route>
-{
-  meta: {
-    layout: 'example'
-  }
-}
+<route lang="yaml">
+meta:
+  layout: example
 </route>
 
 <template>

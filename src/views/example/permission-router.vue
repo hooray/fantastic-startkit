@@ -1,10 +1,7 @@
-<route>
-{
-  meta: {
-    layout: 'example',
-    requireLogin: true
-  }
-}
+<route lang="yaml">
+meta:
+  layout: example
+  requireLogin: true
 </route>
 
 <script lang="ts" setup>

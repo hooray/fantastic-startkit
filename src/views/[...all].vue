@@ -1,10 +1,7 @@
-<route>
-{
-  meta: {
-    layout: false,
-    title: '找不到页面'
-  }
-}
+<route lang="yaml">
+meta:
+  layout: false
+  title: 找不到页面
 </route>
 
 <template>

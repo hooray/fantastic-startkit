@@ -1,10 +1,7 @@
-<route>
-{
-  meta: {
-    layout: 'example',
-    title: 'Svg Icon'
-  }
-}
+<route lang="yaml">
+meta:
+  layout: example
+  title: Svg Icon
 </route>
 
 <template>

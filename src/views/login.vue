@@ -1,10 +1,7 @@
-<route>
-{
-  meta: {
-    layout: false,
-    title: '登录'
-  }
-}
+<route lang="yaml">
+meta:
+  layout: false
+  title: 登录
 </route>
 
 <script lang="ts" setup>

@@ -1,10 +1,7 @@
-<route>
-{
-  name: 'exampleParams',
-  meta: {
-    layout: 'example'
-  }
-}
+<route lang="yaml">
+name: exampleParams
+meta:
+  layout: example
 </route>
 
 <template>
