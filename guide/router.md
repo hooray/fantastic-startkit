@@ -86,13 +86,10 @@ views
 
 你可以在 SFC 单文件组件里设置 layout ：
 
-```vue {1-7}
-<route>
-{
-  meta: {
-    layout: 'example'
-  }
-}
+```vue {1-4}
+<route lang="yaml">
+meta:
+  layout: example
 </route>
 
 <template>
@@ -120,13 +117,10 @@ views
 
 同样也可以设置成 `layout: false` ，这样该路由就不会生成嵌套路由。
 
-```vue {1-7}
-<route>
-{
-  meta: {
-    layout: false
-  }
-}
+```vue {1-4}
+<route lang="yaml">
+meta:
+  layout: false
 </route>
 
 <template>
@@ -145,44 +139,3 @@ views
   },
 }
 ```
-
----
-
-SFC 单文件组件里的 `<route></route>` 接收标准路由配置数据，所以你可以在里面配置符合路由规则的参数，例如：
-
-```vue
-<!-- /src/views/example/params.vue -->
-<route>
-{
-  path: '/example/params/:id',
-  name: 'exampleParams',
-  meta: {
-    layout: 'example',
-    title: '这是 params 页面',
-    requireLogin: true
-  }
-}
-</route>
-```
-
-```ts
-// 生成的路由
-{
-  path: '/example/params/:id',
-  component: () => import('/src/layout/example.vue'),
-  children: [
-    {
-      path: '',
-      component: () => import('/src/views/example/params.vue'),
-      name: 'exampleParams',
-      meta: {
-        layout: 'example',
-        title: '这是 params 页面',
-        requireLogin: true,
-      },
-    },
-  ],
-}
-```
-
-不过既然使用了基于文件系统的路由，不建议再手动去设置 `path` 和 `name` ，更多的使用场景应该是根据业务需求去扩展 `meta` 对象里的属性。
