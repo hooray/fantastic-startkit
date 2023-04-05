@@ -6,6 +6,7 @@ meta:
 
 <script lang="ts" setup>
 import useTokenStore from '@/store/modules/token'
+
 const tokenStore = useTokenStore()
 </script>
 

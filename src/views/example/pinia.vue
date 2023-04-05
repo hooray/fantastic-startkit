@@ -5,6 +5,7 @@ meta:
 
 <script lang="ts" setup>
 import useExampleStore from '@/store/modules/example'
+
 const exampleStore = useExampleStore()
 
 const news = computed(() => exampleStore.news)

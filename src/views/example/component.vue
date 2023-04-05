@@ -8,7 +8,7 @@ import ExampleList from './components/ExampleList/index.vue'
 
 const index = ref(1)
 const list = ref(['张三', '李四', '王五'])
-const add = () => {
+function add() {
   list.value.push(`这是新添加的${index.value++}`)
 }
 </script>

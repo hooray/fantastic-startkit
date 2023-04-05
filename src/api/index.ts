@@ -3,7 +3,7 @@ import axios from 'axios'
 import router from '@/router/index'
 import useTokenStore from '@/store/modules/token'
 
-const toLogin = () => {
+function toLogin() {
   useTokenStore().logout()
   router.push({
     path: '/login',

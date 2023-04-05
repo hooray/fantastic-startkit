@@ -8,7 +8,7 @@ import api from '@/api'
 
 const news = ref<any[]>([])
 
-const getInfo = () => {
+function getInfo() {
   Promise.all([
     api.get('news/list', {
       baseURL: '/mock/',
