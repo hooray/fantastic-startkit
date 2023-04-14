@@ -28,7 +28,7 @@
 // routes = routes.flat()
 
 // 开启以下代码
-import { setupLayouts } from 'virtual:generated-layouts'
+import { setupLayouts } from 'virtual:meta-layouts'
 import generatedRoutes from 'virtual:generated-pages'
 generatedRoutes.forEach(v => {
     routes.push(v?.meta?.layout != false ? setupLayouts([v])[0] : v)
