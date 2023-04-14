@@ -1,3 +1,5 @@
+import 'vue-router'
+
 declare interface Window {
   // extend the window
 }
