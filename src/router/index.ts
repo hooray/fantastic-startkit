@@ -2,6 +2,7 @@ import type { RouteRecordRaw } from 'vue-router'
 import { createRouter, createWebHashHistory } from 'vue-router'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
+
 // import { setupLayouts } from 'virtual:meta-layouts'
 // import generatedRoutes from 'virtual:generated-pages'
 import useSettingsStore from '@/store/modules/settings'
