@@ -3,7 +3,7 @@ meta:
   layout: example
 </route>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import useExampleStore from '@/store/modules/example'
 
 const exampleStore = useExampleStore()

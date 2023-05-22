@@ -4,7 +4,7 @@ meta:
   title: 登录
 </route>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import useTokenStore from '@/store/modules/token'
 
 const router = useRouter()

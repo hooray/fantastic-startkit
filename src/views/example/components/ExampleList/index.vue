@@ -1,6 +1,10 @@
-<script lang="ts" setup name="ExampleList">
+<script setup lang="ts">
 defineProps({
   list: Array,
+})
+
+defineOptions({
+  name: 'ExampleList',
 })
 </script>
 

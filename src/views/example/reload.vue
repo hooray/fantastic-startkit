@@ -3,7 +3,7 @@ meta:
   layout: example
 </route>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 const reload = inject('reload') as any
 
 const value = ref(0)
