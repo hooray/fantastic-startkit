@@ -1,10 +1,7 @@
 <script setup lang="ts">
-defineProps({
-  name: {
-    type: String,
-    required: true,
-  },
-})
+defineProps<{
+  name: string
+}>()
 
 defineOptions({
   name: 'SvgIcon',
