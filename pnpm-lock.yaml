@@ -86,8 +86,8 @@ devDependencies:
     specifier: ^1.1.4
     version: 1.1.4
   sass:
-    specifier: ^1.62.1
-    version: 1.62.1
+    specifier: ^1.63.4
+    version: 1.63.4
   simple-git-hooks:
     specifier: ^2.8.1
     version: 2.8.1
@@ -104,8 +104,8 @@ devDependencies:
     specifier: ^1.0.0
     version: 1.0.0(postcss-html@1.5.0)(stylelint@15.7.0)
   stylelint-scss:
-    specifier: ^5.0.0
-    version: 5.0.0(stylelint@15.7.0)
+    specifier: ^5.0.1
+    version: 5.0.1(stylelint@15.7.0)
   stylelint-stylistic:
     specifier: ^0.4.2
     version: 0.4.2(stylelint@15.7.0)
@@ -123,7 +123,7 @@ devDependencies:
     version: 0.25.1(rollup@2.79.1)(vue@3.3.4)
   vite:
     specifier: ^4.3.9
-    version: 4.3.9(sass@1.62.1)
+    version: 4.3.9(sass@1.63.4)
   vite-plugin-banner:
     specifier: ^0.7.0
     version: 0.7.0
@@ -1561,7 +1561,7 @@ packages:
       '@babel/core': 7.21.3
       '@babel/plugin-transform-typescript': 7.21.3(@babel/core@7.21.3)
       '@vue/babel-plugin-jsx': 1.1.1(@babel/core@7.21.3)
-      vite: 4.3.9(sass@1.62.1)
+      vite: 4.3.9(sass@1.63.4)
       vue: 3.3.4
     transitivePeerDependencies:
       - supports-color
@@ -1574,7 +1574,7 @@ packages:
       vite: ^4.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 4.3.9(sass@1.62.1)
+      vite: 4.3.9(sass@1.63.4)
       vue: 3.3.4
     dev: true
 
@@ -6734,8 +6734,8 @@ packages:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
     dev: true
 
-  /sass@1.62.1:
-    resolution: {integrity: sha512-NHpxIzN29MXvWiuswfc1W3I0N8SXBd8UR26WntmDlRYf0bSADnwnOjsyMZ3lMezSlArD33Vs3YFhp7dWvL770A==}
+  /sass@1.63.4:
+    resolution: {integrity: sha512-Sx/+weUmK+oiIlI+9sdD0wZHsqpbgQg8wSwSnGBjwb5GwqFhYNwwnI+UWZtLjKvKyFlKkatRK235qQ3mokyPoQ==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
@@ -7320,8 +7320,8 @@ packages:
       stylelint: 15.7.0
     dev: true
 
-  /stylelint-scss@5.0.0(stylelint@15.7.0):
-    resolution: {integrity: sha512-5Ee5kG3JIcP2jk2PMoFMiNmW/815V+wK5o37X5ke90ihWMpPXI9iyqeA6zEWipWSRXeQc0kqbd7hKqiR+wPKNA==}
+  /stylelint-scss@5.0.1(stylelint@15.7.0):
+    resolution: {integrity: sha512-n87iCRZrr2J7//I/QFsDXxFLnHKw633U4qvWZ+mOW6KDAp/HLj06H+6+f9zOuTYy+MdGdTuCSDROCpQIhw5fvQ==}
     peerDependencies:
       stylelint: ^14.5.1 || ^15.0.0
     dependencies:
@@ -7963,7 +7963,7 @@ packages:
       chalk: 4.1.2
       debug: 4.3.4
       fs-extra: 10.1.0
-      vite: 4.3.9(sass@1.62.1)
+      vite: 4.3.9(sass@1.63.4)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -7985,7 +7985,7 @@ packages:
       fast-glob: 3.2.12
       mockjs: 1.1.0
       path-to-regexp: 6.2.1
-      vite: 4.3.9(sass@1.62.1)
+      vite: 4.3.9(sass@1.63.4)
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -8008,7 +8008,7 @@ packages:
       json5: 2.2.3
       local-pkg: 0.4.3
       picocolors: 1.0.0
-      vite: 4.3.9(sass@1.62.1)
+      vite: 4.3.9(sass@1.63.4)
       yaml: 2.3.1
     transitivePeerDependencies:
       - supports-color
@@ -8038,7 +8038,7 @@ packages:
       pathe: 0.2.0
       svg-baker: 1.7.0
       svgo: 2.8.0
-      vite: 4.3.9(sass@1.62.1)
+      vite: 4.3.9(sass@1.63.4)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -8057,7 +8057,7 @@ packages:
       kolorist: 1.8.0
       magic-string: 0.30.0
       shell-quote: 1.8.1
-      vite: 4.3.9(sass@1.62.1)
+      vite: 4.3.9(sass@1.63.4)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -8069,11 +8069,11 @@ packages:
       vue-router: '>=4.0.14'
     dependencies:
       local-pkg: 0.4.3
-      vite: 4.3.9(sass@1.62.1)
+      vite: 4.3.9(sass@1.63.4)
       vue-router: 4.2.2(vue@3.3.4)
     dev: true
 
-  /vite@4.3.9(sass@1.62.1):
+  /vite@4.3.9(sass@1.63.4):
     resolution: {integrity: sha512-qsTNZjO9NoJNW7KnOrgYwczm0WctJ8m/yqYAMAK9Lxt4SoySUfS5S8ia9K7JHpa3KEeMfyF8LoJ3c5NeBJy6pg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -8101,7 +8101,7 @@ packages:
       esbuild: 0.17.19
       postcss: 8.4.24
       rollup: 3.23.1
-      sass: 1.62.1
+      sass: 1.63.4
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
