@@ -32,7 +32,7 @@
 <table>
     <tr>
         <th colspan="3" align="center">
-            <a href="https://hooray.gitee.io/fantastic-admin/" target="_blank">Fantastic-admin</a>
+            <a href="https://fantastic-admin.gitee.io/" target="_blank">Fantastic-admin</a>
         </th>
     </tr>
     <tr>
@@ -41,21 +41,21 @@
         </th>
     </tr>
     <tr>
-        <td><img src="https://hooray.gitee.io/fantastic-admin/preview1.png" /></td>
-        <td><img src="https://hooray.gitee.io/fantastic-admin/preview2.png" /></td>
-        <td><img src="https://hooray.gitee.io/fantastic-admin/preview3.png" /></td>
+        <td><img src="https://fantastic-admin.gitee.io/preview1.png" /></td>
+        <td><img src="https://fantastic-admin.gitee.io/preview2.png" /></td>
+        <td><img src="https://fantastic-admin.gitee.io/preview3.png" /></td>
     </tr>
     <tr>
-        <td><img src="https://hooray.gitee.io/fantastic-admin/preview4.png" /></td>
-        <td><img src="https://hooray.gitee.io/fantastic-admin/preview5.png" /></td>
-        <td><img src="https://hooray.gitee.io/fantastic-admin/preview6.png" /></td>
+        <td><img src="https://fantastic-admin.gitee.io/preview4.png" /></td>
+        <td><img src="https://fantastic-admin.gitee.io/preview5.png" /></td>
+        <td><img src="https://fantastic-admin.gitee.io/preview6.png" /></td>
     </tr>
 </table>
 
 <table>
     <tr>
         <th colspan="3" align="center">
-            <a href="https://hooray.gitee.io/one-step-admin/" target="_blank">One-step-admin</a>
+            <a href="https://one-step-admin.gitee.io/" target="_blank">One-step-admin</a>
         </th>
     </tr>
     <tr>
@@ -64,13 +64,13 @@
         </th>
     </tr>
     <tr>
-        <td><img src="https://hooray.gitee.io/one-step-admin/preview1.png" /></td>
-        <td><img src="https://hooray.gitee.io/one-step-admin/preview2.png" /></td>
-        <td><img src="https://hooray.gitee.io/one-step-admin/preview3.png" /></td>
+        <td><img src="https://one-step-admin.gitee.io/preview1.png" /></td>
+        <td><img src="https://one-step-admin.gitee.io/preview2.png" /></td>
+        <td><img src="https://one-step-admin.gitee.io/preview3.png" /></td>
     </tr>
     <tr>
-        <td><img src="https://hooray.gitee.io/one-step-admin/preview4.png" /></td>
-        <td><img src="https://hooray.gitee.io/one-step-admin/preview5.png" /></td>
-        <td><img src="https://hooray.gitee.io/one-step-admin/preview6.png" /></td>
+        <td><img src="https://one-step-admin.gitee.io/preview4.png" /></td>
+        <td><img src="https://one-step-admin.gitee.io/preview5.png" /></td>
+        <td><img src="https://one-step-admin.gitee.io/preview6.png" /></td>
     </tr>
 </table>
