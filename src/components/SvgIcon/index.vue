@@ -1,11 +1,11 @@
 <script setup lang="ts">
-defineProps<{
-  name: string
-}>()
-
 defineOptions({
   name: 'SvgIcon',
 })
+
+defineProps<{
+  name: string
+}>()
 </script>
 
 <template>
