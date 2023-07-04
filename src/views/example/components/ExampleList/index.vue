@@ -1,11 +1,11 @@
 <script setup lang="ts">
-defineProps<{
-  list: []
-}>()
-
 defineOptions({
   name: 'ExampleList',
 })
+
+defineProps<{
+  list: string[]
+}>()
 </script>
 
 <template>
