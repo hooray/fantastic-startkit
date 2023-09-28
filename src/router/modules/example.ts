@@ -24,10 +24,6 @@ const routes: RouteRecordRaw = {
       },
     },
     {
-      path: 'sprite',
-      component: () => import('@/views/example/sprite.vue'),
-    },
-    {
       path: 'global-component',
       component: () => import('@/views/example/global-component.vue'),
     },

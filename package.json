@@ -63,7 +63,6 @@
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-mock": "^2.9.6",
     "vite-plugin-pages": "^0.31.0",
-    "vite-plugin-spritesmith": "^0.1.1",
     "vite-plugin-svg-icons": "^2.0.1",
     "vite-plugin-vue-inspector": "^3.7.1",
     "vite-plugin-vue-meta-layouts": "^0.3.0",

@@ -7,9 +7,6 @@
       <RouterLink to="/example/iconify">
         iconify
       </RouterLink>
-      <RouterLink to="/example/sprite">
-        精灵图
-      </RouterLink>
       <RouterLink to="/example/global-component">
         全局组件
       </RouterLink>
