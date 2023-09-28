@@ -17,6 +17,13 @@ const routes: RouteRecordRaw = {
       },
     },
     {
+      path: 'iconify',
+      component: () => import('@/views/example/iconify.vue'),
+      meta: {
+        title: 'Iconify',
+      },
+    },
+    {
       path: 'sprite',
       component: () => import('@/views/example/sprite.vue'),
     },

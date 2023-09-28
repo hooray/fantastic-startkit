@@ -4,6 +4,9 @@
       <RouterLink to="/example/svgicon">
         svg icon
       </RouterLink>
+      <RouterLink to="/example/iconify">
+        iconify
+      </RouterLink>
       <RouterLink to="/example/sprite">
         精灵图
       </RouterLink>
