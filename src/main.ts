@@ -6,6 +6,8 @@ import router from './router'
 // 加载 svg 图标
 import 'virtual:svg-icons-register'
 
+import 'virtual:uno.css'
+
 // 全局样式
 import '@/assets/styles/globals.scss'
 
