@@ -5,7 +5,7 @@
 使用本套件前，需要在本地依次安装好 [Node.js](https://nodejs.org/zh-cn/), [pnpm](https://pnpm.io/zh/), [Git](https://git-scm.com/) 和 [Visual Studio Code](https://code.visualstudio.com/)。
 
 :::warning 注意
-Node.js 需要使用 14.18+ / 16+ 版本，建议为 18.12+ 版本。
+Node.js 需要使用 16+ 版本，建议为 18+ 版本。
 :::
 
 然后在 Visual Studio Code 里安装好以下扩展：
@@ -14,10 +14,13 @@ Node.js 需要使用 14.18+ / 16+ 版本，建议为 18.12+ 版本。
 - [DotENV](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv)
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
-- [Vue Language Features](https://marketplace.visualstudio.com/items?itemName=vue.volar)
+- [Vue Language Features](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+- [TypeScript Vue Plugin](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin)
+
+在 Visual Studio Code 里打开源码的文件夹，右下角会自动提示需要安装的依赖，直接点击安装即可。
 
 ::: tip
-以上 5 个为 Visual Studio Code 必备扩展，以下则是作者建议安装的扩展，安装它们将在一定程度上提升开发效率。
+以上 6 个为开发时必备扩展，以下则是作者建议安装的扩展，安装它们将在一定程度上提升开发效率。
 
 - [Chinese (Simplified) Language Pack for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-zh-hans) 中文语言包
 - [Color Highlight](https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight) 在代码中高亮颜色
@@ -26,9 +29,9 @@ Node.js 需要使用 14.18+ / 16+ 版本，建议为 18.12+ 版本。
 - [indent-rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow) 彩虹缩进提示
 :::
 
-除此之外，还需要准备好开发使用的浏览器，推荐使用 [Chrome](https://www.google.cn/chrome/) ，并且在 Chrome 里安装好 [Vue.js devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 扩展，这一步很重要，安装 Vue 官方提供的调试工具将大大提升解决 bug 的效率。
+除此之外，还需要准备好开发使用的浏览器，推荐使用 [Chrome](https://www.google.cn/chrome/) ，并且在 Chrome 里安装好 [Vue.js devtools 扩展](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)，安装 Vue 官方提供的调试工具在一定程度上可以提升解决 bug 的效率，当然这个扩展开启后，可能在开发环境操作会有些许卡顿，建议不需要时候可以将扩展禁用。
 
-不过由于安装 Vue.js devtools 需要访问 Chrome 应用商店，如果在大陆地区访问，需要自行准备相关**可访问外网**的工具。如果不具备该条件，也可访问 [Vue.js devtools](https://devtools.vuejs.org/) 官网了解本地构建或者下载支持 Firefox 的 Vue.js devtools 。
+不过由于安装 Vue.js devtools 需要访问 Chrome 应用商店，如果在大陆地区访问，需要自行准备相关**可访问外网**的工具。如果不具备该条件，也可访问 [Vue.js devtools 官网](https://devtools.vuejs.org/) 了解本地构建或者下载支持 Edge/Firefox 的 Vue.js devtools 。
 
 ## 拉取代码
 
@@ -62,25 +65,17 @@ git clone https://github.com/hooray/fantastic-startkit.git
 git clone https://gitee.com/hooray/fantastic-startkit.git
 ```
 
-::: tip
-由于框架有使用到 simple-git-hooks 这个依赖包，所以请确保在安装依赖前，已经使用 `git init` 对项目进行过 git 环境初始化，如果你在安装依赖后再初始化了 git 环境，请在 git 环境初始化之后再执行一遍 `pnpm install` 安装命令。
-
-了解更多请阅读《[代码规范 - simple-git-hooks & lint-staged](coding-standard#simple-git-hooks-lint-staged)》。
-
-此外，如果 git 仓库目录和框架目录并非同一个，则需要在 `package.json` 中修改 `postinstall` 脚本，切换到 git 所在目录。例如 git 目录是 `project/` ，而框架目录是 `project/fantastic-admin/` ，则在 `package.json` 里找到 `"postinstall": "simple-git-hooks"` 并修改为 `"postinstall": "cd .. && simple-git-hooks"` 即可。
-:::
-
 ::: warning 报错
-安装依赖时提示 404 ，或者安装结束后，运行时提示「 'vite' 不是内部或外部命令，也不是可运行的程序或批处理文件 」，都些都是依赖未安装成功导致的。可以尝试执行 `pnpm config set registry https://registry.npmmirror.com/` 切换为国内淘宝源（也可以使用 [nrm](https://github.com/Pana/nrm) 一键切换源），然后删除根目录下 `/node_modules` 文件夹并重新安装依赖。
+安装依赖时提示 404 ，或者安装结束后，运行时提示「 'vite' 不是内部或外部命令，也不是可运行的程序或批处理文件 」，都些都是依赖未安装成功导致的。可以尝试执行 `pnpm config set registry https://registry.npmmirror.com/` 切换为国内 npmmirror 源（也可以使用 [nrm](https://github.com/Pana/nrm) 一键切换源），然后删除根目录下 `/node_modules` 文件夹并重新安装依赖。
 
 如果依旧无法运行（基本不太可能），可尝试删除根目录下 `/node_modules` 文件夹与 `pnpm-lock.yaml` 文件后，再删除 `package.json` 中 `"preinstall": "npx only-allow pnpm"` 这句脚本，最后使用 `npm / yarn` 进行安装依赖。但需要清楚一点，这样操作后，将无法与官方环境锁定的依赖包版本保持一致，可能会出现无法预知的问题，非必要情况下，请勿使用该方案。
 :::
 
 ## 技术栈
 
-了解并熟悉本套件使用到的技术栈，能让你更得心应手。
+了解并熟悉框架使用到的技术栈，能让你使用本框架更得心应手。
 
 - [Vite](https://cn.vitejs.dev/)
 - [Vue 3](https://cn.vuejs.org/) ([v3 迁移指南](https://v3-migration.vuejs.org/))
-- [Vue Router 4](https://next.router.vuejs.org/zh/)
-- [Pinia](https://pinia.vuejs.org/)
+- [Vue Router 4](https://router.vuejs.org/zh/)
+- [Pinia](https://pinia.vuejs.org/zh/)

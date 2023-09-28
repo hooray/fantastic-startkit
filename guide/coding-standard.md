@@ -1,12 +1,14 @@
 # 代码规范
 
-## IDE 编辑器
-
 :::tip
-请确保已阅读《[准备工作 - 开发环境](start.md#开发环境)》，并且按照文档说明安装好相关软件及扩展。
+请确保已阅读《[准备工作 - 开发环境](start#开发环境)》，并且按照文档说明安装好相关软件及扩展。
 :::
 
-为保证代码风格统一，请使用 [Visual Studio Code](https://code.visualstudio.com/) 做为开发 IDE ，本套件已提供相关配置文件，可直接测试效果：在保存代码时，会自动对当前文件进行代码格式化操作。
+为保证代码风格统一，请使用 [Visual Studio Code](https://code.visualstudio.com/) 做为开发 IDE ，框架源码里已提供相关配置文件，可直接测试效果：在保存代码时，会自动对当前文件进行代码格式化操作。
+
+## IDE 配置
+
+配置文件为 `.editorconfig` ，通常情况下无需做任何修改。
 
 ## ESLint
 
@@ -36,6 +38,17 @@
 
 ::: tip 注意
 请确保在安装依赖前，已经使用 `git init` 对项目进行过 git 环境初始化，如果你在安装依赖后再初始化了 git 环境，请在 git 环境初始化之后再执行一遍 `pnpm install` 安装命令。
+
+此外，如果 git 仓库目录和框架目录并非同一个，则需要在 `package.json` 中修改 `postinstall` 脚本，切换到 git 所在目录。例如 git 目录是 `project/` ，而框架目录是 `project/fantastic-startkit/` ，则在 `package.json` 里找到 `simple-git-hooks` 配置并修改：
+
+```json {2}
+"simple-git-hooks": {
+  "pre-commit": "cd ./fantastic-startkit/ && pnpm lint-staged",
+  "preserveUnused": true
+}
+```
+
+修改后重新执行一下 `pnpm install` 即可。
 :::
 
 ### 移除
