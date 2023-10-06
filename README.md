@@ -1,6 +1,6 @@
 <h1 align="center">Fantastic-startkit</h1>
 
-<p align="center">一款<b>简单好用</b>的 Vue 项目启动套件</p>
+<p align="center">一款<b>简单好用</b>的 Vue3 项目启动套件</p>
 
 <p align="center">
     <a href="https://hooray.gitee.io/fantastic-startkit/" target="_blank">官网</a>
@@ -15,7 +15,7 @@
 - 全局组件自动引入
 - 全局 SCSS 资源引入
 - 支持 Unocss
-- 支持 SVG 文件图标、iconify 图标、Unocss 图标
+- 支持 SVG 文件图标、Iconify 图标、UnoCSS 图标
 - 支持 mock 数据，可摆脱后端束缚独立开发
 - 支持 gzip / brotli 优化项目体积，提高加载速度
 - 结合 IDE 插件、ESlint 、stylelint 、Git 钩子，轻松实现团队代码规范
