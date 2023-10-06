@@ -1,12 +1,12 @@
 export default {
   title: 'Fantastic-startkit 官方文档',
-  description: '一款开箱即用的 Vue 项目启动套件，基于 Vue3 & Vite4',
+  description: '一款简单好用的 Vue3 项目启动套件',
   lang: 'zh-CN',
   base: '/fantastic-startkit/',
   head: [
-    ['meta', { name: 'keywords', content: 'vue,router,vuex,pinia,typescript,template,startkit,starter,启动套件,模板' }],
-    ['keywords', { content: 'vue,router,vuex,pinia,typescript,template,startkit,starter,启动套件,模板' }],
-    ['description', { content: '一款开箱即用的 Vue 项目启动套件，基于 Vue3 & Vite4' }]
+    ['meta', { name: 'keywords', content: 'vue,vite,router,vuex,pinia,typescript,template,startkit,starter,启动套件,模板' }],
+    ['keywords', { content: 'vue,vite,router,vuex,pinia,typescript,template,startkit,starter,启动套件,模板' }],
+    ['description', { content: '一款简单好用的 Vue3 项目启动套件' }]
   ],
   themeConfig: {
     footer: {
