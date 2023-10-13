@@ -1,16 +1,16 @@
 {
   "compilerOptions": {
     "target": "ESNext",
+    "jsx": "preserve",
     "lib": [
       "ESNext",
       "DOM",
       "DOM.Iterable"
     ],
-    "jsx": "preserve",
     "useDefineForClassFields": true,
+    "baseUrl": "./",
     "module": "ESNext",
     "moduleResolution": "Node",
-    "baseUrl": "./",
     "paths": {
       "@/*": [
         "src/*"
@@ -19,19 +19,19 @@
         "src/types/*"
       ]
     },
+    "resolveJsonModule": true,
     "types": [
       "vite/client",
       "vite-plugin-pages/client",
       "vite-plugin-vue-meta-layouts/client"
     ],
     "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
     "allowJs": false,
-    "sourceMap": true,
-    "noEmit": true,
-    "isolatedModules": true,
-    "esModuleInterop": true,
     "strict": true,
+    "noEmit": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
     "skipLibCheck": true
   },
   "references": [
