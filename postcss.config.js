@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   plugins: {
     // 'postcss-px2vp': {
     //   // 需要转换的单位，默认为"px"
