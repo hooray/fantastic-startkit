@@ -1,6 +1,7 @@
 {
   "extends": [
     "stylelint-stylistic/config",
+    "stylelint-config-idiomatic-order",
     "stylelint-config-standard-scss",
     "stylelint-config-standard-vue/scss"
   ],

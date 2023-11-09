@@ -44,14 +44,14 @@
   margin-bottom: 10px;
 
   a {
-    text-decoration: none;
     font-size: 14px;
+    text-decoration: none;
 
     &::after {
-      content: "|";
       margin: 0 10px;
-      font-weight: normal;
+      content: "|";
       font-size: 14px;
+      font-weight: normal;
     }
 
     &:last-child::after {
@@ -59,8 +59,8 @@
     }
 
     &.router-link-active {
-      font-weight: bold;
       font-size: 18px;
+      font-weight: bold;
     }
   }
 }
