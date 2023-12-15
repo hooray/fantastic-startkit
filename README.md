@@ -3,8 +3,8 @@
 <p align="center">一款<b>简单好用</b>的 Vue3 项目启动套件</p>
 
 <p align="center">
-    <a href="https://hooray.gitee.io/fantastic-startkit/" target="_blank">官网</a>
-    ( <a href="https://hooray.github.io/fantastic-startkit/" target="_blank">备用</a> )
+  <a href="https://hooray.gitee.io/fantastic-startkit/" target="_blank">官网</a>
+  ( <a href="https://hooray.github.io/fantastic-startkit/" target="_blank">备用</a> )
 <p>
 
 ## 特点
@@ -31,47 +31,47 @@
 ## 生态
 
 <table>
-    <tr>
-        <th colspan="3" align="center">
-            <a href="https://fantastic-admin.gitee.io/" target="_blank">Fantastic-admin</a>
-        </th>
-    </tr>
-    <tr>
-        <th colspan="3" align="center">
-            一款开箱即用的 Vue 中后台管理系统框架
-        </th>
-    </tr>
-    <tr>
-        <td><img src="https://fantastic-admin.gitee.io/preview1.png" /></td>
-        <td><img src="https://fantastic-admin.gitee.io/preview2.png" /></td>
-        <td><img src="https://fantastic-admin.gitee.io/preview3.png" /></td>
-    </tr>
-    <tr>
-        <td><img src="https://fantastic-admin.gitee.io/preview4.png" /></td>
-        <td><img src="https://fantastic-admin.gitee.io/preview5.png" /></td>
-        <td><img src="https://fantastic-admin.gitee.io/preview6.png" /></td>
-    </tr>
+  <tr>
+    <th colspan="3" align="center">
+      <a href="https://fantastic-admin.gitee.io/" target="_blank">Fantastic-admin</a>
+    </th>
+  </tr>
+  <tr>
+    <th colspan="3" align="center">
+      一款开箱即用的 Vue 中后台管理系统框架
+    </th>
+  </tr>
+  <tr>
+    <td><img src="https://fantastic-admin.gitee.io/preview1.png" /></td>
+    <td><img src="https://fantastic-admin.gitee.io/preview2.png" /></td>
+    <td><img src="https://fantastic-admin.gitee.io/preview3.png" /></td>
+  </tr>
+  <tr>
+    <td><img src="https://fantastic-admin.gitee.io/preview4.png" /></td>
+    <td><img src="https://fantastic-admin.gitee.io/preview5.png" /></td>
+    <td><img src="https://fantastic-admin.gitee.io/preview6.png" /></td>
+  </tr>
 </table>
 
 <table>
-    <tr>
-        <th colspan="3" align="center">
-            <a href="https://one-step-admin.gitee.io/" target="_blank">One-step-admin</a>
-        </th>
-    </tr>
-    <tr>
-        <th colspan="3" align="center">
-            一款干啥都快人一步的 Vue 中后台管理系统框架
-        </th>
-    </tr>
-    <tr>
-        <td><img src="https://one-step-admin.gitee.io/preview1.png" /></td>
-        <td><img src="https://one-step-admin.gitee.io/preview2.png" /></td>
-        <td><img src="https://one-step-admin.gitee.io/preview3.png" /></td>
-    </tr>
-    <tr>
-        <td><img src="https://one-step-admin.gitee.io/preview4.png" /></td>
-        <td><img src="https://one-step-admin.gitee.io/preview5.png" /></td>
-        <td><img src="https://one-step-admin.gitee.io/preview6.png" /></td>
-    </tr>
+  <tr>
+    <th colspan="3" align="center">
+      <a href="https://one-step-admin.gitee.io/" target="_blank">One-step-admin</a>
+    </th>
+  </tr>
+  <tr>
+    <th colspan="3" align="center">
+      一款干啥都快人一步的 Vue 中后台管理系统框架
+    </th>
+  </tr>
+  <tr>
+    <td><img src="https://one-step-admin.gitee.io/preview1.png" /></td>
+    <td><img src="https://one-step-admin.gitee.io/preview2.png" /></td>
+    <td><img src="https://one-step-admin.gitee.io/preview3.png" /></td>
+  </tr>
+  <tr>
+    <td><img src="https://one-step-admin.gitee.io/preview4.png" /></td>
+    <td><img src="https://one-step-admin.gitee.io/preview5.png" /></td>
+    <td><img src="https://one-step-admin.gitee.io/preview6.png" /></td>
+  </tr>
 </table>
