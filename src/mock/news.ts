@@ -1,4 +1,7 @@
-export default [
+import { defineFakeRoute } from 'vite-plugin-fake-server/client'
+import Mock from 'mockjs'
+
+export default defineFakeRoute([
   {
     url: '/mock/news/list',
     method: 'get',
@@ -6,14 +9,14 @@ export default [
       return {
         error: '',
         status: 1,
-        data: {
+        data: Mock.mock({
           'list|5-10': [
             {
               title: '@ctitle',
             },
           ],
-        },
+        }),
       }
     },
   },
-]
+])
