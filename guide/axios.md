@@ -81,7 +81,7 @@ server: {
 Mock 数据是前端开发过程中必不可少的一环，是分离前后端开发的关键链路。通过预先跟服务器端约定好的接口，模拟请求数据甚至逻辑，能够让前端开发独立自主，不会被服务端的开发所阻塞。
 
 :::tip
-本套件使用 [vite-plugin-mock](https://github.com/anncwb/vite-plugin-mock) 提供开发和生产模拟服务。
+本套件使用 [vite-plugin-fake-server](https://github.com/condorheroblog/vite-plugin-fake-server) 提供开发和生产模拟服务。
 
 Mock 数据编写规则请阅读 [Mockjs](https://github.com/nuysoft/Mock) 官方文档。
 :::
@@ -93,25 +93,28 @@ mock 文件存放在 `/src/mock/` 下，建议按照不同模块区分文件夹�
 以下为示例代码：
 
 ```ts
-export default [
+import { defineFakeRoute } from 'vite-plugin-fake-server/client'
+import Mock from 'mockjs'
+
+export default defineFakeRoute([
   {
     url: '/mock/news/list',
     method: 'get',
-    response: ({ query }) => {
+    response: () => {
       return {
         error: '',
         status: 1,
-        data: {
+        data: Mock.mock({
           'list|5-10': [
             {
-              'title': '@ctitle',
+              title: '@ctitle',
             },
           ],
-        },
+        }),
       }
     },
   },
-]
+])
 ```
 
 参数获取：
@@ -155,5 +158,3 @@ api.post('news/create', {
 需要注意一点，如果项目中有涉及到上传功能，请彻底关闭线上环境 mock ，在环境配置里设置 `VITE_BUILD_MOCK = false` ，不然线上环境将会报错。
 
 开发环境与生产环境使用 mock 差异不大，比较大的区别是生产环境里调用 mock 接口，在控制台内看不到接口请求日志。
-
-更多介绍请移步 [vite-plugin-mock](https://github.com/anncwb/vite-plugin-mock)
