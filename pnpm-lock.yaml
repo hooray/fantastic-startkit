@@ -44,8 +44,8 @@ devDependencies:
     specifier: ^2.6.1
     version: 2.6.1(@unocss/eslint-plugin@0.58.3)(@vue/compiler-sfc@3.4.5)(eslint@8.56.0)(typescript@5.3.3)
   '@iconify/json':
-    specifier: ^2.2.165
-    version: 2.2.165
+    specifier: ^2.2.166
+    version: 2.2.166
   '@iconify/vue':
     specifier: ^4.1.1
     version: 4.1.1(vue@3.4.5)
@@ -137,8 +137,8 @@ devDependencies:
     specifier: ^0.5.1
     version: 0.5.1(vite@5.0.11)
   vite-plugin-fake-server:
-    specifier: ^2.0.2
-    version: 2.0.2
+    specifier: ^2.1.0
+    version: 2.1.0
   vite-plugin-pages:
     specifier: ^0.32.0
     version: 0.32.0(@vue/compiler-sfc@3.4.5)(vite@5.0.11)
@@ -1418,8 +1418,8 @@ packages:
     resolution: {integrity: sha512-dvuCeX5fC9dXgJn9t+X5atfmgQAzUOWqS1254Gh0m6i8wKd10ebXkfNKiRK+1GWi/yTvvLDHpoxLr0xxxeslWw==}
     dev: true
 
-  /@iconify/json@2.2.165:
-    resolution: {integrity: sha512-KlwAxSejmRGx7D9pvT/OanmraEWk364phfrCPYBOMQx4nO1aQSDUBLkUFMAWobqjBMv6wraoiacuDVwAaxuJcQ==}
+  /@iconify/json@2.2.166:
+    resolution: {integrity: sha512-Cq+t8xOBWU2Dt+bECLvGnF6yxj5hEEF5rmHiEvVR68flgcmG6/ph5xDr9+YWqT3Ita1WxDtj5lVWxoEe/c+U3A==}
     dependencies:
       '@iconify/types': 2.0.0
       pathe: 1.1.1
@@ -8328,15 +8328,14 @@ packages:
       - supports-color
     dev: true
 
-  /vite-plugin-fake-server@2.0.2:
-    resolution: {integrity: sha512-/lQx7epNnXTW0nZJhHx6Yq5p3dD4eGLWxwveyylaE/cue0xaNzYIrDSWgUnOkcK4KBqWRetBJaz4dqQ5W7J8XQ==}
+  /vite-plugin-fake-server@2.1.0:
+    resolution: {integrity: sha512-Dt8gGsgRJDiUrYcAfy0F6RxV/oknnEfkCOqnUim0jXI7n4peL3T+w6CAQ6c7MqEYdIx4g9VzdWG4nQcEWEPkpg==}
     dependencies:
       bundle-import: 0.0.1
       chokidar: 3.5.3
       fast-glob: 3.3.2
       path-to-regexp: 6.2.1
       picocolors: 1.0.0
-      xhook: 1.6.2
     dev: true
 
   /vite-plugin-pages@0.32.0(@vue/compiler-sfc@3.4.5)(vite@5.0.11):
@@ -8651,10 +8650,6 @@ packages:
     dependencies:
       imurmurhash: 0.1.4
       signal-exit: 4.1.0
-    dev: true
-
-  /xhook@1.6.2:
-    resolution: {integrity: sha512-kmOpJ5SyqpubjIgVXWIdTWYqZmTr3mlqaCa8ISg2IirkpvUOfbWeQbJICqVjQ8fo5tkG3FsKi/Pb2TvUOlMuMQ==}
     dev: true
 
   /xml-name-validator@4.0.0:
