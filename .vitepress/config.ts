@@ -8,20 +8,20 @@ export default defineConfig({
   head: [
     ['meta', { name: 'keywords', content: 'vue,vite,router,vuex,pinia,typescript,template,startkit,starter,启动套件,模板' }],
     ['keywords', { content: 'vue,vite,router,vuex,pinia,typescript,template,startkit,starter,启动套件,模板' }],
-    ['description', { content: '一款简单好用的 Vue3 项目启动套件' }]
+    ['description', { content: '一款简单好用的 Vue3 项目启动套件' }],
   ],
   themeConfig: {
     footer: {
-      copyright: 'Copyright © 2020-present Fantastic-startkit'
+      copyright: 'Copyright © 2020-present Fantastic-startkit',
     },
     nav: [
       {
         text: '指南',
-        link: '/guide/start'
+        link: '/guide/start',
       },
       {
         text: '交流社区',
-        link: 'https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&appChannel=share&inviteCode=MwjoF&appChannel=share&businessType=9&from=246610&biz=ka'
+        link: 'https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&appChannel=share&inviteCode=MwjoF&appChannel=share&businessType=9&from=246610&biz=ka',
       },
     ],
     socialLinks: [
@@ -32,7 +32,8 @@ export default defineConfig({
         link: 'https://gitee.com/hooray/fantastic-startkit',
       },
       {
-        icon: 'github', link: 'https://github.com/hooray/fantastic-startkit',
+        icon: 'github',
+        link: 'https://github.com/hooray/fantastic-startkit',
       },
     ],
     sidebar: {
@@ -51,10 +52,10 @@ export default defineConfig({
             { text: '常用 API', link: '/guide/api' },
             { text: '移动端支持', link: '/guide/mobile-support' },
             { text: '构建与预览', link: '/guide/build' },
-            { text: '开发辅助', link: '/guide/assistance' }
-          ]
-        }
-      ]
+            { text: '开发辅助', link: '/guide/assistance' },
+          ],
+        },
+      ],
     },
     outline: 'deep',
     search: {
@@ -65,10 +66,10 @@ export default defineConfig({
           modal: {
             noResultsText: '无法找到相关结果',
             resetButtonTitle: '清除查询条件',
-            footer: { selectText: '选择', navigateText: '切换', closeText: '关闭' }
-          }
-        }
-      }
-    }
-  }
+            footer: { selectText: '选择', navigateText: '切换', closeText: '关闭' },
+          },
+        },
+      },
+    },
+  },
 })
