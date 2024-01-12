@@ -118,6 +118,6 @@
 }
 .aside .special .sponsor-item img {
   max-width: 120px;
-  max-height: 48px;
+  max-height: 36px;
 }
 </style>
