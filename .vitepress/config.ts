@@ -1,4 +1,6 @@
-export default {
+import { defineConfig } from 'vitepress'
+
+export default defineConfig({
   title: 'Fantastic-startkit 官方文档',
   description: '一款简单好用的 Vue3 项目启动套件',
   lang: 'zh-CN',
@@ -21,19 +23,6 @@ export default {
         text: '交流社区',
         link: 'https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&appChannel=share&inviteCode=MwjoF&appChannel=share&businessType=9&from=246610&biz=ka'
       },
-      {
-        text: '生态',
-        items: [
-          {
-            text: 'Fantastaic-admin',
-            link: 'https://fantastic-admin.gitee.io/'
-          },
-          {
-            text: 'One-step-admin',
-            link: 'https://one-step-admin.gitee.io/'
-          }
-        ]
-      }
     ],
     socialLinks: [
       {
@@ -82,4 +71,4 @@ export default {
       }
     }
   }
-}
+})

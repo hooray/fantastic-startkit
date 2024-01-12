@@ -1,9 +1,12 @@
 {
+  "type": "module",
   "scripts": {
     "dev": "vitepress dev .",
     "build": "vitepress build ."
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^2.6.2",
+    "eslint": "^8.56.0",
     "vitepress": "1.0.0-rc.32",
     "vue": "^3.3.12"
   }
