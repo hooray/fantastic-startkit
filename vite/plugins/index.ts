@@ -12,6 +12,7 @@ import createMock from './mock'
 import createLayouts from './layouts'
 import createPages from './pages'
 import createCompression from './compression'
+import createArchiver from './archiver'
 import createConsole from './console'
 import createBanner from './banner'
 
@@ -30,6 +31,7 @@ export default function createVitePlugins(viteEnv, isBuild = false) {
   vitePlugins.push(createLayouts())
   vitePlugins.push(createPages())
   vitePlugins.push(...createCompression(viteEnv, isBuild))
+  vitePlugins.push(createArchiver(viteEnv))
   vitePlugins.push(createConsole())
   vitePlugins.push(createBanner())
   return vitePlugins
