@@ -34,6 +34,8 @@ VITE_BUILD_MOCK = true
 VITE_BUILD_SOURCEMAP = true
 # 是否在打包时开启压缩，支持 gzip 和 brotli
 VITE_BUILD_COMPRESS =
+# 是否在打包后生成存档，支持 zip 和 tar
+VITE_BUILD_ARCHIVE =
 ```
 
 ## 生产环境 `.env.production`
@@ -54,6 +56,8 @@ VITE_BUILD_MOCK = false
 VITE_BUILD_SOURCEMAP = false
 # 是否在打包时开启压缩，支持 gzip 和 brotli
 VITE_BUILD_COMPRESS = gzip,brotli
+# 是否在打包后生成存档，支持 zip 和 tar
+VITE_BUILD_ARCHIVE =
 ```
 
 其中 `VITE_APP_TITLE` `VITE_APP_API_BASEURL` `VITE_APP_DEBUG_TOOL` 为必要配置，即不管是在开发、测试，还是生产环境都需要使用到。而其余配置则在不同环境下有不同用途，例如开发环境用于本地开发使用，测试环境和生产环境用于构建使用。
