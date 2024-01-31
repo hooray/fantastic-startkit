@@ -3,8 +3,8 @@
 <p align="center">一款<b>简单好用</b>的 Vue3 项目启动套件</p>
 
 <p align="center">
-  <a href="https://hooray.gitee.io/fantastic-startkit/" target="_blank">官网</a>
-  ( <a href="https://hooray.github.io/fantastic-startkit/" target="_blank">备用</a> )
+  <a href="https://hooray.github.io/fantastic-startkit/" target="_blank">官网</a>
+  ( <a href="https://hooray.gitee.io/fantastic-startkit/" target="_blank">备用</a> )
 <p>
 
 ## 特点
@@ -33,7 +33,7 @@
 <table>
   <tr>
     <th colspan="3" align="center">
-      <a href="https://fantastic-admin.gitee.io/" target="_blank">Fantastic-admin</a>
+      <a href="https://fantastic-admin.github.io/" target="_blank">Fantastic-admin</a>
     </th>
   </tr>
   <tr>
@@ -42,21 +42,21 @@
     </th>
   </tr>
   <tr>
-    <td><img src="https://fantastic-admin.gitee.io/preview1.png" /></td>
-    <td><img src="https://fantastic-admin.gitee.io/preview2.png" /></td>
-    <td><img src="https://fantastic-admin.gitee.io/preview3.png" /></td>
+    <td><img src="https://fantastic-admin.github.io/preview1.png" /></td>
+    <td><img src="https://fantastic-admin.github.io/preview2.png" /></td>
+    <td><img src="https://fantastic-admin.github.io/preview3.png" /></td>
   </tr>
   <tr>
-    <td><img src="https://fantastic-admin.gitee.io/preview4.png" /></td>
-    <td><img src="https://fantastic-admin.gitee.io/preview5.png" /></td>
-    <td><img src="https://fantastic-admin.gitee.io/preview6.png" /></td>
+    <td><img src="https://fantastic-admin.github.io/preview4.png" /></td>
+    <td><img src="https://fantastic-admin.github.io/preview5.png" /></td>
+    <td><img src="https://fantastic-admin.github.io/preview6.png" /></td>
   </tr>
 </table>
 
 <table>
   <tr>
     <th colspan="3" align="center">
-      <a href="https://one-step-admin.gitee.io/" target="_blank">One-step-admin</a>
+      <a href="https://one-step-admin.github.io/" target="_blank">One-step-admin</a>
     </th>
   </tr>
   <tr>
@@ -65,13 +65,13 @@
     </th>
   </tr>
   <tr>
-    <td><img src="https://one-step-admin.gitee.io/preview1.png" /></td>
-    <td><img src="https://one-step-admin.gitee.io/preview2.png" /></td>
-    <td><img src="https://one-step-admin.gitee.io/preview3.png" /></td>
+    <td><img src="https://one-step-admin.github.io/preview1.png" /></td>
+    <td><img src="https://one-step-admin.github.io/preview2.png" /></td>
+    <td><img src="https://one-step-admin.github.io/preview3.png" /></td>
   </tr>
   <tr>
-    <td><img src="https://one-step-admin.gitee.io/preview4.png" /></td>
-    <td><img src="https://one-step-admin.gitee.io/preview5.png" /></td>
-    <td><img src="https://one-step-admin.gitee.io/preview6.png" /></td>
+    <td><img src="https://one-step-admin.github.io/preview4.png" /></td>
+    <td><img src="https://one-step-admin.github.io/preview5.png" /></td>
+    <td><img src="https://one-step-admin.github.io/preview6.png" /></td>
   </tr>
 </table>
