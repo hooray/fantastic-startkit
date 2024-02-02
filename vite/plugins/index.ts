@@ -22,7 +22,7 @@ export default function createVitePlugins(viteEnv, isBuild = false) {
     vue(),
     vueJsx(),
   ]
-  vitePlugins.push(createDevtools())
+  vitePlugins.push(createDevtools(viteEnv))
   vitePlugins.push(createAutoImport())
   vitePlugins.push(createComponents())
   vitePlugins.push(createUnocss())
