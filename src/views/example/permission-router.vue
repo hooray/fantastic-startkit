@@ -5,11 +5,11 @@ meta:
 </route>
 
 <script setup lang="ts">
-import useTokenStore from '@/store/modules/token'
+import useUserStore from '@/store/modules/user'
 
-const tokenStore = useTokenStore()
+const userStore = useUserStore()
 </script>
 
 <template>
-  <div>token信息：{{ tokenStore.token }}</div>
+  <div>token信息：{{ userStore.token }}</div>
 </template>

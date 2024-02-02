@@ -5,14 +5,17 @@ meta:
 </route>
 
 <script setup lang="ts">
-import useTokenStore from '@/store/modules/token'
+import useUserStore from '@/store/modules/user'
 
 const router = useRouter()
 const route = useRoute()
-const tokenStore = useTokenStore()
+const userStore = useUserStore()
 
 function login() {
-  tokenStore.login().then(() => {
+  userStore.login({
+    account: 'admin',
+    password: '123456',
+  }).then(() => {
     // 登录成功后路由跳回
     if (route.query.redirect) {
       router.replace({

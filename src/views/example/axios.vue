@@ -4,18 +4,14 @@ meta:
 </route>
 
 <script setup lang="ts">
-import api from '@/api'
+import apiNews from '@/api/modules/news'
 
 const news = ref<any[]>([])
 
 function getInfo() {
   Promise.all([
-    api.get('news/list', {
-      baseURL: '/mock/',
-    }),
-    api.get('news/list', {
-      baseURL: '/mock/',
-    }),
+    apiNews.list(),
+    apiNews.list(),
   ]).then((res) => {
     news.value = res[0].data.list.concat(
       res[1].data.list,

@@ -4,15 +4,15 @@ meta:
 </route>
 
 <script setup lang="ts">
-import useTokenStore from '@/store/modules/token'
+import useUserStore from '@/store/modules/user'
 
 const router = useRouter()
-const tokenStore = useTokenStore()
+const userStore = useUserStore()
 
 function user() {
-  if (tokenStore.isLogin) {
+  if (userStore.isLogin) {
     // eslint-disable-next-line no-alert
-    alert(`token信息：${tokenStore.token}`)
+    alert(`token信息：${userStore.token}`)
   }
   else {
     router.push({
@@ -25,7 +25,7 @@ function user() {
 }
 
 function remove() {
-  tokenStore.logout()
+  userStore.logout()
 }
 </script>
 
