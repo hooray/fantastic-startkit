@@ -1,18 +1,7 @@
 import axios from 'axios'
 
 // import qs from 'qs'
-import router from '@/router/index'
-import useTokenStore from '@/store/modules/token'
-
-function toLogin() {
-  useTokenStore().logout()
-  router.push({
-    path: '/login',
-    query: {
-      redirect: router.currentRoute.value.fullPath,
-    },
-  })
-}
+import useUserStore from '@/store/modules/user'
 
 const api = axios.create({
   baseURL: (import.meta.env.DEV && import.meta.env.VITE_OPEN_PROXY === 'true') ? '/proxy/' : import.meta.env.VITE_APP_API_BASEURL,
@@ -22,13 +11,13 @@ const api = axios.create({
 
 api.interceptors.request.use(
   (config) => {
-    const tokenStore = useTokenStore()
+    const userStore = useUserStore()
     /**
      * 全局拦截请求发送前提交的参数
      * 以下代码为示例，在请求头里带上 token 信息
      */
-    if (tokenStore.isLogin && config.headers) {
-      config.headers.Token = tokenStore.token
+    if (userStore.isLogin && config.headers) {
+      config.headers.Token = userStore.token
     }
     // 是否将 POST 请求参数进行字符串化处理
     if (config.method === 'post') {
@@ -56,7 +45,7 @@ api.interceptors.response.use(
       }
     }
     else {
-      toLogin()
+      useUserStore().logout()
     }
     return Promise.resolve(response.data)
   },

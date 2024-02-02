@@ -6,7 +6,7 @@ import 'nprogress/nprogress.css'
 // import { setupLayouts } from 'virtual:meta-layouts'
 // import generatedRoutes from 'virtual:generated-pages'
 import useSettingsStore from '@/store/modules/settings'
-import useTokenStore from '@/store/modules/token'
+import useUserStore from '@/store/modules/user'
 
 let routes: RouteRecordRaw[] = []
 
@@ -33,10 +33,10 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  const tokenOutsideStore = useTokenStore()
+  const userStore = useUserStore()
   NProgress.start()
   if (to.meta.requireLogin) {
-    if (tokenOutsideStore.isLogin) {
+    if (userStore.isLogin) {
       next()
     }
     else {
