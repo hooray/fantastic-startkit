@@ -7,6 +7,10 @@
   ( <a href="https://hooray.gitee.io/fantastic-startkit/" target="_blank">备用</a> )
 <p>
 
+<p align="center">
+  <a href="###"><img src="https://img.shields.io/github/license/hooray/fantastic-startkit?label=%E5%BC%80%E6%BA%90%E5%8D%8F%E8%AE%AE&style=flat-square" /></a>
+</p>
+
 ## 特点
 
 - 支持 TypeScript
