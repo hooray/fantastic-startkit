@@ -53,7 +53,6 @@ export default defineConfig({
             { text: '常用 API', link: '/guide/api' },
             { text: '移动端支持', link: '/guide/mobile-support' },
             { text: '构建与预览', link: '/guide/build' },
-            { text: '开发辅助', link: '/guide/assistance' },
           ],
         },
       ],
