@@ -1,16 +1,18 @@
 const useSettingsStore = defineStore(
   // 唯一ID
   'settings',
-  {
-    state: () => ({
-      title: '',
-    }),
-    actions: {
-      // 设置网页标题
-      setTitle(title: string) {
-        this.title = title
-      },
-    },
+  () => {
+    const title = ref('')
+
+    // 设置网页标题
+    function setTitle(val: string) {
+      title.value = val
+    }
+
+    return {
+      title,
+      setTitle,
+    }
   },
 )
 
