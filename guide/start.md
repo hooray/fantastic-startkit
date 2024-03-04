@@ -14,13 +14,10 @@ Node.js 需要使用 18+ / 20+ 版本。
 - [DotENV](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv)
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
-- [Vue Language Features](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
-- [TypeScript Vue Plugin](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin)
+- [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
 - [UnoCSS](https://marketplace.visualstudio.com/items?itemName=antfu.unocss)
 
 在 Visual Studio Code 里打开源码的文件夹，右下角会自动提示需要安装的依赖，直接点击安装即可。
-
-同时建议开启 Volar 的 Takeover 模式，开启方式请参考 [Volar Takeover 模式](https://cn.vuejs.org/guide/typescript/overview.html#volar-takeover-mode)。
 
 ::: tip 额外推荐
 以上为开发时必备扩展，以下则是作者推荐安装的扩展，安装它们将在一定程度上提升开发效率。
