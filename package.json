@@ -9,5 +9,8 @@
     "eslint": "^8.57.0",
     "vitepress": "1.0.0",
     "vue": "^3.4.21"
+  },
+  "dependencies": {
+    "vitepress-plugin-comment-with-giscus": "^1.1.12"
   }
 }
