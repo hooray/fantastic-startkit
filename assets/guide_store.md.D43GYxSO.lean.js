@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as a,a6 as e}from"./chunks/framework.DZJYz_yc.js";const g=JSON.parse('{"title":"全局状态管理","description":"","frontmatter":{},"headers":[],"relativePath":"guide/store.md","filePath":"guide/store.md"}'),n={name:"guide/store.md"},t=e("",7),l=[t];function p(h,k,r,d,o,c){return a(),i("div",null,l)}const y=s(n,[["render",p]]);export{g as __pageData,y as default};
