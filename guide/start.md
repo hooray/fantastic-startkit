@@ -5,7 +5,7 @@
 使用本套件前，需要在本地依次安装好 [Node.js](https://nodejs.org/), [pnpm](https://pnpm.io/zh/), [Git](https://git-scm.com/) 和 [Visual Studio Code](https://code.visualstudio.com/)。
 
 :::warning 注意
-Node.js 需要使用 18+ / 20+ 版本。
+在 [package.json](https://github.com/hooray/fantastic-startkit/blob/main/package.json#L3-L5) 文件中有限制 node 要求版本，建议使用最新 LTS 版本。
 :::
 
 然后在 Visual Studio Code 里安装好以下扩展：
@@ -50,7 +50,7 @@ pnpm install
 pnpm run dev
 ```
 
-运行成功后，会自动访问页面，默认情况下，地址为 `http://127.0.0.1:5173`
+运行成功后，会自动访问页面，默认情况下，地址为 `http://localhost:5173`
 
 如果你已经了解本套件的特性，我们推荐你通过拉取默认 `main` 分支进行项目开发，该分支不含任何示例代码。
 
@@ -75,4 +75,4 @@ git clone https://gitee.com/hooray/fantastic-startkit.git
 - [Vue 3](https://cn.vuejs.org/) ([v3 迁移指南](https://v3-migration.vuejs.org/))
 - [Vue Router](https://router.vuejs.org/zh/)
 - [Pinia](https://pinia.vuejs.org/zh/)
-- [UnoCss](https://unocss.dev/)
+- [UnoCSS](https://unocss.dev/)
