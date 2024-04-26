@@ -1,7 +1,7 @@
 {
   "type": "module",
   "engines": {
-    "node": "^18.0.0 || ^20.0.0"
+    "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
   },
   "scripts": {
     "dev": "vite",
@@ -28,12 +28,12 @@
     "pinia": "^2.1.7",
     "qs": "^6.12.1",
     "vconsole": "^3.15.1",
-    "vue": "^3.4.23",
+    "vue": "^3.4.25",
     "vue-router": "^4.3.2"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.15.0",
-    "@iconify/json": "^2.2.202",
+    "@antfu/eslint-config": "^2.16.0",
+    "@iconify/json": "^2.2.204",
     "@iconify/vue": "^4.1.2",
     "@stylistic/stylelint-config": "^1.0.1",
     "@types/archiver": "^6.0.2",
@@ -46,7 +46,7 @@
     "archiver": "^7.0.1",
     "autoprefixer": "^10.4.19",
     "boxen": "^7.1.1",
-    "eslint": "^9.1.0",
+    "eslint": "^9.1.1",
     "http-server": "^14.1.1",
     "lint-staged": "^15.2.2",
     "npm-run-all": "^4.1.5",
@@ -56,7 +56,7 @@
     "postcss-px2vp": "^1.1.4",
     "sass": "^1.75.0",
     "simple-git-hooks": "^2.11.1",
-    "stylelint": "^16.3.1",
+    "stylelint": "^16.4.0",
     "stylelint-config-recess-order": "^5.0.1",
     "stylelint-config-standard-scss": "^13.1.0",
     "stylelint-config-standard-vue": "^1.0.0",
@@ -65,7 +65,7 @@
     "typescript": "^5.4.5",
     "unocss": "^0.59.4",
     "unplugin-auto-import": "^0.17.5",
-    "unplugin-turbo-console": "^1.8.1",
+    "unplugin-turbo-console": "^1.8.5",
     "unplugin-vue-components": "^0.26.0",
     "vite": "^5.2.10",
     "vite-plugin-banner": "^0.7.1",
@@ -73,8 +73,8 @@
     "vite-plugin-fake-server": "^2.1.1",
     "vite-plugin-pages": "^0.32.1",
     "vite-plugin-svg-icons": "^2.0.1",
-    "vite-plugin-vue-devtools": "^7.0.27",
-    "vite-plugin-vue-meta-layouts": "^0.4.2",
+    "vite-plugin-vue-devtools": "^7.1.3",
+    "vite-plugin-vue-meta-layouts": "^0.4.3",
     "vue-tsc": "^2.0.14"
   },
   "simple-git-hooks": {
