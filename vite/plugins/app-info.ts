@@ -11,7 +11,7 @@ export default function appInfo(): Plugin {
       // eslint-disable-next-line no-console
       console.log(
         boxen(
-          `${bold(green(`由 ${bgGreen('Fantastic-startkit')} 驱动`))}\n\n${underline('https://hooray.gitee.io/fantastic-startkit')}`,
+          `${bold(green(`由 ${bgGreen('Fantastic-startkit')} 驱动`))}\n\n${underline('https://hooray.github.io/fantastic-startkit')}`,
           {
             padding: 1,
             margin: 1,
