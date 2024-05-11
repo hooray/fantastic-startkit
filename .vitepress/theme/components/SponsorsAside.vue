@@ -18,6 +18,13 @@
           <div class="sub">巧妙的管理系统框架</div>
         </div>
       </a>
+      <a href="https://fantastic-mobile.github.io/" target="_blank" class="sponsor-item">
+        <img src="https://fantastic-mobile.github.io/logo.png">
+        <div class="info">
+          <div class="main">Fantastic-mobile</div>
+          <div class="sub">自成一派的 H5 框架</div>
+        </div>
+      </a>
     </div>
   </div>
 </template>

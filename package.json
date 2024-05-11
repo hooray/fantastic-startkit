@@ -2,15 +2,16 @@
   "type": "module",
   "scripts": {
     "dev": "vitepress dev .",
-    "build": "vitepress build ."
-  },
-  "devDependencies": {
-    "@antfu/eslint-config": "^2.16.1",
-    "eslint": "^9.2.0",
-    "vitepress": "1.1.4",
-    "vue": "^3.4.26"
+    "build": "vitepress build .",
+    "lint:eslint": "eslint . --cache --fix"
   },
   "dependencies": {
     "vitepress-plugin-comment-with-giscus": "^1.1.15"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.17.0",
+    "eslint": "^9.2.0",
+    "vitepress": "1.1.4",
+    "vue": "^3.4.27"
   }
 }
