@@ -6,6 +6,10 @@
 
 如果是需要构建测试环境，则执行 `pnpm build:test` 命令，对应会在根目录生成 dist-test 文件夹。
 
+:::tip
+如果最终访问地址为域名非根节点，如 `https://www.example.com/app`，则需要在 `vite.config.ts` 中设置 `base` 选项为 `/app/`，否则会出现资源引用错误。
+:::
+
 ## 预览
 
 生成好的 dist 文件夹一般需要部署至服务器才算部署发布成功，但为了保证构建出来的文件能正常运行，开发者通常希望能在本地先预览一下，可执行 `pnpm serve` 或 `pnpm serve:test` 命令预览不同环境构建出的文件夹。
