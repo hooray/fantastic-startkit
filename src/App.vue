@@ -24,7 +24,5 @@ import.meta.env.VITE_APP_DEBUG_TOOL === 'vconsole' && new VConsole()
 </script>
 
 <template>
-  <div id="app">
-    <RouterView v-if="isRouterAlive" />
-  </div>
+  <RouterView v-if="isRouterAlive" />
 </template>
