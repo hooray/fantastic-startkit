@@ -1,7 +1,7 @@
 <route lang="yaml">
-  meta:
-    layout: false
-  </route>
+meta:
+  layout: false
+</route>
 
 <template>
   <div class="flex-col-center">
