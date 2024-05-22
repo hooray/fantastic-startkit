@@ -124,7 +124,7 @@ export default defineFakeRoute([
 
 为了让 mock 接口与真实接口共存，即项目开发中，部分请求 mock 接口，部分请求真实接口。需要在配置 mock 接口的时候，给 `url` 参数统一设置 `/mock/` 前缀，并在调用接口的时候，使用 `baseURL` 强制修改此次请求的地址。
 
-如下所示，其中 `news/list` 会请求本地的 mock 接口，而 `news/add` 依旧请求真实接口，即使开启跨域代理也不影响。
+如下所示，其中 `news/list` 会请求本地的 mock 接口，而 `news/create` 依旧请求真实接口，即使开启跨域代理也不影响。
 
 ```ts {4}
 import api from '@/api'
