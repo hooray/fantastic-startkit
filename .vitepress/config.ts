@@ -51,7 +51,6 @@ export default defineConfig({
             { text: '与服务端交互', link: '/guide/axios' },
             { text: '代码文件自动生成', link: '/guide/plop' },
             { text: '常用 API', link: '/guide/api' },
-            { text: '移动端支持', link: '/guide/mobile-support' },
             { text: '构建与预览', link: '/guide/build' },
           ],
         },
