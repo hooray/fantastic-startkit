@@ -105,9 +105,6 @@ importers:
       postcss:
         specifier: ^8.4.38
         version: 8.4.38
-      postcss-px2vp:
-        specifier: ^1.1.4
-        version: 1.1.4
       sass:
         specifier: ^1.77.6
         version: 1.77.6
@@ -4087,9 +4084,6 @@ packages:
     resolution: {integrity: sha512-rdVMIi7Q4B0XbXqNUEI+Z4E+pueiu/CS5E6vRCQommzdQ/sgsS4dK42U7GX8oJR+TJOtT+Qv3GkNo6iijUMp3Q==}
     peerDependencies:
       postcss: '>4 <9'
-
-  postcss-px2vp@1.1.4:
-    resolution: {integrity: sha512-Ooo8KyqJuYH7jWjSHpJiITgTLz0SJYIAxS7mU1P8JWzcUwM3n/Jt2GzWdA1sMjnzArtUNClkvETXn3YqoobD/A==}
 
   postcss-resolve-nested-selector@0.1.1:
     resolution: {integrity: sha512-HvExULSwLqHLgUy1rl3ANIqCsvMS0WHss2UOsXhXnQaZ9VCc2oBvIpXrl00IUFT5ZDITME0o6oiXeiHr2SAIfw==}
@@ -9606,8 +9600,6 @@ snapshots:
   postcss-prefix-selector@1.16.0(postcss@5.2.18):
     dependencies:
       postcss: 5.2.18
-
-  postcss-px2vp@1.1.4: {}
 
   postcss-resolve-nested-selector@0.1.1: {}
 
