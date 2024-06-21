@@ -1,0 +1,1 @@
+import{_ as a,c as e,o as s,a5 as n}from"./chunks/framework.C8yrGa2t.js";const b=JSON.parse('{"title":"构建与预览","description":"","frontmatter":{},"headers":[],"relativePath":"guide/build.md","filePath":"guide/build.md"}'),p={name:"guide/build.md"},t=n("",15),i=[t];function o(c,d,l,r,h,u){return s(),e("div",null,i)}const m=a(p,[["render",o]]);export{b as __pageData,m as default};

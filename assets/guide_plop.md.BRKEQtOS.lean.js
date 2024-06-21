@@ -1,0 +1,1 @@
+import{_ as e,c as o,o as a,a5 as t}from"./chunks/framework.C8yrGa2t.js";const u=JSON.parse('{"title":"代码文件自动生成","description":"","frontmatter":{},"headers":[],"relativePath":"guide/plop.md","filePath":"guide/plop.md"}'),c={name:"guide/plop.md"},p=t("",13),r=[p];function d(l,s,n,i,h,m){return a(),o("div",null,r)}const f=e(c,[["render",d]]);export{u as __pageData,f as default};
