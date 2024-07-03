@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import eruda from 'eruda'
-import VConsole from 'vconsole'
 import useSettingsStore from '@/store/modules/settings'
 
 const isRouterAlive = ref(true)
@@ -18,9 +16,6 @@ watch(() => settingsStore.title, () => {
 }, {
   immediate: true,
 })
-
-import.meta.env.VITE_APP_DEBUG_TOOL === 'eruda' && eruda.init()
-import.meta.env.VITE_APP_DEBUG_TOOL === 'vconsole' && new VConsole()
 </script>
 
 <template>
