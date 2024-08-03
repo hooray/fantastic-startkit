@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as a,a6 as n}from"./chunks/framework.D5g3KRpY.js";const g=JSON.parse('{"title":"与服务端交互","description":"","frontmatter":{},"headers":[],"relativePath":"guide/axios.md","filePath":"guide/axios.md"}'),h={name:"guide/axios.md"},p=n("",37),l=[p];function t(k,e,E,r,d,c){return a(),i("div",null,l)}const y=s(h,[["render",t]]);export{g as __pageData,y as default};
