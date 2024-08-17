@@ -37,15 +37,15 @@ api.interceptors.response.use(
      * 规则是当 status 为 1 时表示请求成功，为 0 时表示接口需要登录或者登录状态失效，需要重新登录
      * 请求出错时 error 会返回错误信息
      */
-    if (response.data.status === 1) {
+    if (response.data.status !== 1) {
+      if (response.data.status === 0) {
+        useUserStore().logout()
+      }
       if (response.data.error !== '') {
         // 这里做错误提示，如果使用了 element plus 则可以使用 Message 进行提示
         // Message.error(options)
         return Promise.reject(response.data)
       }
-    }
-    else {
-      useUserStore().logout()
     }
     return Promise.resolve(response.data)
   },
