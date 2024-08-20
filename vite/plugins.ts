@@ -119,7 +119,7 @@ export default function createVitePlugins(viteEnv, isBuild = false) {
 /**
  * 由 Fantastic-startkit 提供技术支持
  * Powered by Fantastic-startkit
- * https://hooray.github.io/fantastic-startkit/
+ * https://hurui.me/fantastic-startkit/
  */
     `),
 
@@ -155,7 +155,7 @@ export default function createVitePlugins(viteEnv, isBuild = false) {
         // eslint-disable-next-line no-console
         console.log(
           boxen(
-            `${bold(green(`由 ${bgGreen('Fantastic-startkit')} 驱动`))}\n\n${underline('https://hooray.github.io/fantastic-startkit')}`,
+            `${bold(green(`由 ${bgGreen('Fantastic-startkit')} 驱动`))}\n\n${underline('https://hurui.me/fantastic-startkit')}`,
             {
               padding: 1,
               margin: 1,
