@@ -3,7 +3,7 @@
 <p align="center">一款<b>简单好用</b>的 Vue3 项目启动套件</p>
 
 <p align="center">
-  <a href="https://hooray.github.io/fantastic-startkit/" target="_blank">官网</a>
+  <a href="https://hurui.me/fantastic-startkit/" target="_blank">官网</a>
 <p>
 
 <p align="center">
@@ -36,7 +36,7 @@
 <table>
   <tr>
     <th colspan="3" align="center">
-      <a href="https://fantastic-admin.github.io/" target="_blank">Fantastic-admin</a>
+      <a href="https://fantastic-admin.hurui.me/" target="_blank">Fantastic-admin</a>
     </th>
   </tr>
   <tr>
@@ -45,21 +45,21 @@
     </th>
   </tr>
   <tr>
-    <td><img src="https://fantastic-admin.github.io/preview1.png" /></td>
-    <td><img src="https://fantastic-admin.github.io/preview2.png" /></td>
-    <td><img src="https://fantastic-admin.github.io/preview3.png" /></td>
+    <td><img src="https://fantastic-admin.hurui.me/preview1.png" /></td>
+    <td><img src="https://fantastic-admin.hurui.me/preview2.png" /></td>
+    <td><img src="https://fantastic-admin.hurui.me/preview3.png" /></td>
   </tr>
   <tr>
-    <td><img src="https://fantastic-admin.github.io/preview4.png" /></td>
-    <td><img src="https://fantastic-admin.github.io/preview5.png" /></td>
-    <td><img src="https://fantastic-admin.github.io/preview6.png" /></td>
+    <td><img src="https://fantastic-admin.hurui.me/preview4.png" /></td>
+    <td><img src="https://fantastic-admin.hurui.me/preview5.png" /></td>
+    <td><img src="https://fantastic-admin.hurui.me/preview6.png" /></td>
   </tr>
 </table>
 
 <table>
   <tr>
     <th colspan="3" align="center">
-      <a href="https://one-step-admin.github.io/" target="_blank">One-step-admin</a>
+      <a href="https://one-step-admin.hurui.me/" target="_blank">One-step-admin</a>
     </th>
   </tr>
   <tr>
@@ -68,21 +68,21 @@
     </th>
   </tr>
   <tr>
-    <td><img src="https://one-step-admin.github.io/preview1.png" /></td>
-    <td><img src="https://one-step-admin.github.io/preview2.png" /></td>
-    <td><img src="https://one-step-admin.github.io/preview3.png" /></td>
+    <td><img src="https://one-step-admin.hurui.me/preview1.png" /></td>
+    <td><img src="https://one-step-admin.hurui.me/preview2.png" /></td>
+    <td><img src="https://one-step-admin.hurui.me/preview3.png" /></td>
   </tr>
   <tr>
-    <td><img src="https://one-step-admin.github.io/preview4.png" /></td>
-    <td><img src="https://one-step-admin.github.io/preview5.png" /></td>
-    <td><img src="https://one-step-admin.github.io/preview6.png" /></td>
+    <td><img src="https://one-step-admin.hurui.me/preview4.png" /></td>
+    <td><img src="https://one-step-admin.hurui.me/preview5.png" /></td>
+    <td><img src="https://one-step-admin.hurui.me/preview6.png" /></td>
   </tr>
 </table>
 
 <table>
   <tr>
     <th colspan="4" align="center">
-      <a href="https://fantastic-mobile.github.io" target="_blank">Fantastic-mobile</a>
+      <a href="https://fantastic-mobile.hurui.me" target="_blank">Fantastic-mobile</a>
     </th>
   </tr>
   <tr>
@@ -91,9 +91,9 @@
     </th>
   </tr>
   <tr>
-    <td><img src="https://fantastic-mobile.github.io/preview1.png" /></td>
-    <td><img src="https://fantastic-mobile.github.io/preview2.png" /></td>
-    <td><img src="https://fantastic-mobile.github.io/preview3.png" /></td>
-    <td><img src="https://fantastic-mobile.github.io/preview4.png" /></td>
+    <td><img src="https://fantastic-mobile.hurui.me/preview1.png" /></td>
+    <td><img src="https://fantastic-mobile.hurui.me/preview2.png" /></td>
+    <td><img src="https://fantastic-mobile.hurui.me/preview3.png" /></td>
+    <td><img src="https://fantastic-mobile.hurui.me/preview4.png" /></td>
   </tr>
 </table>
