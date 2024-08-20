@@ -4,22 +4,22 @@
       作者其他作品
     </div>
     <div class="sponsor-container special">
-      <a href="https://fantastic-admin.github.io/" target="_blank" class="sponsor-item">
-        <img src="https://fantastic-admin.github.io/logo.png">
+      <a href="https://fantastic-admin.hurui.me/" target="_blank" class="sponsor-item">
+        <img src="https://fantastic-admin.hurui.me/logo.png">
         <div class="info">
           <div class="main">Fantastic-admin</div>
           <div class="sub">杰出的管理系统框架</div>
         </div>
       </a>
-      <a href="https://one-step-admin.github.io/" target="_blank" class="sponsor-item">
-        <img src="https://one-step-admin.github.io/logo.png">
+      <a href="https://one-step-admin.hurui.me/" target="_blank" class="sponsor-item">
+        <img src="https://one-step-admin.hurui.me/logo.png">
         <div class="info">
           <div class="main">One-step-admin</div>
           <div class="sub">巧妙的管理系统框架</div>
         </div>
       </a>
-      <a href="https://fantastic-mobile.github.io/" target="_blank" class="sponsor-item">
-        <img src="https://fantastic-mobile.github.io/logo.png">
+      <a href="https://fantastic-mobile.hurui.me/" target="_blank" class="sponsor-item">
+        <img src="https://fantastic-mobile.hurui.me/logo.png">
         <div class="info">
           <div class="main">Fantastic-mobile</div>
           <div class="sub">自成一派的 H5 框架</div>
