@@ -33,7 +33,7 @@ function getInfo() {
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style scoped>
 img {
   display: block;
   width: 300px;

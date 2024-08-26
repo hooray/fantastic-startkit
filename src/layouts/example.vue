@@ -39,7 +39,7 @@
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style scoped>
 #nav {
   margin-bottom: 10px;
 
