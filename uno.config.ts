@@ -29,8 +29,6 @@ export default defineConfig<Theme>({
       }
       return cls.join(' ')
     }],
-    [/^square-\[?(.*?)\]?$/, ([, size]) => `w-${size} h-${size}`],
-    [/^circle-\[?(.*?)\]?$/, ([, size]) => `square-${size} rounded-full`],
   ],
   presets: [
     presetUno(),
