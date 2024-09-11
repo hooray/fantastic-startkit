@@ -1,7 +1,7 @@
-import './utils/system.copyright'
 import App from './App.vue'
-import pinia from './store'
 import router from './router'
+import pinia from './store'
+import './utils/system.copyright'
 
 // 加载 svg 图标
 import 'virtual:svg-icons-register'
