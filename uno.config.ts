@@ -1,4 +1,3 @@
-import type { Theme } from 'unocss/preset-uno'
 import {
   defineConfig,
   presetAttributify,
@@ -9,6 +8,7 @@ import {
   transformerDirectives,
   transformerVariantGroup,
 } from 'unocss'
+import type { Theme } from 'unocss/preset-uno'
 
 export default defineConfig<Theme>({
   shortcuts: [

@@ -1,7 +1,7 @@
-import axios from 'axios'
-
 // import qs from 'qs'
 import useUserStore from '@/store/modules/user'
+
+import axios from 'axios'
 
 const api = axios.create({
   baseURL: (import.meta.env.DEV && import.meta.env.VITE_OPEN_PROXY === 'true') ? '/proxy/' : import.meta.env.VITE_APP_API_BASEURL,
