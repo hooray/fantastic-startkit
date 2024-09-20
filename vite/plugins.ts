@@ -1,3 +1,4 @@
+import type { PluginOption } from 'vite'
 import path from 'node:path'
 import process from 'node:process'
 import vue from '@vitejs/plugin-vue'
@@ -16,7 +17,6 @@ import Pages from 'vite-plugin-pages'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import VueDevTools from 'vite-plugin-vue-devtools'
 import Layouts from 'vite-plugin-vue-meta-layouts'
-import type { PluginOption } from 'vite'
 
 export default function createVitePlugins(viteEnv, isBuild = false) {
   const vitePlugins: (PluginOption | PluginOption[])[] = [

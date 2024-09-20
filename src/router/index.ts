@@ -1,6 +1,6 @@
+import type { RouteRecordRaw } from 'vue-router'
 import NProgress from 'nprogress'
 import { createRouter, createWebHashHistory } from 'vue-router'
-import type { RouteRecordRaw } from 'vue-router'
 import 'nprogress/nprogress.css'
 
 // import { setupLayouts } from 'virtual:meta-layouts'
