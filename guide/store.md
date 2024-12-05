@@ -8,12 +8,12 @@
 - [【探索学习】面向未来的 Vuex -- pinia](https://www.bilibili.com/video/BV1Mb4y1X7NL/)
 :::
 
-全局状态文件存放在 `/src/store/modules/` 目录下，请按模块进行区分。同时请保证文件名和文件内唯一ID保持一致，建议使用 `pnpm new` 指令进行创建。
+全局状态文件存放在 `/src/store/` 目录下，请按模块进行区分。同时请保证文件名和文件内唯一ID保持一致，建议使用 `pnpm new` 指令进行创建。
 
 例如新建一个 `example.ts` 的文件：
 
 ```ts
-const useExampleStore = defineStore(
+export const useExampleStore = defineStore(
   // 唯一ID
   'example',
   {
@@ -22,14 +22,11 @@ const useExampleStore = defineStore(
     actions: {},
   },
 )
-
-export default useExampleStore
 ```
 
 使用方法：
 
 ```ts
-import useExampleStore from '@/store/modules/example'
 const exampleStore = useExampleStore()
 
 exampleStore.data

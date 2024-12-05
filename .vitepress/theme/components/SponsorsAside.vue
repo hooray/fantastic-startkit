@@ -5,7 +5,7 @@
     </div>
     <div class="sponsor-container special">
       <a href="https://fantastic-admin.hurui.me/" target="_blank" class="sponsor-item">
-        <img src="https://fantastic-admin.hurui.me/logo.png">
+        <img src="https://fantastic-admin.hurui.me/logo.svg">
         <div class="info">
           <div class="main">Fantastic-admin</div>
           <div class="sub">杰出的管理系统框架</div>
