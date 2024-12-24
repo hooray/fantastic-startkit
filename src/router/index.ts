@@ -1,12 +1,11 @@
 import type { RouteRecordRaw } from 'vue-router'
-import NProgress from 'nprogress'
-import { createRouter, createWebHashHistory } from 'vue-router'
-import 'nprogress/nprogress.css'
-
-// import { setupLayouts } from 'virtual:meta-layouts'
-// import generatedRoutes from 'virtual:generated-pages'
 import useSettingsStore from '@/store/modules/settings'
 import useUserStore from '@/store/modules/user'
+import NProgress from 'nprogress'
+// import generatedRoutes from 'virtual:generated-pages'
+// import { setupLayouts } from 'virtual:meta-layouts'
+import { createRouter, createWebHashHistory } from 'vue-router'
+import 'nprogress/nprogress.css'
 
 let routes: RouteRecordRaw[] = []
 
