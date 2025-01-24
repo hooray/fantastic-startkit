@@ -7,13 +7,13 @@ meta:
 <template>
   <div>
     <p>Iconify 图标</p>
-    <SvgIcon name="logos:vue" class="text-[48px]" />
-    <SvgIcon name="logos:vitejs" class="text-[48px]" />
-    <SvgIcon name="uim:box" class="text-[48px]" />
+    <SvgIcon name="logos:vue" class="size-12" />
+    <SvgIcon name="logos:vitejs" class="size-12" />
+    <SvgIcon name="uim:box" class="size-12" />
     <p>搭配 unocss 使用，将不会渲染成 svg 标签</p>
-    <SvgIcon name="i-logos:vue" class="text-[48px]" />
-    <SvgIcon name="i-logos:vitejs" class="text-[48px]" />
-    <SvgIcon name="i-uim:box" class="text-[48px]" />
+    <SvgIcon name="i-logos:vue" class="size-12" />
+    <SvgIcon name="i-logos:vitejs" class="size-12" />
+    <SvgIcon name="i-uim:box" class="size-12" />
     <p>使用方法：</p>
     <ol>
       <li>上 <a href="https://icon-sets.iconify.design/" target="_blank">Iconify</a> 找寻需要的图标</li>
