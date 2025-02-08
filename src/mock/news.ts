@@ -1,5 +1,13 @@
-import Mock from 'mockjs'
+import { faker } from '@faker-js/faker'
 import { defineFakeRoute } from 'vite-plugin-fake-server/client'
+
+const list: any[] = []
+for (let i = 0; i < 10; i++) {
+  list.push({
+    id: i + 1,
+    title: faker.lorem.sentence(),
+  })
+}
 
 export default defineFakeRoute([
   {
@@ -9,13 +17,9 @@ export default defineFakeRoute([
       return {
         error: '',
         status: 1,
-        data: Mock.mock({
-          'list|5-10': [
-            {
-              title: '@ctitle',
-            },
-          ],
-        }),
+        data: {
+          list,
+        },
       }
     },
   },
