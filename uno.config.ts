@@ -4,7 +4,7 @@ import {
   presetAttributify,
   presetIcons,
   presetTypography,
-  presetUno,
+  presetWind3,
   transformerCompileClass,
   transformerDirectives,
   transformerVariantGroup,
@@ -31,7 +31,7 @@ export default defineConfig<Theme>({
     }],
   ],
   presets: [
-    presetUno(),
+    presetWind3(),
     presetAttributify(),
     presetIcons({
       extraProperties: {
