@@ -12,7 +12,6 @@ import components from 'unplugin-vue-components/vite'
 import { loadEnv } from 'vite'
 import Archiver from 'vite-plugin-archiver'
 import banner from 'vite-plugin-banner'
-import checker from 'vite-plugin-checker'
 import { compression } from 'vite-plugin-compression2'
 import { envParse, parseLoadedEnv } from 'vite-plugin-env-parse'
 import { vitePluginFakeServer } from 'vite-plugin-fake-server'
@@ -32,18 +31,6 @@ export default function createVitePlugins(mode: string, isBuild = false) {
 
     envParse({
       dtsPath: 'src/types/env.d.ts',
-    }),
-
-    checker({
-      typescript: true,
-      vueTsc: true,
-      eslint: {
-        useFlatConfig: true,
-        lintCommand: 'eslint . --cache',
-      },
-      stylelint: {
-        lintCommand: 'stylelint \"src/**/*.{css,scss,vue}\" --cache',
-      },
     }),
 
     // https://github.com/unplugin/unplugin-auto-import
