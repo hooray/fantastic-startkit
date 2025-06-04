@@ -153,9 +153,6 @@ importers:
       vite-plugin-banner:
         specifier: ^0.8.1
         version: 0.8.1
-      vite-plugin-checker:
-        specifier: ^0.9.3
-        version: 0.9.3(eslint@9.27.0(jiti@2.4.2))(meow@13.2.0)(optionator@0.9.4)(stylelint@16.19.1(typescript@5.8.3))(typescript@5.8.3)(vite@6.3.5(@types/node@22.5.5)(jiti@2.4.2)(sass-embedded@1.89.0)(sass@1.79.2)(tsx@4.19.2)(yaml@2.8.0))(vue-tsc@2.2.10(typescript@5.8.3))
       vite-plugin-compression2:
         specifier: ^1.4.0
         version: 1.4.0(rollup@4.40.0)(vite@6.3.5(@types/node@22.5.5)(jiti@2.4.2)(sass-embedded@1.89.0)(sass@1.79.2)(tsx@4.19.2)(yaml@2.8.0))
@@ -5355,9 +5352,6 @@ packages:
     resolution: {integrity: sha512-MDN2WZb7TgsIvtFxqsLJ4GYy9dTDG5Dea/ZfPHrG98Cy7UH1EFIOzH+zDjnoP38ImuBbxZy1Zl8AbiwOZpYMUQ==}
     hasBin: true
 
-  tiny-invariant@1.3.3:
-    resolution: {integrity: sha512-+FbBPE1o9QAYvviau/qC5SE3caw21q3xkvWKBtja5vgqOWIHHJ3ioaq1VPfn/Szqctz2bU/oYeKd9/z5BL+PVg==}
-
   tinybench@2.9.0:
     resolution: {integrity: sha512-0+DUvqWMValLmha6lr4kD8iAMK1HzV0/aKnCtWb9v9641TnP/MFb7Pc2bxoxQjTXAErryXVgUOfv2YqNllqGeg==}
 
@@ -5679,40 +5673,6 @@ packages:
 
   vite-plugin-banner@0.8.1:
     resolution: {integrity: sha512-0+gGguHk3MH0HvzMSOCJC6fGgH4+jtY9KlKVZh+hwwE+PBkGVzY8xe657JL74vEgbeUJD37XjVqTrmve8XvZBQ==}
-
-  vite-plugin-checker@0.9.3:
-    resolution: {integrity: sha512-Tf7QBjeBtG7q11zG0lvoF38/2AVUzzhMNu+Wk+mcsJ00Rk/FpJ4rmUviVJpzWkagbU13cGXvKpt7CMiqtxVTbQ==}
-    engines: {node: '>=14.16'}
-    peerDependencies:
-      '@biomejs/biome': '>=1.7'
-      eslint: '>=7'
-      meow: ^13.2.0
-      optionator: ^0.9.4
-      stylelint: '>=16'
-      typescript: '*'
-      vite: '>=2.0.0'
-      vls: '*'
-      vti: '*'
-      vue-tsc: ~2.2.10
-    peerDependenciesMeta:
-      '@biomejs/biome':
-        optional: true
-      eslint:
-        optional: true
-      meow:
-        optional: true
-      optionator:
-        optional: true
-      stylelint:
-        optional: true
-      typescript:
-        optional: true
-      vls:
-        optional: true
-      vti:
-        optional: true
-      vue-tsc:
-        optional: true
 
   vite-plugin-compression2@1.4.0:
     resolution: {integrity: sha512-UEk0Bq1IkkwqbDLoLOHZ8WTmN1QbvR28fvNl2liB88/6SG1oLrTVkxfjqW3pdla/rKQ6QXn+pJpv3GBbl+k56g==}
@@ -11655,8 +11615,6 @@ snapshots:
       unconfig: 7.3.2
       yaml: 2.8.0
 
-  tiny-invariant@1.3.3: {}
-
   tinybench@2.9.0:
     optional: true
 
@@ -12023,26 +11981,6 @@ snapshots:
       open: 10.1.0
 
   vite-plugin-banner@0.8.1: {}
-
-  vite-plugin-checker@0.9.3(eslint@9.27.0(jiti@2.4.2))(meow@13.2.0)(optionator@0.9.4)(stylelint@16.19.1(typescript@5.8.3))(typescript@5.8.3)(vite@6.3.5(@types/node@22.5.5)(jiti@2.4.2)(sass-embedded@1.89.0)(sass@1.79.2)(tsx@4.19.2)(yaml@2.8.0))(vue-tsc@2.2.10(typescript@5.8.3)):
-    dependencies:
-      '@babel/code-frame': 7.27.1
-      chokidar: 4.0.3
-      npm-run-path: 6.0.0
-      picocolors: 1.1.1
-      picomatch: 4.0.2
-      strip-ansi: 7.1.0
-      tiny-invariant: 1.3.3
-      tinyglobby: 0.2.14
-      vite: 6.3.5(@types/node@22.5.5)(jiti@2.4.2)(sass-embedded@1.89.0)(sass@1.79.2)(tsx@4.19.2)(yaml@2.8.0)
-      vscode-uri: 3.1.0
-    optionalDependencies:
-      eslint: 9.27.0(jiti@2.4.2)
-      meow: 13.2.0
-      optionator: 0.9.4
-      stylelint: 16.19.1(typescript@5.8.3)
-      typescript: 5.8.3
-      vue-tsc: 2.2.10(typescript@5.8.3)
 
   vite-plugin-compression2@1.4.0(rollup@4.40.0)(vite@6.3.5(@types/node@22.5.5)(jiti@2.4.2)(sass-embedded@1.89.0)(sass@1.79.2)(tsx@4.19.2)(yaml@2.8.0)):
     dependencies:

@@ -70,7 +70,6 @@
     "vite": "^6.3.5",
     "vite-plugin-archiver": "^0.1.2",
     "vite-plugin-banner": "^0.8.1",
-    "vite-plugin-checker": "^0.9.3",
     "vite-plugin-compression2": "^1.4.0",
     "vite-plugin-env-parse": "^1.0.15",
     "vite-plugin-fake-server": "^2.2.0",
