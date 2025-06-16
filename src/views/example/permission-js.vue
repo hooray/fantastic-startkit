@@ -4,8 +4,6 @@ meta:
 </route>
 
 <script setup lang="ts">
-import useUserStore from '@/store/modules/user'
-
 const router = useRouter()
 const userStore = useUserStore()
 

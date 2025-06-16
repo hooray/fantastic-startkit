@@ -1,6 +1,6 @@
 import api from '@/api'
 
-const useExampleStore = defineStore(
+export const useExampleStore = defineStore(
   // 唯一ID
   'example',
   () => {
@@ -31,5 +31,3 @@ const useExampleStore = defineStore(
     }
   },
 )
-
-export default useExampleStore

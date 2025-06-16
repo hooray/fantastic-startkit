@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import useSettingsStore from '@/store/modules/settings'
-
 const isRouterAlive = ref(true)
 const settingsStore = useSettingsStore()
 

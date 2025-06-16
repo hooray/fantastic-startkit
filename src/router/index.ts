@@ -3,8 +3,6 @@ import NProgress from 'nprogress'
 // import generatedRoutes from 'virtual:generated-pages'
 // import { setupLayouts } from 'virtual:meta-layouts'
 import { createRouter, createWebHashHistory } from 'vue-router'
-import useSettingsStore from '@/store/modules/settings'
-import useUserStore from '@/store/modules/user'
 import 'nprogress/nprogress.css'
 
 let routes: RouteRecordRaw[] = []

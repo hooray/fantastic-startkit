@@ -4,8 +4,6 @@ meta:
 </route>
 
 <script setup lang="ts">
-import useExampleStore from '@/store/modules/example'
-
 const exampleStore = useExampleStore()
 
 const news = computed(() => exampleStore.news)
