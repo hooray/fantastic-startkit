@@ -1,11 +1,11 @@
 import apiUser from '@/api/modules/user'
 import router from '@/router'
 
-const useUserStore = defineStore(
+export const useUserStore = defineStore(
   // 唯一ID
   'user',
   () => {
-    const token = ref(sessionStorage.token ?? '')
+    const token = ref(localStorage.token ?? '')
 
     const isLogin = computed(() => {
       if (token.value) {
@@ -20,7 +20,7 @@ const useUserStore = defineStore(
     }) {
       return new Promise((resolve, reject) => {
         apiUser.login(data).then((res) => {
-          sessionStorage.setItem('token', res.data.token)
+          localStorage.setItem('token', res.data.token)
           token.value = res.data.token
           resolve(res)
         }).catch((error) => {
@@ -30,7 +30,7 @@ const useUserStore = defineStore(
     }
     function logout(redirect = router.currentRoute.value.fullPath) {
       // 模拟退出登录，清除 token 信息
-      sessionStorage.removeItem('token')
+      localStorage.removeItem('token')
       token.value = ''
       router.push({
         name: 'login',
@@ -48,5 +48,3 @@ const useUserStore = defineStore(
     }
   },
 )
-
-export default useUserStore
