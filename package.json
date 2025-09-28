@@ -9,9 +9,9 @@
     "vitepress-plugin-comment-with-giscus": "^1.1.15"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.2.1",
-    "eslint": "^9.20.1",
-    "vitepress": "1.6.3",
-    "vue": "^3.5.13"
+    "@antfu/eslint-config": "^6.2.0",
+    "eslint": "^9.39.1",
+    "vitepress": "1.6.4",
+    "vue": "^3.5.24"
   }
 }

@@ -71,7 +71,7 @@ api.post('news/create', {
 
 ## 跨域处理
 
-生产环境的跨域需要服务端去解决，开发环境的跨域问题可在本地设置代理解决。如果本地开发环境请求接口提示跨域，可以设置 `.env.development` 文件里 `VITE_OPEN_PROXY = true` 开启代理。
+生产环境的跨域需要服务端去解决，开发环境的跨域问题可在本地设置代理解决。如果本地开发环境请求接口提示跨域，可以设置 `.env.development` 文件里 `VITE_ENABLE_PROXY = true` 开启代理。
 
 ```ts
 import api from '@/api'
@@ -88,7 +88,7 @@ server: {
   proxy: {
     '/proxy': {
       target: loadEnv(mode, process.cwd()).VITE_APP_API_BASEURL,
-      changeOrigin: command === 'serve' && loadEnv(mode, process.cwd()).VITE_OPEN_PROXY == 'true',
+      changeOrigin: command === 'serve' && loadEnv(mode, process.cwd()).VITE_ENABLE_PROXY,
       rewrite: path => path.replace(/\/proxy/, ''),
     },
   },
