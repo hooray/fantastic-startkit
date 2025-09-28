@@ -2,11 +2,12 @@ import fs from 'node:fs'
 import path from 'node:path'
 import process from 'node:process'
 import { defineConfig, loadEnv } from 'vite'
+import { parseLoadedEnv } from 'vite-plugin-env-parse'
 import createVitePlugins from './vite/plugins'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode, command }) => {
-  const env = loadEnv(mode, process.cwd())
+  const env = parseLoadedEnv(loadEnv(mode, process.cwd()))
   // 全局 scss 资源
   const scssResources: string[] = []
   fs.readdirSync('src/assets/styles/resources').forEach((dirname) => {
@@ -22,7 +23,7 @@ export default defineConfig(({ mode, command }) => {
       proxy: {
         '/proxy': {
           target: env.VITE_APP_API_BASEURL,
-          changeOrigin: command === 'serve' && env.VITE_OPEN_PROXY === 'true',
+          changeOrigin: command === 'serve' && env.VITE_ENABLE_PROXY,
           rewrite: path => path.replace(/\/proxy/, ''),
         },
       },
@@ -30,7 +31,7 @@ export default defineConfig(({ mode, command }) => {
     // 构建选项 https://cn.vitejs.dev/config/build-options
     build: {
       outDir: mode === 'production' ? 'dist' : `dist-${mode}`,
-      sourcemap: env.VITE_BUILD_SOURCEMAP === 'true',
+      sourcemap: env.VITE_BUILD_SOURCEMAP,
     },
     plugins: createVitePlugins(mode, command === 'build'),
     resolve: {
