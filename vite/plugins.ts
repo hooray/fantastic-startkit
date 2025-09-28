@@ -27,7 +27,9 @@ export default function createVitePlugins(mode: string, isBuild = false) {
     vueJsx(),
 
     // https://github.com/vuejs/devtools-next
-    viteEnv.VITE_OPEN_DEVTOOLS && VueDevTools(),
+    viteEnv.VITE_ENABLE_VUE_DEVTOOLS && VueDevTools({
+      launchEditor: viteEnv.VITE_LAUNCH_EDITOR,
+    }),
 
     envParse({
       dtsPath: 'src/types/env.d.ts',
@@ -96,7 +98,11 @@ export default function createVitePlugins(mode: string, isBuild = false) {
     }),
 
     // https://github.com/unplugin/unplugin-turbo-console
-    TurboConsole(),
+    viteEnv.VITE_ENABLE_CONSOLE && TurboConsole({
+      launchEditor: {
+        specifiedEditor: viteEnv.VITE_LAUNCH_EDITOR,
+      },
+    }),
 
     // https://github.com/chengpeiquan/vite-plugin-banner
     banner(`

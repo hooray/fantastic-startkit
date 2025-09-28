@@ -15,9 +15,18 @@ interface ImportMetaEnv {
   /**
    * 是否开启代理
    */
-  readonly VITE_OPEN_PROXY: boolean
+  readonly VITE_ENABLE_PROXY: boolean
   /**
-   * 是否开启开发者工具
+   * 是否启用 Vue 开发工具
    */
-  readonly VITE_OPEN_DEVTOOLS: boolean
+  readonly VITE_ENABLE_VUE_DEVTOOLS: boolean
+  /**
+   * 是否启用 console 工具
+   */
+  readonly VITE_ENABLE_CONSOLE: boolean
+  /**
+   * 启动编辑器，该配置用于 vite-plugin-vue-devtools 和 unplugin-turbo-console
+   * 支持IDE列表 https://github.com/yyx990803/launch-editor#supported-editors
+   */
+  readonly VITE_LAUNCH_EDITOR: string
 }
