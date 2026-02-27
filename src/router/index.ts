@@ -1,7 +1,7 @@
 import type { RouteRecordRaw } from 'vue-router'
 import NProgress from 'nprogress'
+// import { setupLayouts } from 'virtual:generated-layouts'
 // import generatedRoutes from 'virtual:generated-pages'
-// import { setupLayouts } from 'virtual:meta-layouts'
 import { createRouter, createWebHashHistory } from 'vue-router'
 import 'nprogress/nprogress.css'
 
@@ -29,24 +29,18 @@ const router = createRouter({
   routes,
 })
 
-router.beforeEach((to, _from, next) => {
+router.beforeEach((to, _from) => {
   const userStore = useUserStore()
   NProgress.start()
   if (to.meta.requireLogin) {
-    if (userStore.isLogin) {
-      next()
-    }
-    else {
-      next({
+    if (!userStore.isLogin) {
+      return {
         name: 'login',
         query: {
           redirect: to.fullPath,
         },
-      })
+      }
     }
-  }
-  else {
-    next()
   }
 })
 

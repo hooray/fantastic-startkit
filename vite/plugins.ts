@@ -18,7 +18,7 @@ import { vitePluginFakeServer } from 'vite-plugin-fake-server'
 import Pages from 'vite-plugin-pages'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import VueDevTools from 'vite-plugin-vue-devtools'
-import Layouts from 'vite-plugin-vue-meta-layouts'
+import Layouts from 'vite-plugin-vue-layouts-next'
 
 export default function createVitePlugins(mode: string, isBuild = false) {
   const viteEnv = parseLoadedEnv(loadEnv(mode, process.cwd()))
@@ -73,7 +73,7 @@ export default function createVitePlugins(mode: string, isBuild = false) {
       enableProd: isBuild && viteEnv.VITE_BUILD_MOCK,
     }),
 
-    // https://github.com/dishait/vite-plugin-vue-meta-layouts
+    // https://github.com/loicduong/vite-plugin-vue-layouts-next
     Layouts(),
 
     // https://github.com/hannoeru/vite-plugin-pages
