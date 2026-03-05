@@ -16,6 +16,7 @@
 - [stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
 - [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
 - [UnoCSS](https://marketplace.visualstudio.com/items?itemName=antfu.unocss)
+- [Catalog Lens](https://marketplace.visualstudio.com/items?itemName=antfu.pnpm-catalog-lens)
 
 在 Visual Studio Code 里打开源码的文件夹，右下角会自动提示需要安装的依赖，直接点击安装即可。
 
@@ -66,6 +67,23 @@ git clone https://gitee.com/hooray/fantastic-startkit.git
 
 如果依旧无法运行（基本不太可能），可尝试删除根目录下 `/node_modules` 文件夹与 `pnpm-lock.yaml` 文件后，再删除 `package.json` 中 `"preinstall": "npx only-allow pnpm"` 这句脚本，最后使用 `npm / yarn` 进行安装依赖。但需要清楚一点，这样操作后，将无法与官方环境锁定的依赖包版本保持一致，可能会出现无法预知的问题，非必要情况下，请勿使用该方案。
 :::
+
+## 项目结构
+
+本项目采用 Monorepo 架构，基于 pnpm workspace 管理多个应用和公共包。
+
+```
+fantastic-startkit/
+├── apps/              # 应用目录
+│   ├── web-example    # 示例应用
+│   └── web-template   # 项目模板
+├── packages/          # 公共包目录
+├── docs/              # 文档
+├── scripts/           # 脚本工具
+└── package.json       # 根目录 package.json
+```
+
+执行 `pnpm dev` 或 `pnpm build` 命令时，会通过交互式命令行提示选择要运行或构建的应用。
 
 ## 技术栈
 

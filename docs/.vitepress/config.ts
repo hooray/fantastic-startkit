@@ -42,6 +42,7 @@ export default defineConfig({
           text: '指南',
           items: [
             { text: '开始', link: '/guide/start' },
+            { text: 'Monorepo 架构', link: '/guide/monorepo' },
             { text: '代码规范', link: '/guide/coding-standard' },
             { text: '环境配置', link: '/guide/configure' },
             { text: '资源', link: '/guide/resources' },
@@ -49,7 +50,6 @@ export default defineConfig({
             { text: '路由', link: '/guide/router' },
             { text: '全局状态管理', link: '/guide/store' },
             { text: '与服务端交互', link: '/guide/axios' },
-            { text: '代码文件自动生成', link: '/guide/plop' },
             { text: '常用 API', link: '/guide/api' },
             { text: '构建与预览', link: '/guide/build' },
           ],
