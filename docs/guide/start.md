@@ -37,9 +37,9 @@
 ```bash
 # 克隆项目（如果本地已有源码，可跳过这步）
 # 可选择从 github 或 gitee 克隆 example 分支
-git clone -b example https://github.com/hooray/fantastic-startkit.git
+git clone https://github.com/hooray/fantastic-startkit.git
 # 或者
-git clone -b example https://gitee.com/hooray/fantastic-startkit.git
+git clone https://gitee.com/hooray/fantastic-startkit.git
 
 # 进入项目目录
 cd fantastic-startkit
@@ -53,19 +53,8 @@ pnpm run dev
 
 运行成功后，会自动访问页面，默认情况下，地址为 `http://localhost:5173`
 
-如果你已经了解本套件的特性，我们推荐你通过拉取默认 `main` 分支进行项目开发，该分支不含任何示例代码。
-
-```bash
-# 可选择从 github 或 gitee 克隆
-git clone https://github.com/hooray/fantastic-startkit.git
-# 或者
-git clone https://gitee.com/hooray/fantastic-startkit.git
-```
-
 ::: warning 报错
 安装依赖时提示 404 ，或者安装结束后，运行时提示「 'vite' 不是内部或外部命令，也不是可运行的程序或批处理文件 」，都些都是依赖未安装成功导致的。可以尝试执行 `pnpm config set registry https://registry.npmmirror.com/` 切换为国内 npmmirror 源（也可以使用 [nrm](https://github.com/Pana/nrm) 一键切换源），然后删除根目录下 `/node_modules` 文件夹并重新安装依赖。
-
-如果依旧无法运行（基本不太可能），可尝试删除根目录下 `/node_modules` 文件夹与 `pnpm-lock.yaml` 文件后，再删除 `package.json` 中 `"preinstall": "npx only-allow pnpm"` 这句脚本，最后使用 `npm / yarn` 进行安装依赖。但需要清楚一点，这样操作后，将无法与官方环境锁定的依赖包版本保持一致，可能会出现无法预知的问题，非必要情况下，请勿使用该方案。
 :::
 
 ## 项目结构
@@ -90,7 +79,7 @@ fantastic-startkit/
 了解并熟悉框架使用到的技术栈，能让你使用本框架更得心应手。
 
 - [Vite](https://cn.vitejs.dev/)
-- [Vue 3](https://cn.vuejs.org/) ([v3 迁移指南](https://v3-migration.vuejs.org/))
+- [Vue 3](https://cn.vuejs.org/)
 - [Vue Router](https://router.vuejs.org/zh/)
 - [Pinia](https://pinia.vuejs.org/zh/)
 - [UnoCSS](https://unocss.dev/)

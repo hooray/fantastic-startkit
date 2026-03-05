@@ -12,6 +12,7 @@
 
 ## 特点
 
+- 采用 Monorepo 架构，基于 pnpm workspace
 - 支持 TypeScript
 - 默认集成 vue-router 和 pinia
 - 支持基于文件系统的路由
@@ -22,7 +23,6 @@
 - 支持 mock 数据，可摆脱后端束缚独立开发
 - 支持 gzip / brotli 优化项目体积，提高加载速度
 - 结合 IDE 插件、ESlint 、stylelint 、Git 钩子，轻松实现团队代码规范
-- 采用 Monorepo 架构，基于 pnpm workspace
 
 ## 目录结构
 
