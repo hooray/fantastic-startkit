@@ -1,0 +1,145 @@
+<template>
+  <div>
+    <div class="sponsors-aside-text">
+      作者其他作品
+    </div>
+    <div class="sponsor-container special">
+      <a href="https://fantastic-admin.hurui.me/" target="_blank" class="sponsor-item">
+        <img src="https://fantastic-admin.hurui.me/logo.svg">
+        <div class="info">
+          <div class="main">Fantastic-admin</div>
+          <div class="sub">杰出的管理系统框架</div>
+        </div>
+      </a>
+      <a href="https://one-step-admin.hurui.me/" target="_blank" class="sponsor-item">
+        <img src="https://one-step-admin.hurui.me/logo.png">
+        <div class="info">
+          <div class="main">One-step-admin</div>
+          <div class="sub">巧妙的管理系统框架</div>
+        </div>
+      </a>
+      <a href="https://fantastic-mobile.hurui.me/" target="_blank" class="sponsor-item">
+        <img src="https://fantastic-mobile.hurui.me/logo.png">
+        <div class="info">
+          <div class="main">Fantastic-mobile</div>
+          <div class="sub">自成一派的 H5 框架</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+.sponsors-aside-text {
+  display: block;
+  margin: 3em 0 1em;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--vp-c-text-3);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.sponsor-container {
+  --max-width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--max-width), 1fr));
+  column-gap: 4px;
+}
+
+.sponsor-item {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  height: calc(var(--max-width) / 2 - 6px);
+  padding-inline: 20px;
+  margin: 2px 0;
+  font-size: 13px;
+  background-color: var(--vp-c-bg-soft);
+  border-radius: 2px;
+  transition: background-color 0.2s ease;
+}
+
+.sponsor-item.action {
+  font-size: 11px;
+  color: var(--vt-c-text-3);
+}
+
+.sponsor-item img {
+  max-width: calc(var(--max-width) - 30px);
+  max-height: calc(var(--max-width) / 2 - 20px);
+}
+
+.sponsor-item .info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.sponsor-item .info .main {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--vp-c-text-1);
+}
+
+.sponsor-item .info .sub {
+  font-size: 12px;
+  line-height: 1.2;
+  color: var(--vp-c-text-3);
+}
+
+.special .sponsor-item {
+  height: 160px;
+}
+
+.special .sponsor-item img {
+  max-width: 300px;
+  max-height: 150px;
+}
+
+/* dark mode */
+.dark .aside .sponsor-item,
+.dark .landing .sponsor-item {
+  background-color: var(--vp-c-gray-soft);
+}
+
+.aside .sponsor-item img,
+.landing .sponsor-item img {
+  transition: filter 0.2s ease;
+}
+
+.dark .aside .sponsor-item img,
+.dark .landing .sponsor-item img {
+  filter: grayscale(1) invert(1);
+}
+
+.dark .sponsor-item:hover img {
+  filter: none;
+}
+
+/* aside mode (on content pages) */
+.sponsor-container.platinum.aside {
+  --max-width: 110px;
+
+  column-gap: 1px;
+}
+
+.aside .sponsor-item {
+  margin: 1px 0;
+}
+
+.aside .special .sponsor-item {
+  width: 100%;
+  height: 70px;
+}
+
+.aside .special .sponsor-item img {
+  max-width: 120px;
+  max-height: 36px;
+}
+</style>

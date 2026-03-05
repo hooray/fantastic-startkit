@@ -5,6 +5,7 @@
     "dbaeumer.vscode-eslint",
     "stylelint.vscode-stylelint",
     "Vue.volar",
-    "antfu.unocss"
+    "antfu.unocss",
+    "antfu.pnpm-catalog-lens"
   ]
 }

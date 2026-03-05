@@ -6,6 +6,9 @@ export default antfu(
     ignores: [
       'public',
       'dist*',
+      '**/*.md',
+      '.vitepress/cache',
+      '.vitepress/dist',
     ],
   },
   {
@@ -27,5 +30,10 @@ export default antfu(
         order: ['route', 'i18n', 'script', 'template', 'style'],
       }],
     },
+  },
+  {
+    files: [
+      'src/**/*.ts',
+    ],
   },
 )
