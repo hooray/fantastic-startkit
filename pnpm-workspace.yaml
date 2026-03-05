@@ -1,14 +1,7 @@
-shellEmulator: true
-
-trustPolicy: no-downgrade
-
 packages:
   - 'packages/*'
   - 'apps/*'
   - docs
-
-overrides:
-  oxc-parser: ^0.115.0
 
 catalog:
   '@faker-js/faker': ^10.3.0

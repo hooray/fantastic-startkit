@@ -2,6 +2,7 @@ import antfu from '@antfu/eslint-config'
 
 export default antfu(
   {
+    pnpm: false,
     unocss: true,
     ignores: [
       'public',
@@ -30,10 +31,5 @@ export default antfu(
         order: ['route', 'i18n', 'script', 'template', 'style'],
       }],
     },
-  },
-  {
-    files: [
-      'src/**/*.ts',
-    ],
   },
 )
