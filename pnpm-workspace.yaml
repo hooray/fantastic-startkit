@@ -5,17 +5,17 @@ packages:
 
 catalog:
   '@faker-js/faker': ^10.3.0
-  '@iconify/json': ^2.2.446
+  '@iconify/json': ^2.2.449
   '@iconify/vue': ^5.0.0
   '@types/nprogress': ^0.2.3
   '@types/qs': ^6.15.0
-  '@vitejs/plugin-vue': ^6.0.4
-  '@vitejs/plugin-vue-jsx': ^5.1.4
+  '@vitejs/plugin-vue': ^6.0.5
+  '@vitejs/plugin-vue-jsx': ^5.1.5
   '@vue/tsconfig': ^0.9.0
   autoprefixer: ^10.4.27
   axios: ^1.13.6
   boxen: ^8.0.1
-  dayjs: ^1.11.19
+  dayjs: ^1.11.20
   eruda: ^3.4.3
   http-server: ^14.1.1
   mitt: ^3.0.1
@@ -25,7 +25,7 @@ catalog:
   postcss: ^8.5.8
   postcss-nested: ^7.0.2
   qs: ^6.15.0
-  sass-embedded: ^1.97.3
+  sass-embedded: ^1.98.0
   svgo: ^4.0.1
   typescript: ^5.9.3
   unocss: ^66.6.6
@@ -33,16 +33,16 @@ catalog:
   unplugin-turbo-console: ^2.3.0
   unplugin-vue-components: ^31.0.0
   vconsole: ^3.15.1
-  vite: ^7.3.1
+  vite: ^8.0.0
   vite-plugin-archiver: ^0.2.0
   vite-plugin-banner: ^0.8.1
-  vite-plugin-compression2: ^2.5.0
+  vite-plugin-compression2: ^2.5.1
   vite-plugin-env-parse: ^1.0.15
   vite-plugin-fake-server: ^2.2.2
   vite-plugin-pages: ^0.33.3
   vite-plugin-svg-icons: ^2.0.1
   vite-plugin-vue-devtools: ^8.0.7
   vite-plugin-vue-layouts-next: ^2.0.1
-  vue: ^3.5.29
+  vue: ^3.5.30
   vue-router: ^5.0.3
   vue-tsc: ^3.2.5
