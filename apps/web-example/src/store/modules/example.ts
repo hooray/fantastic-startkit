@@ -1,4 +1,4 @@
-import api from '@/api'
+import apiNews from '@/api/modules/news'
 
 export const useExampleStore = defineStore(
   // 唯一ID
@@ -13,9 +13,7 @@ export const useExampleStore = defineStore(
     })
 
     function getNews() {
-      api.get('/news/list', {
-        baseURL: '/mock/',
-      }).then((res) => {
+      apiNews.list().then((res) => {
         news.value = res.data.list
       })
     }
