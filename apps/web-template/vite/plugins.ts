@@ -1,6 +1,7 @@
 import type { PluginOption } from 'vite'
 import path from 'node:path'
 import process from 'node:process'
+import { FantasticComponentsResolver, FantasticComponentsType } from '@fantastic-startkit/components/resolver'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import boxen from 'boxen'
@@ -54,6 +55,12 @@ export default function createVitePlugins(mode: string, isBuild = false) {
       dirs: ['src/components'],
       include: [/\.vue$/, /\.vue\?vue/, /\.tsx$/],
       dts: './src/types/components.d.ts',
+      resolvers: [
+        FantasticComponentsResolver(),
+      ],
+      types: [
+        FantasticComponentsType,
+      ],
     }),
 
     Unocss(),

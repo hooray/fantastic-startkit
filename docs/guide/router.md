@@ -49,7 +49,7 @@ views
 │    │    └─ [id].vue              /example/params/:id              example-params
 │    ├─ axios.vue                  /example/axios                   example-axios
 │    ├─ cookie.vue                 /example/cookie                  example-cookie
-│    └─ svgicon.vue                /example/svgicon                 example-svgicon
+│    └─ icon.vue                   /example/icon                    example-icon
 ├─ [...all].vue                    /:all(.*)*                       all
 ├─ index.vue                       /                                index
 └─ login.vue                       /login                           login

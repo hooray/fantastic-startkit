@@ -6,26 +6,19 @@ function ExampleLayout() {
 
 const routes: RouteRecordRaw = {
   path: '/example',
-  redirect: '/example/svgicon',
+  redirect: '/example/icon',
   component: ExampleLayout,
   children: [
     {
-      path: 'svgicon',
-      component: () => import('@/views/example/svgicon.vue'),
+      path: 'icon',
+      component: () => import('@/views/example/icon.vue'),
       meta: {
-        title: 'Svg Icon',
+        title: 'Icon',
       },
     },
     {
-      path: 'iconify',
-      component: () => import('@/views/example/iconify.vue'),
-      meta: {
-        title: 'Iconify',
-      },
-    },
-    {
-      path: 'global-component',
-      component: () => import('@/views/example/global-component.vue'),
+      path: 'component',
+      component: () => import('@/views/example/component.vue'),
     },
     {
       path: 'axios',
@@ -34,10 +27,6 @@ const routes: RouteRecordRaw = {
     {
       path: 'pinia',
       component: () => import('@/views/example/pinia.vue'),
-    },
-    {
-      path: 'component',
-      component: () => import('@/views/example/component.vue'),
     },
     {
       path: 'params/:test',

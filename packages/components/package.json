@@ -1,0 +1,22 @@
+{
+  "name": "@fantastic-startkit/components",
+  "type": "module",
+  "version": "0.0.0",
+  "exports": {
+    ".": "./index.ts",
+    "./resolver": "./resolver.ts",
+    "./global": "./global.d.ts"
+  },
+  "peerDependencies": {
+    "unplugin-vue-components": "catalog:",
+    "vue": "catalog:"
+  },
+  "peerDependenciesMeta": {
+    "unplugin-vue-components": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "@iconify/vue": "catalog:"
+  }
+}

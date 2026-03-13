@@ -12,15 +12,17 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    DemoButton: typeof import('./../components/DemoButton/index.vue')['default']
+    FsIcon: typeof import('@fantastic-startkit/components')['FsIcon']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    SvgIcon: typeof import('./../components/SvgIcon/index.vue')['default']
   }
 }
 
 // For TSX support
 declare global {
+  const DemoButton: typeof import('./../components/DemoButton/index.vue')['default']
+  const FsIcon: typeof import('@fantastic-startkit/components')['FsIcon']
   const RouterLink: typeof import('vue-router')['RouterLink']
   const RouterView: typeof import('vue-router')['RouterView']
-  const SvgIcon: typeof import('./../components/SvgIcon/index.vue')['default']
 }

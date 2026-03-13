@@ -185,6 +185,9 @@ importers:
 
   apps/web-example:
     dependencies:
+      '@fantastic-startkit/components':
+        specifier: workspace:*
+        version: link:../../packages/components
       axios:
         specifier: 'catalog:'
         version: 1.13.6
@@ -315,6 +318,9 @@ importers:
 
   apps/web-template:
     dependencies:
+      '@fantastic-startkit/components':
+        specifier: workspace:*
+        version: link:../../packages/components
       axios:
         specifier: 'catalog:'
         version: 1.13.6
@@ -452,6 +458,18 @@ importers:
       vitepress:
         specifier: 1.6.4
         version: 1.6.4(@algolia/client-search@5.49.1)(@types/node@22.5.5)(axios@1.13.6)(change-case@5.4.4)(lightningcss@1.32.0)(nprogress@0.2.0)(postcss@8.5.8)(sass-embedded@1.98.0)(sass@1.98.0)(search-insights@2.17.3)(typescript@5.9.3)
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.30(typescript@5.9.3)
+
+  packages/components:
+    dependencies:
+      '@iconify/vue':
+        specifier: 'catalog:'
+        version: 5.0.0(vue@3.5.30(typescript@5.9.3))
+      unplugin-vue-components:
+        specifier: 'catalog:'
+        version: 31.0.0(vue@3.5.30(typescript@5.9.3))
       vue:
         specifier: 'catalog:'
         version: 3.5.30(typescript@5.9.3)

@@ -90,10 +90,23 @@ $width: 500px;
 全局公共组件在使用时，无需手动引入，框架会在你使用时自动引入，该特性由 [unplugin-vue-components](https://github.com/unplugin/unplugin-vue-components) 提供支持。
 :::
 
-全局公共组件存放在 `/src/components/` 目录下，每个组件按文件夹进行区分。
+全局公共组件有两个来源：
 
-每个组件的文件夹内至少保留一个文件名为 `index.vue` 的组件入口（可参考 `SvgIcon` 组件），文件夹名称即为组件名。
+#### 来源一：应用内组件
 
+存放在 `/src/components/` 目录下，每个组件独占一个文件夹，文件夹名称即为组件名。文件夹内至少包含一个名为 `index.vue` 的入口文件。
+
+```
+src/components/
+└── DemoButton/
+    └── index.vue   # 组件名为 DemoButton，直接在模板中使用 <DemoButton />
+```
+
+#### 来源二：monorepo 子包
+
+`@fantastic-startkit/components` 子包提供跨应用的公共组件，通过 `FantasticComponentsResolver` 自动识别并导入。子包组件名统一以 `Fs` 为前缀，例如 `<FsIcon />`。
+
+如需新增子包组件，参考 `packages/components` 目录下的结构说明。
 
 ### 局部私有
 

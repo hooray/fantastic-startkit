@@ -2,6 +2,7 @@ import type { RouteRecordRaw } from 'vue-router'
 import NProgress from 'nprogress'
 // import { setupLayouts } from 'virtual:generated-layouts'
 // import generatedRoutes from 'virtual:generated-pages'
+import { nextTick } from 'vue'
 import { createRouter, createWebHashHistory } from 'vue-router'
 import 'nprogress/nprogress.css'
 
@@ -29,7 +30,7 @@ const router = createRouter({
   routes,
 })
 
-router.beforeEach((to, _from) => {
+router.beforeEach((to) => {
   const userStore = useUserStore()
   NProgress.start()
   if (to.meta.requireLogin) {
@@ -42,6 +43,15 @@ router.beforeEach((to, _from) => {
       }
     }
   }
+  if (!document.startViewTransition) {
+    return
+  }
+  return new Promise<void>((resolve) => {
+    document.startViewTransition(() => {
+      resolve()
+      return nextTick()
+    })
+  })
 })
 
 router.afterEach((to) => {

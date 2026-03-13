@@ -13,7 +13,7 @@ meta:
         Vue 3 · Vite · TypeScript
       </div>
 
-      <h1 class="mb-4 text-[56px] text-slate-900 font-extrabold leading-none tracking-tight">
+      <h1 class="mb-4 text-[56px] text-slate-900 font-extrabold leading-none tracking-tight" style="view-transition-name: site-title;">
         Fantastic
         <span class="text-blue-600">Startkit</span>
       </h1>
@@ -24,7 +24,7 @@ meta:
 
       <div class="flex items-center justify-center gap-3">
         <RouterLink
-          to="/example/svgicon"
+          to="/example/icon"
           class="inline-flex cursor-pointer items-center gap-2 border-0 rounded-xl bg-blue-600 px-6 py-2.5 text-[14px] text-white font-semibold no-underline shadow-md transition-all hover:bg-blue-700 hover:shadow-lg hover:-translate-y-0.5"
         >
           查看演示

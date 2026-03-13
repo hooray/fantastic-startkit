@@ -46,7 +46,7 @@ export default defineConfig({
             { text: '代码规范', link: '/guide/coding-standard' },
             { text: '环境配置', link: '/guide/configure' },
             { text: '资源', link: '/guide/resources' },
-            { text: '图标', link: '/guide/svg-icon' },
+            { text: '图标', link: '/guide/icon' },
             { text: '路由', link: '/guide/router' },
             { text: '全局状态管理', link: '/guide/store' },
             { text: '与服务端交互', link: '/guide/axios' },

@@ -28,7 +28,7 @@ function remove() {
 </script>
 
 <template>
-  <div class="max-w-[760px]">
+  <div class="max-w-full">
     <div class="mb-7">
       <h2 class="mb-2 text-[22px] text-slate-900 font-bold tracking-tight">
         JS 鉴权

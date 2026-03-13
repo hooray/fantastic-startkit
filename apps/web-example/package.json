@@ -19,6 +19,7 @@
     "lint:stylelint": "stylelint \"src/**/*.{css,scss,vue}\" --cache --fix"
   },
   "dependencies": {
+    "@fantastic-startkit/components": "workspace:*",
     "axios": "catalog:",
     "dayjs": "catalog:",
     "eruda": "catalog:",
