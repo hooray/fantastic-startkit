@@ -3,9 +3,6 @@
   "type": "module",
   "private": true,
   "packageManager": "pnpm@10.32.1",
-  "engines": {
-    "node": "^20.19.0 || >=22.12.0"
-  },
   "scripts": {
     "dev": "vite",
     "build:test": "vue-tsc -b && vite build --mode test",
@@ -48,7 +45,6 @@
     "postcss-nested": "catalog:",
     "sass-embedded": "catalog:",
     "svgo": "catalog:",
-    "typescript": "catalog:",
     "unocss": "catalog:",
     "unplugin-auto-import": "catalog:",
     "unplugin-turbo-console": "catalog:",

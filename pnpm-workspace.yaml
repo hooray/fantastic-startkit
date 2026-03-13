@@ -4,11 +4,16 @@ packages:
   - docs
 
 catalog:
+  '@antfu/eslint-config': ^7.7.2
+  '@clack/prompts': ^1.1.0
   '@faker-js/faker': ^10.3.0
   '@iconify/json': ^2.2.449
   '@iconify/vue': ^5.0.0
+  '@stylistic/stylelint-config': ^4.0.0
+  '@types/node': ^25.5.0
   '@types/nprogress': ^0.2.3
   '@types/qs': ^6.15.0
+  '@unocss/eslint-plugin': ^66.6.6
   '@vitejs/plugin-vue': ^6.0.5
   '@vitejs/plugin-vue-jsx': ^5.1.5
   '@vue/tsconfig': ^0.9.0
@@ -17,8 +22,11 @@ catalog:
   boxen: ^8.0.1
   dayjs: ^1.11.20
   eruda: ^3.4.3
+  eslint: ^10.0.3
   http-server: ^14.1.1
+  lint-staged: ^16.3.3
   mitt: ^3.0.1
+  npm-run-all2: ^8.0.4
   nprogress: ^0.2.0
   picocolors: ^1.1.1
   pinia: ^3.0.4
@@ -26,7 +34,15 @@ catalog:
   postcss-nested: ^7.0.2
   qs: ^6.15.0
   sass-embedded: ^1.98.0
+  simple-git-hooks: ^2.13.1
+  stylelint: ^17.4.0
+  stylelint-config-recess-order: ^7.6.1
+  stylelint-config-standard-scss: ^17.0.0
+  stylelint-config-standard-vue: ^1.0.0
+  stylelint-scss: ^7.0.0
   svgo: ^4.0.1
+  taze: ^19.10.0
+  tsx: ^4.21.0
   typescript: ^5.9.3
   unocss: ^66.6.6
   unplugin-auto-import: ^21.0.0
@@ -41,7 +57,7 @@ catalog:
   vite-plugin-fake-server: ^2.2.2
   vite-plugin-pages: ^0.33.3
   vite-plugin-svg-icons: ^2.0.1
-  vite-plugin-vue-devtools: ^8.0.7
+  vite-plugin-vue-devtools: ^8.1.0
   vite-plugin-vue-layouts-next: ^2.0.1
   vue: ^3.5.30
   vue-router: ^5.0.3

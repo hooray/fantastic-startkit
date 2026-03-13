@@ -2,7 +2,6 @@ import antfu from '@antfu/eslint-config'
 
 export default antfu(
   {
-    pnpm: false,
     unocss: true,
     ignores: [
       'public',
@@ -14,6 +13,7 @@ export default antfu(
   },
   {
     rules: {
+      'pnpm/yaml-enforce-settings': 'off',
       'e18e/prefer-static-regex': 'off',
       'eslint-comments/no-unlimited-disable': 'off',
       'curly': ['error', 'all'],
