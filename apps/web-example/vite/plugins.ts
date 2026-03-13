@@ -27,7 +27,7 @@ export default function createVitePlugins(mode: string, isBuild = false) {
     vue(),
     vueJsx(),
 
-    // https://github.com/vuejs/devtools-next
+    // https://github.com/vuejs/devtools
     viteEnv.VITE_ENABLE_VUE_DEVTOOLS && VueDevTools({
       launchEditor: viteEnv.VITE_LAUNCH_EDITOR,
     }),
@@ -52,8 +52,7 @@ export default function createVitePlugins(mode: string, isBuild = false) {
 
     // https://github.com/unplugin/unplugin-vue-components
     components({
-      dirs: ['src/components'],
-      include: [/\.vue$/, /\.vue\?vue/, /\.tsx$/],
+      dirs: ['src/components/*/index.vue'],
       dts: './src/types/components.d.ts',
       resolvers: [
         FantasticComponentsResolver(),
@@ -76,7 +75,6 @@ export default function createVitePlugins(mode: string, isBuild = false) {
     vitePluginFakeServer({
       logger: !isBuild,
       include: 'src/api/modules',
-      infixName: false,
       enableProd: isBuild && viteEnv.VITE_BUILD_MOCK,
     }),
 

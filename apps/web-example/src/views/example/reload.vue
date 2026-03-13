@@ -30,7 +30,7 @@ function plus() {
           当前计数
         </p>
         <div class="flex items-center gap-3">
-          <div class="font-code w-20 border border-slate-200 rounded-lg bg-slate-50 py-2 text-center text-[20px] text-blue-600 font-semibold">
+          <div class="w-20 border border-slate-200 rounded-lg bg-slate-50 py-2 text-center text-[20px] text-blue-600 font-semibold">
             {{ value }}
           </div>
           <button

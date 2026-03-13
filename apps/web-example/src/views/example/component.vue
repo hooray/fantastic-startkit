@@ -36,11 +36,11 @@ function add() {
       <div class="p-5">
         <p class="mb-4 text-sm text-slate-500">
           存放于页面的
-          <code class="font-code border border-slate-200 rounded bg-slate-100 px-1.5 py-0.5 text-xs text-slate-700">components/</code>
+          <code class="border border-slate-200 rounded bg-slate-100 px-1.5 py-0.5 text-xs text-slate-700">components/</code>
           子目录下，使用前需在
-          <code class="font-code border border-slate-200 rounded bg-slate-100 px-1.5 py-0.5 text-xs text-slate-700">&lt;script setup&gt;</code>
+          <code class="border border-slate-200 rounded bg-slate-100 px-1.5 py-0.5 text-xs text-slate-700">&lt;script setup&gt;</code>
           中手动
-          <code class="font-code border border-slate-200 rounded bg-slate-100 px-1.5 py-0.5 text-xs text-slate-700">import</code>
+          <code class="border border-slate-200 rounded bg-slate-100 px-1.5 py-0.5 text-xs text-slate-700">import</code>
           引入。
         </p>
 
@@ -58,7 +58,7 @@ function add() {
           </button>
         </div>
 
-        <div class="font-code mt-4 border border-slate-200 rounded-lg bg-slate-50 px-4 py-3 text-xs text-slate-500">
+        <div class="mt-4 border border-slate-200 rounded-lg bg-slate-50 px-4 py-3 text-xs text-slate-500">
           <div><span class="text-slate-400">// 手动引入</span></div>
           <div>
             <span class="text-violet-500">import</span>
@@ -79,9 +79,9 @@ function add() {
       <div class="p-5 space-y-4">
         <p class="text-sm text-slate-500">
           通过
-          <code class="font-code border border-slate-200 rounded bg-slate-100 px-1.5 py-0.5 text-xs text-slate-700">unplugin-vue-components</code>
+          <code class="border border-slate-200 rounded bg-slate-100 px-1.5 py-0.5 text-xs text-slate-700">unplugin-vue-components</code>
           实现自动导入，无需手动
-          <code class="font-code border border-slate-200 rounded bg-slate-100 px-1.5 py-0.5 text-xs text-slate-700">import</code>，
+          <code class="border border-slate-200 rounded bg-slate-100 px-1.5 py-0.5 text-xs text-slate-700">import</code>，
           可直接在模板中使用。全局组件有两个来源：
         </p>
 
@@ -89,15 +89,15 @@ function add() {
         <div class="border border-slate-200 rounded-lg p-4">
           <div class="mb-2 flex items-center gap-2">
             <span class="rounded bg-slate-100 px-2 py-0.5 text-[11px] text-slate-500 font-semibold">来源一</span>
-            <code class="font-code text-xs text-slate-600">src/components/</code>
+            <code class="text-xs text-slate-600">src/components/</code>
           </div>
           <p class="mb-3 text-sm text-slate-500">
             存放于
-            <code class="font-code border border-slate-200 rounded bg-slate-100 px-1.5 py-0.5 text-xs text-slate-700">src/components/</code>
+            <code class="border border-slate-200 rounded bg-slate-100 px-1.5 py-0.5 text-xs text-slate-700">src/components/</code>
             目录下，每个组件独占一个文件夹，<strong class="text-slate-700">文件夹名即组件名</strong>，目录内包含
-            <code class="font-code border border-slate-200 rounded bg-slate-100 px-1.5 py-0.5 text-xs text-slate-700">index.vue</code>
+            <code class="border border-slate-200 rounded bg-slate-100 px-1.5 py-0.5 text-xs text-slate-700">index.vue</code>
             入口文件即可。以
-            <code class="font-code border border-slate-200 rounded bg-slate-100 px-1.5 py-0.5 text-xs text-slate-700">DemoButton</code>
+            <code class="border border-slate-200 rounded bg-slate-100 px-1.5 py-0.5 text-xs text-slate-700">DemoButton</code>
             为例：
           </p>
           <div class="mb-3 border border-slate-200 rounded-lg bg-slate-50 p-4">
@@ -110,7 +110,7 @@ function add() {
               <DemoButton label="取消" />
             </div>
           </div>
-          <div class="font-code border border-slate-200 rounded-lg bg-slate-50 px-4 py-3 text-xs text-slate-500">
+          <div class="border border-slate-200 rounded-lg bg-slate-50 px-4 py-3 text-xs text-slate-500">
             <div class="text-slate-400">
               // 无需 import，直接使用
             </div>
@@ -126,20 +126,20 @@ function add() {
         <div class="border border-slate-200 rounded-lg p-4">
           <div class="mb-2 flex items-center gap-2">
             <span class="rounded bg-slate-100 px-2 py-0.5 text-[11px] text-slate-500 font-semibold">来源二</span>
-            <code class="font-code text-xs text-slate-600">@fantastic-startkit/components</code>
+            <code class="text-xs text-slate-600">@fantastic-startkit/components</code>
           </div>
           <p class="mb-3 text-sm text-slate-500">
             monorepo 子包提供的公共组件，通过
-            <code class="font-code border border-slate-200 rounded bg-slate-100 px-1.5 py-0.5 text-xs text-slate-700">FantasticComponentsResolver</code>
+            <code class="border border-slate-200 rounded bg-slate-100 px-1.5 py-0.5 text-xs text-slate-700">FantasticComponentsResolver</code>
             自动识别并导入，组件名以
-            <code class="font-code border border-slate-200 rounded bg-slate-100 px-1.5 py-0.5 text-xs text-slate-700">Fs</code>
+            <code class="border border-slate-200 rounded bg-slate-100 px-1.5 py-0.5 text-xs text-slate-700">Fs</code>
             开头。以
             <RouterLink to="/example/icon" class="text-blue-500 font-medium hover:text-blue-600 hover:underline">
               FsIcon
             </RouterLink>
             为例：
           </p>
-          <div class="font-code border border-slate-200 rounded-lg bg-slate-50 px-4 py-3 text-xs text-slate-500">
+          <div class="border border-slate-200 rounded-lg bg-slate-50 px-4 py-3 text-xs text-slate-500">
             <span class="text-slate-400">// 无需 import，直接使用</span>
             <br>
             <span class="text-violet-500">&lt;FsIcon</span>

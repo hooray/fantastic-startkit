@@ -74,7 +74,7 @@ function getLength() {
           :key="index"
           class="flex items-baseline gap-3 border-b border-slate-100 py-2.5 last:border-b-0"
         >
-          <span class="font-code shrink-0 text-[11px] text-slate-400">{{ String(index + 1).padStart(2, '0') }}</span>
+          <span class="shrink-0 text-[11px] text-slate-400">{{ String(index + 1).padStart(2, '0') }}</span>
           <span class="text-[13.5px] text-slate-600">{{ item.title }}</span>
         </li>
       </transition-group>

@@ -54,7 +54,7 @@ function login() {
             <div class="mb-0.5 text-[11px] text-slate-400 font-medium">
               账号
             </div>
-            <div class="font-code text-sm text-slate-700">
+            <div class="text-sm text-slate-700">
               admin
             </div>
           </div>
@@ -62,7 +62,7 @@ function login() {
             <div class="mb-0.5 text-[11px] text-slate-400 font-medium">
               密码
             </div>
-            <div class="font-code text-sm text-slate-700 tracking-widest">
+            <div class="text-sm text-slate-700 tracking-widest">
               ••••••
             </div>
           </div>

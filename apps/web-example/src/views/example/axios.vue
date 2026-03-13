@@ -28,7 +28,7 @@ async function getInfo() {
         Axios 请求
       </h2>
       <p class="text-sm text-slate-500 leading-relaxed">
-        使用 <code class="font-code border border-blue-100 rounded bg-blue-50 px-1.5 py-0.5 text-xs text-blue-600">Promise.all</code>
+        使用 <code class="border border-blue-100 rounded bg-blue-50 px-1.5 py-0.5 text-xs text-blue-600">Promise.all</code>
         并发请求两个接口，合并返回的 mock 数据。
       </p>
     </div>
@@ -56,7 +56,7 @@ async function getInfo() {
           :key="index"
           class="flex items-baseline gap-3 border-b border-slate-100 py-2.5 last:border-b-0"
         >
-          <span class="font-code shrink-0 text-[11px] text-slate-400">{{ String(index + 1).padStart(2, '0') }}</span>
+          <span class="shrink-0 text-[11px] text-slate-400">{{ String(index + 1).padStart(2, '0') }}</span>
           <span class="text-[13.5px] text-slate-600">{{ item.title }}</span>
         </li>
       </transition-group>

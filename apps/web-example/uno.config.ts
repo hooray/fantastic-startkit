@@ -1,4 +1,3 @@
-import type { Theme } from 'unocss/preset-uno'
 import {
   defineConfig,
   presetAttributify,
@@ -10,7 +9,7 @@ import {
   transformerVariantGroup,
 } from 'unocss'
 
-export default defineConfig<Theme>({
+export default defineConfig({
   shortcuts: [
     [/^flex-?(col)?-(start|end|center|baseline|stretch)-?(start|end|center|between|around|evenly|left|right)?$/, ([, col, items, justify]) => {
       const cls = ['flex']
