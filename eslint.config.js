@@ -2,10 +2,11 @@ import antfu from '@antfu/eslint-config'
 
 export default antfu(
   {
+    vue: true,
     unocss: true,
     ignores: [
-      'public',
-      'dist*',
+      '**/public',
+      '**/dist*',
       '**/*.md',
       '.vitepress/cache',
       '.vitepress/dist',
