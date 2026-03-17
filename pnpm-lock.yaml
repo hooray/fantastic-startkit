@@ -7,8 +7,8 @@ settings:
 catalogs:
   default:
     '@antfu/eslint-config':
-      specifier: ^7.7.2
-      version: 7.7.2
+      specifier: ^7.7.3
+      version: 7.7.3
     '@clack/prompts':
       specifier: ^1.1.0
       version: 1.1.0
@@ -16,8 +16,8 @@ catalogs:
       specifier: ^10.3.0
       version: 10.3.0
     '@iconify/json':
-      specifier: ^2.2.449
-      version: 2.2.449
+      specifier: ^2.2.450
+      version: 2.2.450
     '@iconify/vue':
       specifier: ^5.0.0
       version: 5.0.0
@@ -151,8 +151,8 @@ catalogs:
       specifier: ^0.8.1
       version: 0.8.1
     vite-plugin-compression2:
-      specifier: ^2.5.1
-      version: 2.5.1
+      specifier: ^2.5.2
+      version: 2.5.2
     vite-plugin-env-parse:
       specifier: ^1.0.15
       version: 1.0.15
@@ -171,6 +171,12 @@ catalogs:
     vite-plugin-vue-layouts-next:
       specifier: ^2.0.1
       version: 2.0.1
+    vitepress:
+      specifier: ^1.6.4
+      version: 1.6.4
+    vitepress-plugin-comment-with-giscus:
+      specifier: ^1.1.15
+      version: 1.1.15
     vue:
       specifier: ^3.5.30
       version: 3.5.30
@@ -187,7 +193,7 @@ importers:
     devDependencies:
       '@antfu/eslint-config':
         specifier: 'catalog:'
-        version: 7.7.2(@typescript-eslint/rule-tester@8.57.0(eslint@10.0.3(jiti@2.6.1))(typescript@5.9.3))(@typescript-eslint/typescript-estree@8.57.0(typescript@5.9.3))(@typescript-eslint/utils@8.57.0(eslint@10.0.3(jiti@2.6.1))(typescript@5.9.3))(@unocss/eslint-plugin@66.6.6(eslint@10.0.3(jiti@2.6.1))(typescript@5.9.3))(@vue/compiler-sfc@3.5.30)(eslint@10.0.3(jiti@2.6.1))(typescript@5.9.3)
+        version: 7.7.3(@typescript-eslint/rule-tester@8.57.0(eslint@10.0.3(jiti@2.6.1))(typescript@5.9.3))(@typescript-eslint/typescript-estree@8.57.0(typescript@5.9.3))(@typescript-eslint/utils@8.57.0(eslint@10.0.3(jiti@2.6.1))(typescript@5.9.3))(@unocss/eslint-plugin@66.6.6(eslint@10.0.3(jiti@2.6.1))(typescript@5.9.3))(@vue/compiler-sfc@3.5.30)(eslint@10.0.3(jiti@2.6.1))(typescript@5.9.3)
       '@clack/prompts':
         specifier: 'catalog:'
         version: 1.1.0
@@ -206,9 +212,6 @@ importers:
       lint-staged:
         specifier: 'catalog:'
         version: 16.4.0
-      npm-run-all2:
-        specifier: 'catalog:'
-        version: 8.0.4
       simple-git-hooks:
         specifier: 'catalog:'
         version: 2.13.1
@@ -278,7 +281,7 @@ importers:
         version: 10.3.0
       '@iconify/json':
         specifier: 'catalog:'
-        version: 2.2.449
+        version: 2.2.450
       '@iconify/vue':
         specifier: 'catalog:'
         version: 5.0.0(vue@3.5.30(typescript@5.9.3))
@@ -306,6 +309,9 @@ importers:
       http-server:
         specifier: 'catalog:'
         version: 14.1.1
+      npm-run-all2:
+        specifier: 'catalog:'
+        version: 8.0.4
       picocolors:
         specifier: 'catalog:'
         version: 1.1.1
@@ -344,7 +350,7 @@ importers:
         version: 0.8.1
       vite-plugin-compression2:
         specifier: 'catalog:'
-        version: 2.5.1(rollup@4.59.0)
+        version: 2.5.2(rollup@4.59.0)
       vite-plugin-env-parse:
         specifier: 'catalog:'
         version: 1.0.15(vite@8.0.0(@types/node@25.5.0)(esbuild@0.27.4)(jiti@2.6.1)(sass-embedded@1.98.0)(sass@1.98.0)(tsx@4.21.0)(yaml@2.8.2))
@@ -408,7 +414,7 @@ importers:
         version: 10.3.0
       '@iconify/json':
         specifier: 'catalog:'
-        version: 2.2.449
+        version: 2.2.450
       '@iconify/vue':
         specifier: 'catalog:'
         version: 5.0.0(vue@3.5.30(typescript@5.9.3))
@@ -436,6 +442,9 @@ importers:
       http-server:
         specifier: 'catalog:'
         version: 14.1.1
+      npm-run-all2:
+        specifier: 'catalog:'
+        version: 8.0.4
       picocolors:
         specifier: 'catalog:'
         version: 1.1.1
@@ -474,7 +483,7 @@ importers:
         version: 0.8.1
       vite-plugin-compression2:
         specifier: 'catalog:'
-        version: 2.5.1(rollup@4.59.0)
+        version: 2.5.2(rollup@4.59.0)
       vite-plugin-env-parse:
         specifier: 'catalog:'
         version: 1.0.15(vite@8.0.0(@types/node@25.5.0)(esbuild@0.27.4)(jiti@2.6.1)(sass-embedded@1.98.0)(sass@1.98.0)(tsx@4.21.0)(yaml@2.8.2))
@@ -500,11 +509,11 @@ importers:
   docs:
     dependencies:
       vitepress-plugin-comment-with-giscus:
-        specifier: ^1.1.15
+        specifier: 'catalog:'
         version: 1.1.15(vue@3.5.30(typescript@5.9.3))
     devDependencies:
       vitepress:
-        specifier: 1.6.4
+        specifier: 'catalog:'
         version: 1.6.4(@algolia/client-search@5.49.2)(@types/node@25.5.0)(axios@1.13.6)(change-case@5.4.4)(lightningcss@1.32.0)(nprogress@0.2.0)(postcss@8.5.8)(sass-embedded@1.98.0)(sass@1.98.0)(search-insights@2.17.3)(typescript@5.9.3)
       vue:
         specifier: 'catalog:'
@@ -600,8 +609,8 @@ packages:
     resolution: {integrity: sha512-UuihBGHafG/ENsrcTGAn5rsOffrCIRuHMOsD85fZGLEY92ate+BMTUqxz60dv5zerh8ZumN4bRm8eW2z9L11jA==}
     engines: {node: '>= 14.0.0'}
 
-  '@antfu/eslint-config@7.7.2':
-    resolution: {integrity: sha512-CGCcwASry9hk8cOYl82sfTsqmma4DyDfmQSaOJ9p8OtJlVMouDV0MCueDZzUu7iHl+DraSSN6J6sXSkzG6LzcQ==}
+  '@antfu/eslint-config@7.7.3':
+    resolution: {integrity: sha512-BtroDxTvmWtvr3yJkdWVCvwsKlnEdkreoeOyrdNezc/W5qaiQNf2xjcsQ3N5Yy0x27h+0WFfW8rG8YlVioG6dw==}
     hasBin: true
     peerDependencies:
       '@angular-eslint/eslint-plugin': ^21.1.0
@@ -1458,8 +1467,8 @@ packages:
   '@iconify-json/simple-icons@1.2.73':
     resolution: {integrity: sha512-nQZTwul4c2zBqH/aLP4zMOiElj93T6HawbrP+sFQKpxmBdS5x1duCK3cAnkj6dntHz84EYkzaQRM83V2pj4qxA==}
 
-  '@iconify/json@2.2.449':
-    resolution: {integrity: sha512-23uDJsjBeUXqK66dchHDN/YulLeXxUDvAKLwYVKzL0UDT7A9UyHtHPwcOUNf0rbA452ZQMVqk8jsyDtg+xcheg==}
+  '@iconify/json@2.2.450':
+    resolution: {integrity: sha512-dltwhGrVC1guhfqIiFJ+jH21aO1C9RRvIOsAYdmsqKOr3vfMkKnwji4pYpxPEEEg3YQCvVDFpyKCKbfI8Gl/ow==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -6020,8 +6029,8 @@ packages:
   vite-plugin-banner@0.8.1:
     resolution: {integrity: sha512-0+gGguHk3MH0HvzMSOCJC6fGgH4+jtY9KlKVZh+hwwE+PBkGVzY8xe657JL74vEgbeUJD37XjVqTrmve8XvZBQ==}
 
-  vite-plugin-compression2@2.5.1:
-    resolution: {integrity: sha512-2YpLZWs1ZRo9XwtSFA6/NVuBgOR+kvFk8M0HNDsP7Wu7OfJDOKT6fHB8kzuvw6jhgC9KYgDOttfaG2qC0wE9AQ==}
+  vite-plugin-compression2@2.5.2:
+    resolution: {integrity: sha512-a1eAY2Ux5JrflaWStWUa7yoMnjhw3tx7y6vQIp20QZ9K57wcKxYT+DUJiAG4VSEvmFMjeo9a5R2phdBriOJ/1A==}
 
   vite-plugin-env-parse@1.0.15:
     resolution: {integrity: sha512-XzeCnTakUfAHgD/RphoTZ14t99AT5+rdzZdvdO9FnButorZTKIrUaCuBWdQI0jYh34duNti7PArS/X6Nv6NmpQ==}
@@ -6415,7 +6424,7 @@ snapshots:
     dependencies:
       '@algolia/client-common': 5.49.2
 
-  '@antfu/eslint-config@7.7.2(@typescript-eslint/rule-tester@8.57.0(eslint@10.0.3(jiti@2.6.1))(typescript@5.9.3))(@typescript-eslint/typescript-estree@8.57.0(typescript@5.9.3))(@typescript-eslint/utils@8.57.0(eslint@10.0.3(jiti@2.6.1))(typescript@5.9.3))(@unocss/eslint-plugin@66.6.6(eslint@10.0.3(jiti@2.6.1))(typescript@5.9.3))(@vue/compiler-sfc@3.5.30)(eslint@10.0.3(jiti@2.6.1))(typescript@5.9.3)':
+  '@antfu/eslint-config@7.7.3(@typescript-eslint/rule-tester@8.57.0(eslint@10.0.3(jiti@2.6.1))(typescript@5.9.3))(@typescript-eslint/typescript-estree@8.57.0(typescript@5.9.3))(@typescript-eslint/utils@8.57.0(eslint@10.0.3(jiti@2.6.1))(typescript@5.9.3))(@unocss/eslint-plugin@66.6.6(eslint@10.0.3(jiti@2.6.1))(typescript@5.9.3))(@vue/compiler-sfc@3.5.30)(eslint@10.0.3(jiti@2.6.1))(typescript@5.9.3)':
     dependencies:
       '@antfu/install-pkg': 1.1.0
       '@clack/prompts': 1.1.0
@@ -7091,7 +7100,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify/json@2.2.449':
+  '@iconify/json@2.2.450':
     dependencies:
       '@iconify/types': 2.0.0
       pathe: 2.0.3
@@ -12193,7 +12202,7 @@ snapshots:
 
   vite-plugin-banner@0.8.1: {}
 
-  vite-plugin-compression2@2.5.1(rollup@4.59.0):
+  vite-plugin-compression2@2.5.2(rollup@4.59.0):
     dependencies:
       '@rollup/pluginutils': 5.3.0(rollup@4.59.0)
       tar-mini: 0.2.0

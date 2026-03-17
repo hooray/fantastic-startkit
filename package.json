@@ -22,7 +22,6 @@
     "@unocss/eslint-plugin": "catalog:",
     "eslint": "catalog:",
     "lint-staged": "catalog:",
-    "npm-run-all2": "catalog:",
     "simple-git-hooks": "catalog:",
     "stylelint": "catalog:",
     "stylelint-config-recess-order": "catalog:",

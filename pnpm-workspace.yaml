@@ -1,13 +1,13 @@
 packages:
-  - 'packages/*'
-  - 'apps/*'
+  - packages/*
+  - apps/*
   - docs
 
 catalog:
-  '@antfu/eslint-config': ^7.7.2
+  '@antfu/eslint-config': ^7.7.3
   '@clack/prompts': ^1.1.0
   '@faker-js/faker': ^10.3.0
-  '@iconify/json': ^2.2.449
+  '@iconify/json': ^2.2.450
   '@iconify/vue': ^5.0.0
   '@stylistic/stylelint-config': ^4.0.0
   '@types/node': ^25.5.0
@@ -52,13 +52,15 @@ catalog:
   vite: ^8.0.0
   vite-plugin-archiver: ^0.2.0
   vite-plugin-banner: ^0.8.1
-  vite-plugin-compression2: ^2.5.1
+  vite-plugin-compression2: ^2.5.2
   vite-plugin-env-parse: ^1.0.15
   vite-plugin-fake-server: ^2.2.2
   vite-plugin-pages: ^0.33.3
   vite-plugin-svg-icons: ^2.0.1
   vite-plugin-vue-devtools: ^8.1.0
   vite-plugin-vue-layouts-next: ^2.0.1
+  vitepress: ^1.6.4
+  vitepress-plugin-comment-with-giscus: ^1.1.15
   vue: ^3.5.30
   vue-router: ^5.0.3
   vue-tsc: ^3.2.5
