@@ -1,6 +1,6 @@
 # 路由
 
-路由实现了自动注册，路由配置存放在 `/src/router/modules/` 目录下，每一个 ts 文件会被视为一个路由模块，可参考 `/src/router/modules/example.ts` 文件。
+路由实现了自动注册，路由配置存放在 `router/modules/` 目录下，每一个 ts 文件会被视为一个路由模块，可参考 `router/modules/example.ts` 文件。
 
 更多使用技巧请移步至 Vue-router [官方文档](https://router.vuejs.org/zh/)。
 
@@ -10,7 +10,7 @@
 
 传统使用路由的方式需要手动编写路由，而基于文件系统的路由则会根据文件的目录结构自动生成路由结构，从而节省开发周期。
 
-默认未开启该模式，如果需要启用，到 `/src/router/index.ts` 文件里找到下面代码片段，通过开启/关闭注释修改成下面这样：
+默认未开启该模式，如果需要启用，到 `router/index.ts` 文件里找到下面代码片段，通过开启/关闭注释修改成下面这样：
 
 ```ts {2-13,16-20}
 // 注释以下代码
@@ -35,7 +35,7 @@ generatedRoutes.forEach(v => {
 })
 ```
 
-启用基于文件系统的路由后，`/src/router/modules/` 目录将不再被需要，而 `/src/views/` 目录下的文件会自动被注册成路由。
+启用基于文件系统的路由后，`router/modules/` 目录将不再被需要，而 `views/` 目录下的文件会自动被注册成路由。
 
 ```
 文件系统                           路由地址                          路由 name
@@ -64,17 +64,17 @@ views
 
 ---
 
-默认生成的所有路由均为嵌套路由，父级 component 指向 `/src/layout/index.vue` 组件，即：
+默认生成的所有路由均为嵌套路由，父级 component 指向 `layout/index.vue` 组件，即：
 
 ```ts
 // 生成的路由
 {
   path: '/login',
-  component: () => import('/src/layout/index.vue'),
+  component: () => import('layout/index.vue'),
   children: [
     {
       path: '',
-      component: () => import('/src/views/login.vue'),
+      component: () => import('views/login.vue'),
       name: 'login',
       meta: {
         layout: 'index',
@@ -101,11 +101,11 @@ meta:
 // 生成的路由
 {
   path: '/login',
-  component: () => import('/src/layout/example.vue'),
+  component: () => import('layout/example.vue'),
   children: [
     {
       path: '',
-      component: () => import('/src/views/login.vue'),
+      component: () => import('views/login.vue'),
       name: 'login',
       meta: {
         layout: 'example',
@@ -132,7 +132,7 @@ meta:
 // 生成的路由
 {
   path: '/login',
-  component: () => import('/src/views/login.vue'),
+  component: () => import('views/login.vue'),
   name: 'login',
   meta: {
     layout: false,

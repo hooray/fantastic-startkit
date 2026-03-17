@@ -4,10 +4,10 @@
 
 ## 自定义图标
 
-你可以去[阿里巴巴矢量图标库](https://www.iconfont.cn/)，或者其它支持下载 SVG 图标文件的网站，又或者是设计师绘制的 SVG 文件，将准备好的 SVG 图标文件放到 `/src/assets/icons/` 目录下，然后在页面中就可以通过 FsIcon 组件使用了，name 就是 svg 的文件名。
+你可以去[阿里巴巴矢量图标库](https://www.iconfont.cn/)，或者其它支持下载 SVG 图标文件的网站，又或者是设计师绘制的 SVG 文件，将准备好的 SVG 图标文件放到 `assets/icons/` 目录下，然后在页面中就可以通过 FsIcon 组件使用了，name 就是 svg 的文件名。
 
 ```vue
-<!-- /src/assets/icons/example.svg -->
+<!-- assets/icons/example.svg -->
 <FsIcon name="example" />
 ```
 

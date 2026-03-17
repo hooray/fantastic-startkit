@@ -32,7 +32,7 @@ VITE_APP_API_BASEURL = /
 VITE_APP_DEBUG_TOOL =
 
 # 是否在打包时启用 Mock
-VITE_BUILD_MOCK = true
+VITE_BUILD_FAKE = true
 # 是否在打包时生成 sourcemap
 VITE_BUILD_SOURCEMAP = true
 # 是否在打包时开启压缩，支持 gzip 和 brotli
@@ -50,7 +50,7 @@ VITE_APP_API_BASEURL = /
 VITE_APP_DEBUG_TOOL =
 
 # 是否在打包时启用 Mock
-VITE_BUILD_MOCK = false
+VITE_BUILD_FAKE = false
 # 是否在打包时生成 sourcemap
 VITE_BUILD_SOURCEMAP = false
 # 是否在打包时开启压缩，支持 gzip 和 brotli
