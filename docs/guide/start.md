@@ -64,10 +64,10 @@ pnpm run dev
 ```
 fantastic-startkit/
 ├── apps/              # 应用目录
-│   ├── web-example    # 示例应用
-│   └── web-template   # 项目模板
+│   ├── core           # 应用源码
+│   └── example        # 示例应用
 ├── packages/          # 公共包目录
-├── docs/              # 文档
+├── docs/              # 文档站点
 ├── scripts/           # 脚本工具
 └── package.json       # 根目录 package.json
 ```

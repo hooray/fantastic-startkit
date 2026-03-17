@@ -1,5 +1,5 @@
 {
-  "name": "@fantastic-startkit/web-template",
+  "name": "@fantastic-startkit/example",
   "type": "module",
   "private": true,
   "scripts": {
@@ -22,6 +22,7 @@
     "mitt": "catalog:",
     "nprogress": "catalog:",
     "pinia": "catalog:",
+    "pinia-plugin-persistedstate": "catalog:",
     "qs": "catalog:",
     "vconsole": "catalog:",
     "vue": "catalog:",

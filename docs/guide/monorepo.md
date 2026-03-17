@@ -7,26 +7,25 @@
 ```
 fantastic-startkit/
 ├── apps/              # 应用目录
-│   ├── web-example    # 示例应用
-│   └── web-template   # 项目模板
+│   ├── core           # 应用源码
+│   └── example        # 示例应用
 ├── packages/          # 公共包目录
 ├── docs/              # 文档站点
 ├── scripts/           # 脚本工具
-├── package.json       # 根目录 package.json
-└── pnpm-workspace.yaml
+└── package.json       # 根目录 package.json
 ```
 
 ## 应用说明
 
-### apps/web-example
+### apps/core
+
+应用源码，不含示例代码，仅保留必要的项目结构，适合直接用于项目开发。
+
+建议使用时直接复制一份在 `apps/` 目录下。
+
+### apps/example
 
 示例应用，包含丰富的示例代码和最佳实践，适合学习和参考。
-
-### apps/web-template
-
-项目模板，不含示例代码，仅保留必要的项目结构，适合直接用于项目开发。
-
-建议使用时直接复制一份在 `apps/` 目录下
 
 ## 常用命令
 
@@ -54,13 +53,13 @@ pnpm lint
 
 ```bash
 # 运行指定应用
-pnpm -F @fantastic-startkit/web-template dev
+pnpm -F @fantastic-startkit/core dev
 
 # 构建指定应用
-pnpm -F @fantastic-startkit/web-template build
+pnpm -F @fantastic-startkit/core build
 
 # 在指定应用下执行任意命令
-pnpm -F @fantastic-startkit/web-template lint
+pnpm -F @fantastic-startkit/core lint
 ```
 
 ## 依赖管理
@@ -80,7 +79,7 @@ pnpm -F @fantastic-startkit/web-template lint
 
 ```bash
 # 为指定应用添加依赖
-pnpm add axios -F @fantastic-startkit/web-template
+pnpm add axios -F @fantastic-startkit/core
 
 # 为根目录添加开发依赖
 pnpm add -D typescript -w
