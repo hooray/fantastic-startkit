@@ -7,9 +7,6 @@
     "./resolver": "./resolver.ts",
     "./global": "./global.d.ts"
   },
-  "scripts": {
-    "lint": "eslint . --cache --fix"
-  },
   "peerDependencies": {
     "unplugin-vue-components": "catalog:",
     "vue": "catalog:"

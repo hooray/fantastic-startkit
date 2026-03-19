@@ -4,28 +4,28 @@ meta:
 </route>
 
 <template>
-  <div class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-slate-50">
+  <div class="bg-slate-50 flex flex-col min-h-screen items-center justify-center relative overflow-hidden">
     <div class="dots-bg" />
 
-    <div class="relative z-10 text-center">
-      <div class="mb-6 inline-flex items-center gap-2 border border-slate-200 rounded-full bg-white px-4 py-1.5 text-xs text-slate-500 font-medium shadow-sm">
-        <span class="size-1.5 rounded-full bg-emerald-500" />
+    <div class="text-center relative z-10">
+      <div class="text-xs text-slate-500 font-medium mb-6 px-4 py-1.5 border border-slate-200 rounded-full bg-white inline-flex gap-2 shadow-sm items-center">
+        <span class="rounded-full bg-emerald-500 size-1.5" />
         Vue 3 · Vite · TypeScript
       </div>
 
-      <h1 class="mb-4 text-[56px] text-slate-900 font-extrabold leading-none tracking-tight" style="view-transition-name: site-title;">
+      <h1 class="text-[56px] text-slate-900 leading-none tracking-tight font-extrabold mb-4" style="view-transition-name: site-title;">
         Fantastic
         <span class="text-blue-600">Startkit</span>
       </h1>
 
-      <p class="mb-10 text-[17px] text-slate-500">
+      <p class="text-[17px] text-slate-500 mb-10">
         开箱即用的企业级前端开发脚手架
       </p>
 
-      <div class="flex items-center justify-center gap-3">
+      <div class="flex gap-3 items-center justify-center">
         <RouterLink
           to="/example/icon"
-          class="inline-flex cursor-pointer items-center gap-2 border-0 rounded-xl bg-blue-600 px-6 py-2.5 text-[14px] text-white font-semibold no-underline shadow-md transition-all hover:bg-blue-700 hover:shadow-lg hover:-translate-y-0.5"
+          class="text-[14px] text-white font-semibold px-6 py-2.5 border-0 rounded-xl bg-blue-600 no-underline inline-flex gap-2 cursor-pointer shadow-md transition-all items-center hover:bg-blue-700 hover:shadow-lg hover:-translate-y-0.5"
         >
           查看演示
           <span class="text-blue-200">→</span>
@@ -34,14 +34,14 @@ meta:
           rel="noreferrer"
           href="https://hurui.me/fantastic-startkit/"
           target="_blank"
-          class="inline-flex cursor-pointer items-center gap-1.5 border border-slate-200 rounded-xl bg-white px-6 py-2.5 text-[14px] text-slate-600 font-semibold no-underline shadow-sm transition-all hover:bg-slate-50 hover:shadow-md hover:-translate-y-0.5"
+          class="text-[14px] text-slate-600 font-semibold px-6 py-2.5 border border-slate-200 rounded-xl bg-white no-underline inline-flex gap-1.5 cursor-pointer shadow-sm transition-all items-center hover:bg-slate-50 hover:shadow-md hover:-translate-y-0.5"
         >
           文档
         </a>
       </div>
     </div>
 
-    <div class="absolute bottom-8 left-0 right-0 flex justify-center gap-6 text-xs text-slate-400">
+    <div class="text-xs text-slate-400 flex gap-6 bottom-8 left-0 right-0 justify-center absolute">
       <span>Vue 3</span>
       <span class="text-slate-300">·</span>
       <span>Vite</span>
