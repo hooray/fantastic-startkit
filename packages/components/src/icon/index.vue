@@ -24,10 +24,10 @@ const outputType = computed(() => {
 </script>
 
 <template>
-  <i class="relative size-[1em] flex-inline items-center justify-center fill-current leading-[1em]">
-    <i v-if="outputType === 'unocss'" class="size-inherit shrink-0" :class="name" />
+  <i class="leading-[1em] flex-inline size-[1em] items-center justify-center relative fill-current">
+    <i v-if="outputType === 'unocss'" class="shrink-0 size-inherit" :class="name" />
     <Icon v-else-if="outputType === 'iconify'" :icon="name" class="shrink-0 size-inherit!" />
-    <svg v-else-if="outputType === 'svg'" class="size-inherit shrink-0" aria-hidden="true">
+    <svg v-else-if="outputType === 'svg'" class="shrink-0 size-inherit" aria-hidden="true">
       <use :xlink:href="`#icon-${name}`" />
     </svg>
   </i>

@@ -26,7 +26,7 @@ export default antfu(
   },
   {
     files: [
-      'src/**/*.vue',
+      '**/*.vue',
     ],
     rules: {
       'vue/block-order': ['error', {

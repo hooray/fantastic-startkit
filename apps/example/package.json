@@ -46,7 +46,6 @@
     "postcss-nested": "catalog:",
     "sass-embedded": "catalog:",
     "svgo": "catalog:",
-    "unocss": "catalog:",
     "unplugin-auto-import": "catalog:",
     "unplugin-turbo-console": "catalog:",
     "unplugin-vue-components": "catalog:",

@@ -30,7 +30,8 @@
     "stylelint-scss": "catalog:",
     "taze": "catalog:",
     "tsx": "catalog:",
-    "typescript": "catalog:"
+    "typescript": "catalog:",
+    "unocss": "catalog:"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged",
