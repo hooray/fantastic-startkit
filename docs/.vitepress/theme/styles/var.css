@@ -1,0 +1,8 @@
+/* medium-zoom */
+.medium-zoom-overlay {
+  z-index: 30;
+}
+
+.medium-zoom-image {
+  z-index: 30;
+}

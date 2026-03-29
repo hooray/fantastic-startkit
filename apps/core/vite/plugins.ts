@@ -98,7 +98,7 @@ export default function createVitePlugins(mode: string, isBuild = false) {
     }),
 
     // https://github.com/unplugin/unplugin-turbo-console
-    viteEnv.VITE_ENABLE_CONSOLE && TurboConsole({
+    viteEnv.VITE_ENABLE_TURBO_CONSOLE && TurboConsole({
       launchEditor: {
         specifiedEditor: viteEnv.VITE_LAUNCH_EDITOR,
       },

@@ -28,6 +28,7 @@ export default {
   ignoreFiles: [
     'node_modules/**/*',
     'dist*/**/*',
-    'packages/**/*',
+    'docs/.vitepress/cache/**/*',
+    'docs/.vitepress/dist/**/*',
   ],
 }

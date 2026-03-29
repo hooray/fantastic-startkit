@@ -7,6 +7,7 @@
     "build": "vitepress build ."
   },
   "dependencies": {
+    "medium-zoom": "catalog:",
     "vitepress-plugin-comment-with-giscus": "catalog:"
   },
   "devDependencies": {

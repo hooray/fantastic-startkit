@@ -1,9 +1,11 @@
+import mediumZoom from 'medium-zoom'
 import { useData, useRoute } from 'vitepress'
 import giscusTalk from 'vitepress-plugin-comment-with-giscus'
 import Theme from 'vitepress/theme'
-import { h, toRefs } from 'vue'
+import { h, nextTick, onMounted, toRefs, watch } from 'vue'
 import SponsorsAside from './components/SponsorsAside.vue'
 import './fonts/fira_code/fira_code.css'
+import './styles/var.css'
 
 export default {
   ...Theme,
@@ -13,9 +15,23 @@ export default {
     })
   },
   setup() {
-    // 获取前言和路由
-    const { frontmatter } = toRefs(useData())
     const route = useRoute()
+
+    const initZoom = () => {
+      mediumZoom('[data-zoomable]', { background: 'var(--vp-c-bg)' })
+    }
+    onMounted(() => {
+      initZoom()
+    })
+    watch(
+      () => route.path,
+      () => nextTick(() => {
+        initZoom()
+      }),
+    )
+
+    // 获取前言
+    const { frontmatter } = toRefs(useData())
 
     // 评论组件 - https://giscus.app/
     giscusTalk({

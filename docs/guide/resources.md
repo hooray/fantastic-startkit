@@ -4,7 +4,7 @@
 
 ### 全局公共
 
-全局公共图片存放在 `assets/images/` 目录下，可自行新建文件夹分类管理。
+全局公共图片存放在 `apps/<app>/src/assets/images/` 目录下，可自行新建文件夹分类管理。
 
 ### 局部私有
 
@@ -14,13 +14,13 @@
 
 ### 全局公共
 
-全局公共样式存放在 `assets/styles/` 目录下，可自行新建文件，并在 `main.ts` 中引入即可。
+全局公共样式存放在 `apps/<app>/src/assets/styles/` 目录下，可自行新建文件，并在 `apps/<app>/src/main.ts` 中引入即可。
 
-此目录下还有一个特殊目录，即 `assets/styles/resources/` ，这是全局 SCSS 资源目录，你可以在该目录下编写变量、函数、混合等支持 SCSS 特性的代码。
+此目录下还有一个特殊目录，即 `apps/<app>/src/assets/styles/resources/` ，这是全局 SCSS 资源目录，你可以在该目录下编写变量、函数、混合等支持 SCSS 特性的代码。
 
 ### 局部私有
 
-基于 SFC 组件规范，局部私有样式建议直接在 `.vue` 文件中编写，模板集成了 UnoCSS / PostCSS / SCSS 方案，可选择自己适合的方案。更多单文件组件 CSS 功能请参考[这里](https://cn.vuejs.org/api/sfc-css-features)。
+基于单文件组件规范，局部私有样式建议直接在 `.vue` 文件中编写，模板集成了 UnoCSS / PostCSS / SCSS 方案，可选择自己适合的方案。更多单文件组件 CSS 功能请参考[这里](https://cn.vuejs.org/api/sfc-css-features)。
 
 #### UnoCSS
 
@@ -87,7 +87,7 @@ $width: 500px;
 ### 全局公共
 
 ::: tip 说明
-全局公共组件在使用时，无需手动引入，框架会在你使用时自动引入，该特性由 [unplugin-vue-components](https://github.com/unplugin/unplugin-vue-components) 提供支持。
+全局公共组件在使用时，无需手动引入，模板会在你使用时自动引入，该特性由 [unplugin-vue-components](https://github.com/unplugin/unplugin-vue-components) 提供支持。
 :::
 
 全局公共组件有两个来源：

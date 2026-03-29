@@ -14,13 +14,13 @@ interface ImportMetaEnv {
    */
   readonly VITE_APP_TITLE: string
   /**
-   * 是否启用 console 工具
-   */
-  readonly VITE_ENABLE_CONSOLE: boolean
-  /**
    * 是否开启代理
    */
   readonly VITE_ENABLE_PROXY: boolean
+  /**
+   * 是否启用 console 工具
+   */
+  readonly VITE_ENABLE_TURBO_CONSOLE: boolean
   /**
    * 是否启用 Vue 开发工具
    */

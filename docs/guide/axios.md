@@ -1,12 +1,12 @@
 # 与服务端交互
 
-本套件使用 [Axios](https://axios-http.com/) 做为异步请求工具，并进行了简单的封装。
+框架使用 [Axios](https://axios-http.com/zh/) 做为异步请求工具，并进行了简单的封装。
 
 ## 接口请求
 
 ### 设置 baseURL
 
-在根目录 `.env.*` 文件里的 `VITE_APP_API_BASEURL` 这个参数就是配置 axios 的 `baseURL` 。
+在 `apps/<app>/.env.*` 文件里的 `VITE_APP_API_BASEURL` 这个参数就是配置 axios 的 `baseURL` 。
 
 例如项目的真实接口请求地址为：
 
@@ -18,7 +18,7 @@
 
 ### 请求调用
 
-常用的 get 和 post 请求可使用以下的方法：
+常用的 GET 和 POST 请求可使用以下的方法：
 
 ```ts
 import api from '@/api'
@@ -29,7 +29,7 @@ api.get('news/list', {
     page: 1,
     size: 10,
   },
-}).then(res => {
+}).then((res) => {
   // 后续业务代码
 })
 
@@ -37,14 +37,14 @@ api.get('news/list', {
 api.post('news/create', {
   title: '新闻标题',
   content: '新闻内容',
-}).then(res => {
+}).then((res) => {
   // 后续业务代码
 })
 ```
 
 ### 拦截器
 
-在 `src/api/index.ts` 文件里实例化了 axios 对象，并对 `request` 和 `response` 设置了拦截器，拦截器的用处就是拦截每一次的请求和响应，然后做一些全局的处理。例如接口响应报错，可以在拦截器里用统一的报错提示来展示，方便业务开发。但因为每个公司提供的接口标准不同，所以该文件拦截器部分的代码，需要开发者根据实际情况去修改调整。
+在 `apps/<app>/src/api/index.ts` 文件里实例化了 axios 对象，并对 `request` 和 `response` 设置了拦截器，拦截器的用处就是拦截每一次的请求和响应，然后做一些全局的处理。例如接口响应报错，可以在拦截器里用统一的报错提示来展示，方便业务开发。但因为每个公司提供的接口标准不同，所以该文件拦截器部分的代码，需要开发者根据实际情况去修改调整。
 
 代码很简单，首先初始化 axios 对象，然后 `axios.interceptors.request.use()` 和 `axios.interceptors.response.use()` 就分别是请求和响应的拦截代码了。
 
@@ -67,15 +67,15 @@ api.post('news/create', {
 })
 ```
 
-默认请求重试次数为 3 次，请求间隔为 1000 毫秒，可在 `api/index.ts` 文件中修改 `MAX_RETRY_COUNT` 和 `RETRY_DELAY` 的默认配置。
+默认请求重试次数为 3 次，请求间隔为 1000 毫秒，可在 `apps/<app>/src/api/index.ts` 文件中修改 `MAX_RETRY_COUNT` 和 `RETRY_DELAY` 的默认配置。
 
 ## 模块管理
 
-如果项目里的接口很多，推荐根据模块来统一管理接口，目录为 `src/api/modules/` 。
+如果项目里的接口很多，推荐根据模块来统一管理接口，目录为 `apps/<app>/src/api/modules/` 。
 
 ## 跨域处理
 
-生产环境的跨域需要服务端去解决，开发环境的跨域问题可在本地设置代理解决。如果本地开发环境请求接口提示跨域，可以设置 `.env.development` 文件里 `VITE_ENABLE_PROXY = true` 开启代理。
+生产环境的跨域需要服务端去解决，开发环境的跨域问题可在本地设置代理解决。如果本地开发环境请求接口提示跨域，可以设置 `apps/<app>/.env.development` 文件里 `VITE_ENABLE_PROXY = true` 开启代理。
 
 ```ts
 import api from '@/api'
@@ -115,14 +115,14 @@ api.get('/new/list', {
 
 这种方式的前提是，两个数据源的 `request` 和 `response` 规则要保持一致，因为只是覆盖 `baseURL` ，拦截器还是用的同一套规则。
 
-所以如果两个数据源的请求和响应是完全不同的标准，你需要给第二个数据源单独实例化一个 axios 对象。首先在 `.env.*` 文件里配置第二个数据源的 `baseURL` ：
+所以如果两个数据源的请求和响应是完全不同的标准，你需要给第二个数据源单独实例化一个 axios 对象。首先在 `apps/<app>/.env.*` 文件里配置第二个数据源的 `baseURL` ：
 
 ```
 # 命名可随意，以 VITE_APP_ 开头即可
 VITE_APP_API_BASEURL_2 = 此处填写接口地址
 ```
 
-然后把 `src/api/index.ts` 文件复制一份，例如就叫 `src/api/index2.ts` ，并且将代码中使用到 `VITE_APP_API_BASEURL` 也替换为 `VITE_APP_API_BASEURL_2` ，这样你就可以在页面中通过引入不同的文件分别请求两个数据源了：
+然后把 `apps/<app>/src/api/index.ts` 文件复制一份，例如就叫 `apps/<app>/src/api/index2.ts` ，并且将代码中使用到 `VITE_APP_API_BASEURL` 也替换为 `VITE_APP_API_BASEURL_2` ，这样你就可以在页面中通过引入不同的文件分别请求两个数据源了：
 
 ```ts
 import api from '@/api'
@@ -134,7 +134,7 @@ api.get('/new/list')
 api2.get('/new/list')
 ```
 
-需注意，如果第二个数据源也需要开启跨域处理的话，需要在 `src/api/index2.ts` 里定一个新的 proxy 路径，例如 `/proxy2/` ：
+需注意，如果第二个数据源也需要开启跨域处理的话，需要在 `apps/<app>/src/api/index2.ts` 里定一个新的 proxy 路径，例如 `/proxy2/` ：
 
 ```ts {2}
 const api = axios.create({
@@ -144,7 +144,7 @@ const api = axios.create({
 })
 ```
 
-同时在 vite.config.ts 里增加一段新的 proxy 配置：
+同时在 `apps/<app>/vite.config.ts` 里增加一段新的 proxy 配置：
 
 ```ts {9-13}
 server: {
@@ -174,7 +174,7 @@ server: {
 
 ### 开发环境
 
-文件存放在 `src/api/modules/` 目录下，并以 `*.fake.ts` 命名。文件新增或修改后会自动更新，不需要手动重启，可以在代码控制台查看日志信息。
+文件存放在 `apps/<app>/src/api/modules/` 目录下，并以 `*.fake.ts` 命名。文件新增或修改后会自动更新，不需要手动重启，可以在代码控制台查看日志信息。
 
 以下为示例代码：
 
