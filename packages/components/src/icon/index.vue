@@ -28,7 +28,7 @@ const outputType = computed(() => {
     <i v-if="outputType === 'unocss'" class="shrink-0 size-inherit" :class="name" />
     <Icon v-else-if="outputType === 'iconify'" :icon="name" class="shrink-0 size-inherit!" />
     <svg v-else-if="outputType === 'svg'" class="shrink-0 size-inherit" aria-hidden="true">
-      <use :xlink:href="`#icon-${name}`" />
+      <use :xlink:href="`/__spritemap#sprite-${name}`" />
     </svg>
   </i>
 </template>
