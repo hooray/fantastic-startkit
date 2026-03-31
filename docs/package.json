@@ -3,7 +3,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "vitepress dev .",
+    "dev": "vitepress dev . --open",
     "build": "vitepress build ."
   },
   "dependencies": {

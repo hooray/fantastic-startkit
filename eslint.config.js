@@ -14,7 +14,6 @@ export default antfu(
   },
   {
     rules: {
-      'pnpm/yaml-enforce-settings': 'off',
       'e18e/prefer-static-regex': 'off',
       'eslint-comments/no-unlimited-disable': 'off',
       'curly': ['error', 'all'],
@@ -32,6 +31,14 @@ export default antfu(
       'vue/block-order': ['error', {
         order: ['route', 'i18n', 'script', 'template', 'style'],
       }],
+    },
+  },
+  {
+    files: [
+      'pnpm-workspace.yaml',
+    ],
+    rules: {
+      'pnpm/yaml-enforce-settings': 'off',
     },
   },
 )
