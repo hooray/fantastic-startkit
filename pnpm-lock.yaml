@@ -16,8 +16,8 @@ catalogs:
       specifier: ^10.4.0
       version: 10.4.0
     '@iconify/json':
-      specifier: ^2.2.456
-      version: 2.2.456
+      specifier: ^2.2.458
+      version: 2.2.458
     '@iconify/vue':
       specifier: ^5.0.0
       version: 5.0.0
@@ -296,7 +296,7 @@ importers:
         version: 10.4.0
       '@iconify/json':
         specifier: 'catalog:'
-        version: 2.2.456
+        version: 2.2.458
       '@iconify/vue':
         specifier: 'catalog:'
         version: 5.0.0(vue@3.5.31(typescript@6.0.2))
@@ -429,7 +429,7 @@ importers:
         version: 10.4.0
       '@iconify/json':
         specifier: 'catalog:'
-        version: 2.2.456
+        version: 2.2.458
       '@iconify/vue':
         specifier: 'catalog:'
         version: 5.0.0(vue@3.5.31(typescript@6.0.2))
@@ -1484,8 +1484,8 @@ packages:
   '@iconify-json/simple-icons@1.2.73':
     resolution: {integrity: sha512-nQZTwul4c2zBqH/aLP4zMOiElj93T6HawbrP+sFQKpxmBdS5x1duCK3cAnkj6dntHz84EYkzaQRM83V2pj4qxA==}
 
-  '@iconify/json@2.2.456':
-    resolution: {integrity: sha512-u2215knwHqSTgvRwkwziitJr5Js25KukLhW8C58fUGyNsD6P5EWoOb5nA0o8K8tzqUBi/622XTdf7wN2hmK+NA==}
+  '@iconify/json@2.2.458':
+    resolution: {integrity: sha512-YcJx5EjyRU3O+qpYNjx0BX/Uewxao9uSF0gd9Xa+d8YzCGGbMXosaANQ5aQV/lptnToqpu/PDTQ1c883GhvGRA==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -6403,7 +6403,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify/json@2.2.456':
+  '@iconify/json@2.2.458':
     dependencies:
       '@iconify/types': 2.0.0
       pathe: 2.0.3

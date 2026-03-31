@@ -16,7 +16,7 @@ catalog:
   '@antfu/eslint-config': ^7.7.3
   '@clack/prompts': ^1.1.0
   '@faker-js/faker': ^10.4.0
-  '@iconify/json': ^2.2.456
+  '@iconify/json': ^2.2.458
   '@iconify/vue': ^5.0.0
   '@spiriit/vite-plugin-svg-spritemap': ^6.0.0
   '@stylistic/stylelint-config': ^5.0.0
