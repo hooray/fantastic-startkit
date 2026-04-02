@@ -1,18 +1,16 @@
 import type { PluginOption } from 'vite'
 import process from 'node:process'
 import { FantasticComponentsResolver, FantasticComponentsType } from '@fantastic-startkit/components/resolver'
+import { createFantasticStartkitCopyrightPlugins } from '@fantastic-startkit/copyright'
 import VitePluginSvgSpritemap from '@spiriit/vite-plugin-svg-spritemap'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
-import boxen from 'boxen'
-import picocolors from 'picocolors'
 import Unocss from 'unocss/vite'
 import autoImport from 'unplugin-auto-import/vite'
 import TurboConsole from 'unplugin-turbo-console/vite'
 import components from 'unplugin-vue-components/vite'
 import { loadEnv } from 'vite'
 import Archiver from 'vite-plugin-archiver'
-import banner from 'vite-plugin-banner'
 import { compression } from 'vite-plugin-compression2'
 import { envParse, parseLoadedEnv } from 'vite-plugin-env-parse'
 import { vitePluginFakeServer } from 'vite-plugin-fake-server'
@@ -104,14 +102,7 @@ export default function createVitePlugins(mode: string, isBuild = false) {
       },
     }),
 
-    // https://github.com/chengpeiquan/vite-plugin-banner
-    banner(`
-/**
- * 由 Fantastic-startkit 提供技术支持
- * Powered by Fantastic-startkit
- * https://hurui.me/fantastic-startkit/
- */
-    `),
+    createFantasticStartkitCopyrightPlugins(),
 
     {
       name: 'vite-plugin-debug-plugin',
@@ -136,26 +127,6 @@ new VConsole()
             map: null,
           }
         }
-      },
-    },
-
-    {
-      name: 'vite-plugin-terminal-info',
-      apply: 'serve',
-      async buildStart() {
-        const { bold, green, bgGreen, underline } = picocolors
-        // eslint-disable-next-line no-console
-        console.log(
-          boxen(
-            `${bold(green(`由 ${bgGreen('Fantastic-startkit')} 驱动`))}\n\n${underline('https://hurui.me/fantastic-startkit')}`,
-            {
-              padding: 1,
-              margin: 1,
-              borderStyle: 'double',
-              textAlignment: 'center',
-            },
-          ),
-        )
       },
     },
   ]

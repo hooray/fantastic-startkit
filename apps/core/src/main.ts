@@ -1,7 +1,6 @@
 import App from './App.vue'
 import router from './router'
 import pinia from './store'
-import './utils/system.copyright'
 
 import 'virtual:uno.css'
 
