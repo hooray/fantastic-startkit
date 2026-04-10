@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: 开始
-      link: /guide/start
+      link: /guide/ready
 
 features:
 - title: 先进的技术栈

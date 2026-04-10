@@ -13,26 +13,26 @@ packages:
   - docs
 
 catalog:
-  '@antfu/eslint-config': ^7.7.3
-  '@clack/prompts': ^1.1.0
+  '@antfu/eslint-config': ^8.1.1
+  '@clack/prompts': ^1.2.0
   '@faker-js/faker': ^10.4.0
-  '@iconify/json': ^2.2.458
+  '@iconify/json': ^2.2.460
   '@iconify/vue': ^5.0.0
-  '@spiriit/vite-plugin-svg-spritemap': ^6.0.0
+  '@spiriit/vite-plugin-svg-spritemap': ^7.0.0
   '@stylistic/stylelint-config': ^5.0.0
-  '@types/node': ^25.5.0
+  '@types/node': ^25.6.0
   '@types/nprogress': ^0.2.3
   '@types/qs': ^6.15.0
-  '@unocss/eslint-plugin': ^66.6.7
+  '@unocss/eslint-plugin': ^66.6.8
   '@vitejs/plugin-vue': ^6.0.5
   '@vitejs/plugin-vue-jsx': ^5.1.5
   '@vue/tsconfig': ^0.9.1
   autoprefixer: ^10.4.27
-  axios: ^1.14.0
+  axios: ^1.15.0
   boxen: ^8.0.1
   dayjs: ^1.11.20
   eruda: ^3.4.3
-  eslint: ^10.1.0
+  eslint: ^10.2.0
   http-server: ^14.1.1
   lint-staged: ^16.4.0
   medium-zoom: ^1.1.0
@@ -42,10 +42,10 @@ catalog:
   picocolors: ^1.1.1
   pinia: ^3.0.4
   pinia-plugin-persistedstate: ^4.7.1
-  postcss: ^8.5.8
+  postcss: ^8.5.9
   postcss-nested: ^7.0.2
-  qs: ^6.15.0
-  sass-embedded: ^1.98.0
+  qs: ^6.15.1
+  sass-embedded: ^1.99.0
   simple-git-hooks: ^2.13.1
   stylelint: ^17.6.0
   stylelint-config-recess-order: ^7.7.0
@@ -53,16 +53,16 @@ catalog:
   stylelint-config-standard-vue: ^1.0.0
   stylelint-scss: ^7.0.0
   svgo: ^4.0.1
-  taze: ^19.10.0
+  taze: ^19.11.0
   tsx: ^4.21.0
   typescript: ^6.0.2
   unbuild: ^3.6.1
-  unocss: ^66.6.7
+  unocss: ^66.6.8
   unplugin-auto-import: ^21.0.0
   unplugin-turbo-console: ^2.3.0
   unplugin-vue-components: ^32.0.0
   vconsole: ^3.15.1
-  vite: ^8.0.3
+  vite: ^8.0.8
   vite-plugin-archiver: ^0.2.0
   vite-plugin-banner: ^0.8.1
   vite-plugin-compression2: ^2.5.3
@@ -71,8 +71,10 @@ catalog:
   vite-plugin-pages: ^0.33.3
   vite-plugin-vue-devtools: ^8.1.1
   vite-plugin-vue-layouts-next: ^2.1.0
-  vitepress: ^1.6.4
-  vitepress-plugin-comment-with-giscus: ^1.1.15
-  vue: ^3.5.31
+  vue: ^3.5.32
   vue-router: ^5.0.4
   vue-tsc: ^3.2.6
+catalogs:
+  docs:
+    vitepress: ^1.6.4
+    vitepress-plugin-comment-with-giscus: ^1.1.15

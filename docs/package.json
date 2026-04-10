@@ -8,10 +8,10 @@
   },
   "dependencies": {
     "medium-zoom": "catalog:",
-    "vitepress-plugin-comment-with-giscus": "catalog:"
+    "vitepress-plugin-comment-with-giscus": "catalog:docs"
   },
   "devDependencies": {
-    "vitepress": "catalog:",
+    "vitepress": "catalog:docs",
     "vue": "catalog:"
   }
 }

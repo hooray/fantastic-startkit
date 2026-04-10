@@ -1,65 +1,15 @@
 # 开始
 
-## 开发环境
+本项目采用 Monorepo（单体仓库）架构，基于 pnpm workspace 管理多个应用和公共包。
 
-使用本套件前，需要在本地依次安装好 [Node.js](https://nodejs.org/), [pnpm](https://pnpm.io/zh/), [Git](https://git-scm.com/) 和 [Visual Studio Code](https://code.visualstudio.com/)。
+Monorepo 的优势：
 
-:::warning 注意
-在 [package.json](https://github.com/hooray/fantastic-startkit/blob/main/package.json#L3-L5) 文件中有限制 node 要求版本，建议使用最新 LTS 版本。
-:::
+- **代码共享**：多个应用可共享公共代码和依赖
+- **统一管理**：统一版本控制和依赖管理
+- **开发效率**：一次修改，多处生效
+- **原子提交**：跨应用的变更可在一个提交中完成
 
-然后在 Visual Studio Code 里安装好以下扩展：
-
-- [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
-- [DotENV](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv)
-- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-- [stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
-- [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
-- [UnoCSS](https://marketplace.visualstudio.com/items?itemName=antfu.unocss)
-- [Catalog Lens](https://marketplace.visualstudio.com/items?itemName=antfu.pnpm-catalog-lens)
-
-在 Visual Studio Code 里打开源码的文件夹，右下角会自动提示需要安装的依赖，直接点击安装即可。
-
-::: tip 额外推荐
-以上为开发时必备扩展，以下则是作者推荐安装的扩展，安装它们将在一定程度上提升开发效率。
-
-- [Chinese (Simplified) Language Pack for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-zh-hans) 中文语言包
-- [Color Highlight](https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight) 在代码中高亮颜色
-- [Highlight Matching Tag](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag) 高亮显示匹配的标签
-- [Image preview](https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview) 图片预览
-- [indent-rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow) 彩虹缩进提示
-:::
-
-## 拉取代码
-
-做好准备工作后，依次执行下面的命令：
-
-```bash
-# 克隆项目（如果本地已有源码，可跳过这步）
-# 可选择从 github 或 gitee 克隆 example 分支
-git clone https://github.com/hooray/fantastic-startkit.git
-# 或者
-git clone https://gitee.com/hooray/fantastic-startkit.git
-
-# 进入项目目录
-cd fantastic-startkit
-
-# 安装项目依赖
-pnpm install
-
-# 运行
-pnpm run dev
-```
-
-运行成功后，会自动访问页面，默认情况下，地址为 `http://localhost:5173`
-
-::: warning 报错
-安装依赖时提示 404 ，或者安装结束后，运行时提示「 'vite' 不是内部或外部命令，也不是可运行的程序或批处理文件 」，都些都是依赖未安装成功导致的。可以尝试执行 `pnpm config set registry https://registry.npmmirror.com/` 切换为国内 npmmirror 源（也可以使用 [nrm](https://github.com/Pana/nrm) 一键切换源），然后删除根目录下 `/node_modules` 文件夹并重新安装依赖。
-:::
-
-## 项目结构
-
-本项目采用 Monorepo 架构，基于 pnpm workspace 管理多个应用和公共包。
+## 目录结构
 
 ```
 fantastic-startkit/
@@ -72,14 +22,95 @@ fantastic-startkit/
 └── package.json       # 根目录 package.json
 ```
 
-执行 `pnpm dev` 或 `pnpm build` 命令时，会通过交互式命令行提示选择要运行或构建的应用。
+## 应用说明
 
-## 技术栈
+### apps/core
 
-了解并熟悉框架使用到的技术栈，能让你使用本框架更得心应手。
+应用源码，不含示例代码，仅保留必要的项目结构，适合直接用于项目开发。
 
-- [Vite](https://cn.vitejs.dev/)
-- [Vue 3](https://cn.vuejs.org/)
-- [Vue Router](https://router.vuejs.org/zh/)
-- [Pinia](https://pinia.vuejs.org/zh/)
-- [UnoCSS](https://unocss.dev/)
+使用时建议从此处复制一份在 `apps/` 目录下，同时修改 `apps/<app>/package.json` 中 `name` 属性。
+
+这样做的目的是确保项目内始终保留一份原始应用源码，方便后续扩展更多应用。
+
+### apps/example
+
+示例应用，包含丰富的示例代码和最佳实践，适合学习和参考。
+
+## 常用命令
+
+:::tip 建议
+在安装依赖前，可以将不需要的应用先删除。假设你已经足够熟悉框架，则可以将 `apps/example` 应用文件夹直接删除，减少无用依赖的安装。
+:::
+
+根目录 `package.json` 提供了统一的命令入口：
+
+```bash
+# 安装所有依赖
+pnpm install
+
+# 启动开发服务器（交互式选择应用）
+pnpm dev
+
+# 构建项目（交互式选择应用）
+pnpm build
+
+# 预览构建产物（交互式选择应用）
+pnpm serve
+
+# 代码检查
+pnpm lint
+```
+
+其中 `pnpm lint` 会按以下顺序执行：
+
+1. 在各应用目录执行 `vue-tsc`
+2. 在根目录执行 `eslint`
+3. 在根目录执行 `stylelint`
+
+::: warning 报错
+如果无法正常安装依赖，可能是因为 npm 默认源无法访问，可以尝试执行 `pnpm config set registry https://registry.npmmirror.com/` 切换为国内 npmmirror 镜像源（也可以使用 [nrm](https://github.com/Pana/nrm) 一键切换源），然后删除 `node_modules/` 文件夹并重新安装依赖。
+:::
+
+## 应用级命令
+
+如果明确知道要操作哪个应用，也可以直接使用 pnpm filter 命令：
+
+```bash
+# 运行指定应用
+pnpm -F @fantastic-startkit/core dev
+
+# 构建指定应用
+pnpm -F @fantastic-startkit/core build
+
+# 在指定应用下执行任意命令
+pnpm -F @fantastic-startkit/core lint
+```
+
+应用目录中的 `lint` 命令仅执行 `vue-tsc` ，用于当前应用的类型检查。
+
+## 依赖管理
+
+### 根目录依赖
+
+在根目录安装的依赖为所有应用和包共享，通常是：
+- ESLint、Stylelint 等代码规范工具
+- 脚本工具（如 tsx、taze）
+- Git 钩子相关依赖
+
+### 应用/包级依赖
+
+每个应用或包可以拥有自己独立的依赖，安装在各自的 `node_modules/` 目录下。
+
+### 添加新依赖
+
+```bash
+# 为指定应用添加依赖
+pnpm add axios -F @fantastic-startkit/core
+
+# 为根目录添加开发依赖
+pnpm add -D typescript -w
+```
+
+你也可以全局安装 [`@rizumu/nai`](https://github.com/LittleSound/nai) ，并通过交互式的 CLI 将依赖包安装到指定应用，如下图：
+
+![](https://github.com/user-attachments/assets/83d164f3-8a13-41f1-a453-23ffd81ed387)

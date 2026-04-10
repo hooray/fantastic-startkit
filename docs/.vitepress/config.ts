@@ -41,8 +41,8 @@ export default defineConfig({
         {
           text: '指南',
           items: [
+            { text: '准备工作', link: '/guide/ready' },
             { text: '开始', link: '/guide/start' },
-            { text: 'Monorepo 架构', link: '/guide/monorepo' },
             { text: '代码规范', link: '/guide/coding-standard' },
             { text: '环境配置', link: '/guide/env' },
             { text: '与服务端交互', link: '/guide/axios' },
