@@ -13,10 +13,10 @@ packages:
   - docs
 
 catalog:
-  '@antfu/eslint-config': ^8.1.1
+  '@antfu/eslint-config': ^8.2.0
   '@clack/prompts': ^1.2.0
   '@faker-js/faker': ^10.4.0
-  '@iconify/json': ^2.2.460
+  '@iconify/json': ^2.2.462
   '@iconify/vue': ^5.0.0
   '@spiriit/vite-plugin-svg-spritemap': ^7.0.0
   '@stylistic/stylelint-config': ^5.0.0
@@ -24,7 +24,7 @@ catalog:
   '@types/nprogress': ^0.2.3
   '@types/qs': ^6.15.0
   '@unocss/eslint-plugin': ^66.6.8
-  '@vitejs/plugin-vue': ^6.0.5
+  '@vitejs/plugin-vue': ^6.0.6
   '@vitejs/plugin-vue-jsx': ^5.1.5
   '@vue/tsconfig': ^0.9.1
   autoprefixer: ^10.4.27
@@ -47,7 +47,7 @@ catalog:
   qs: ^6.15.1
   sass-embedded: ^1.99.0
   simple-git-hooks: ^2.13.1
-  stylelint: ^17.6.0
+  stylelint: ^17.7.0
   stylelint-config-recess-order: ^7.7.0
   stylelint-config-standard-scss: ^17.0.0
   stylelint-config-standard-vue: ^1.0.0
@@ -63,7 +63,7 @@ catalog:
   unplugin-vue-components: ^32.0.0
   vconsole: ^3.15.1
   vite: ^8.0.8
-  vite-plugin-archiver: ^0.2.0
+  vite-plugin-archiver: ^0.3.2
   vite-plugin-banner: ^0.8.1
   vite-plugin-compression2: ^2.5.3
   vite-plugin-env-parse: ^1.0.15
