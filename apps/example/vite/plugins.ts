@@ -49,7 +49,9 @@ export default function createVitePlugins(mode: string, isBuild = false) {
 
     // https://github.com/unplugin/unplugin-vue-components
     components({
-      dirs: ['src/components/*/index.vue'],
+      globs: [
+        'src/components/*/index.vue',
+      ],
       dts: './src/types/components.d.ts',
       resolvers: [
         FantasticComponentsResolver(),

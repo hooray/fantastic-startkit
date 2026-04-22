@@ -12,11 +12,13 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    DemoButton: typeof import('./../components/DemoButton/index.vue')['default']
     FsIcon: typeof import('@fantastic-startkit/components')['FsIcon']
   }
 }
 
 // For TSX support
 declare global {
+  const DemoButton: typeof import('./../components/DemoButton/index.vue')['default']
   const FsIcon: typeof import('@fantastic-startkit/components')['FsIcon']
 }
