@@ -47,6 +47,7 @@ type Mode = 'build' | 'dev' | 'serve'
 const currentDir = path.dirname(fileURLToPath(import.meta.url))
 const rootDir = path.resolve(currentDir, '..')
 const isWindows = process.platform === 'win32'
+const pnpmCommand = isWindows ? 'pnpm.cmd' : 'pnpm'
 const validModes: Mode[] = ['build', 'dev', 'serve']
 const modeConfigs: Record<Mode, ModeConfig> = {
   build: {
@@ -203,10 +204,9 @@ async function selectScript(app: AppInfo, action: Mode): Promise<string> {
 
 async function runPackageScript(packageName: string, script: string): Promise<void> {
   return new Promise((resolve, reject) => {
-    childProcess = spawn('pnpm', ['--filter', packageName, 'run', script], {
+    childProcess = spawn(pnpmCommand, ['--filter', packageName, 'run', script], {
       stdio: 'inherit',
       cwd: rootDir,
-      shell: isWindows,
     })
 
     childProcess.on('close', (code) => {
