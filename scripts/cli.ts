@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
-import { spawn } from 'node:child_process'
 import fs from 'node:fs'
 import path from 'node:path'
 import process from 'node:process'
 import { fileURLToPath } from 'node:url'
 import * as p from '@clack/prompts'
+import spawn from 'cross-spawn'
 
 interface PackageJson {
   name: string
@@ -46,7 +46,6 @@ type Mode = 'build' | 'dev' | 'serve'
 
 const currentDir = path.dirname(fileURLToPath(import.meta.url))
 const rootDir = path.resolve(currentDir, '..')
-const isWindows = process.platform === 'win32'
 const validModes: Mode[] = ['build', 'dev', 'serve']
 const modeConfigs: Record<Mode, ModeConfig> = {
   build: {
@@ -206,7 +205,6 @@ async function runPackageScript(packageName: string, script: string): Promise<vo
     childProcess = spawn('pnpm', ['--filter', packageName, 'run', script], {
       stdio: 'inherit',
       cwd: rootDir,
-      shell: isWindows,
     })
 
     childProcess.on('close', (code) => {

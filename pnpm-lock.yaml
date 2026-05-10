@@ -27,6 +27,9 @@ catalogs:
     '@stylistic/stylelint-config':
       specifier: ^5.0.0
       version: 5.0.0
+    '@types/cross-spawn':
+      specifier: ^6.0.6
+      version: 6.0.6
     '@types/node':
       specifier: ^25.6.0
       version: 25.6.0
@@ -57,6 +60,9 @@ catalogs:
     boxen:
       specifier: ^8.0.1
       version: 8.0.1
+    cross-spawn:
+      specifier: ^7.0.6
+      version: 7.0.6
     dayjs:
       specifier: ^1.11.20
       version: 1.11.20
@@ -210,12 +216,18 @@ importers:
       '@stylistic/stylelint-config':
         specifier: 'catalog:'
         version: 5.0.0(stylelint@17.11.0(typescript@6.0.3))
+      '@types/cross-spawn':
+        specifier: 'catalog:'
+        version: 6.0.6
       '@types/node':
         specifier: 'catalog:'
         version: 25.6.0
       '@unocss/eslint-plugin':
         specifier: 'catalog:'
         version: 66.6.8(eslint@10.3.0(jiti@2.6.1))(typescript@6.0.3)
+      cross-spawn:
+        specifier: 'catalog:'
+        version: 7.0.6
       eslint:
         specifier: 'catalog:'
         version: 10.3.0(jiti@2.6.1)
@@ -2475,6 +2487,9 @@ packages:
 
   '@tybys/wasm-util@0.10.1':
     resolution: {integrity: sha512-9tTaPJLSiejZKx+Bmog4uSubteqTvFrVrURwkmHixBo0G4seD0zUxp98E1DzUBJxLQ3NPwXrGKDiVjwx/DpPsg==}
+
+  '@types/cross-spawn@6.0.6':
+    resolution: {integrity: sha512-fXRhhUkG4H3TQk5dBhQ7m/JDdSNHKwR2BBia62lhwEIq9xGiQKLxd6LymNhn47SjXhsUEPmxi+PKw2OkW4LLjA==}
 
   '@types/debug@4.1.12':
     resolution: {integrity: sha512-vIChWdVG3LG1SMxEvI/AK+FWJthlrqlTu7fbrlywTkkaONwk/UAGaULXRlf8vkzFBLVm0zkMdCquhL5aOjhXPQ==}
@@ -7770,6 +7785,10 @@ snapshots:
     dependencies:
       tslib: 2.8.1
     optional: true
+
+  '@types/cross-spawn@6.0.6':
+    dependencies:
+      '@types/node': 25.6.0
 
   '@types/debug@4.1.12':
     dependencies:

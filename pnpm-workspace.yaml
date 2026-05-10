@@ -20,6 +20,7 @@ catalog:
   '@iconify/vue': ^5.0.1
   '@spiriit/vite-plugin-svg-spritemap': ^7.0.0
   '@stylistic/stylelint-config': ^5.0.0
+  '@types/cross-spawn': ^6.0.6
   '@types/node': ^25.6.0
   '@types/nprogress': ^0.2.3
   '@types/qs': ^6.15.0
@@ -30,6 +31,7 @@ catalog:
   autoprefixer: ^10.5.0
   axios: ^1.16.0
   boxen: ^8.0.1
+  cross-spawn: ^7.0.6
   dayjs: ^1.11.20
   eruda: ^3.4.3
   eslint: ^10.3.0
