@@ -34,6 +34,11 @@ export default defineConfig(({ mode, command }) => {
       sourcemap: env.VITE_BUILD_SOURCEMAP,
     },
     plugins: createVitePlugins(mode, command === 'build'),
+    optimizeDeps: {
+      exclude: [
+        '@fantastic-startkit/components',
+      ],
+    },
     resolve: {
       alias: {
         '@': path.resolve(__dirname, 'src'),

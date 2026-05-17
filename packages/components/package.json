@@ -3,15 +3,8 @@
   "type": "module",
   "version": "0.0.0",
   "exports": {
-    ".": "./index.ts",
-    "./resolver": {
-      "types": "./resolver.ts",
-      "import": "./dist/resolver.mjs"
-    },
-    "./global": "./global.d.ts"
-  },
-  "scripts": {
-    "stub": "pnpm unbuild --stub"
+    ".": "./src/index.ts",
+    "./resolver": "./resolver.ts"
   },
   "peerDependencies": {
     "unplugin-vue-components": "catalog:",

@@ -3,19 +3,19 @@ import boxen from 'boxen'
 import picocolors from 'picocolors'
 import banner from 'vite-plugin-banner'
 
-export interface FantasticStartkitCopyrightOptions {
+export interface CopyrightOptions {
   edition?: string
   website?: string
 }
 
-function resolveOptions(options: FantasticStartkitCopyrightOptions = {}) {
+function resolveOptions(options: CopyrightOptions = {}) {
   return {
     edition: options.edition ?? 'Startkit',
     website: options.website ?? 'https://hurui.me/fantastic-startkit/',
   }
 }
 
-export function createFantasticStartkitBannerPlugin(options: FantasticStartkitCopyrightOptions = {}): PluginOption {
+export function createBannerPlugin(options: CopyrightOptions = {}): PluginOption {
   const { website } = resolveOptions(options)
 
   return banner(`
@@ -27,7 +27,7 @@ export function createFantasticStartkitBannerPlugin(options: FantasticStartkitCo
   `)
 }
 
-export function createFantasticStartkitTerminalInfoPlugin(options: FantasticStartkitCopyrightOptions = {}): PluginOption {
+export function createTerminalInfoPlugin(options: CopyrightOptions = {}): PluginOption {
   const { edition, website } = resolveOptions(options)
 
   return {
@@ -52,7 +52,7 @@ export function createFantasticStartkitTerminalInfoPlugin(options: FantasticStar
   }
 }
 
-export function createFantasticStartkitSystemCopyrightPlugin(options: FantasticStartkitCopyrightOptions = {}): PluginOption {
+export function createSystemCopyrightPlugin(options: CopyrightOptions = {}): PluginOption {
   const { website } = resolveOptions(options)
   const fontFamily = 'font-family: "JetBrains Mono", "SF Mono", "Cascadia Code", Menlo, Consolas, "Liberation Mono", monospace;'
   const mainStyle = `${fontFamily} font-size: 14px; font-weight: 700; padding: 6px 8px; color: #35495e; background: #42b883;`
@@ -86,10 +86,10 @@ ${code}
   }
 }
 
-export function createFantasticStartkitCopyrightPlugins(options: FantasticStartkitCopyrightOptions = {}): PluginOption[] {
+export function createCopyrightPlugins(options: CopyrightOptions = {}): PluginOption[] {
   return [
-    createFantasticStartkitBannerPlugin(options),
-    createFantasticStartkitTerminalInfoPlugin(options),
-    createFantasticStartkitSystemCopyrightPlugin(options),
+    createBannerPlugin(options),
+    createTerminalInfoPlugin(options),
+    createSystemCopyrightPlugin(options),
   ]
 }

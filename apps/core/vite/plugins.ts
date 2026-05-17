@@ -1,7 +1,7 @@
 import type { PluginOption } from 'vite'
 import process from 'node:process'
-import { FantasticComponentsResolver, FantasticComponentsType } from '@fantastic-startkit/components/resolver'
-import { createFantasticStartkitCopyrightPlugins } from '@fantastic-startkit/copyright'
+import { ComponentsResolver as FantasticStartkitComponentsResolver, ComponentsType as FantasticStartkitComponentsType } from '@fantastic-startkit/components/resolver'
+import { createCopyrightPlugins as createFantasticStartkitCopyrightPlugins } from '@fantastic-startkit/copyright'
 import VitePluginSvgSpritemap from '@spiriit/vite-plugin-svg-spritemap'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
@@ -54,10 +54,10 @@ export default function createVitePlugins(mode: string, isBuild = false) {
       ],
       dts: './src/types/components.d.ts',
       resolvers: [
-        FantasticComponentsResolver(),
+        FantasticStartkitComponentsResolver(),
       ],
       types: [
-        FantasticComponentsType,
+        FantasticStartkitComponentsType,
       ],
     }),
 

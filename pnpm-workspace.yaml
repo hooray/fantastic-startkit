@@ -1,16 +1,9 @@
-autoInstallPeers: true
-catalogMode: prefer
-cleanupUnusedCatalogs: true
-engineStrict: true
-ignoreWorkspaceRootCheck: true
-shamefullyHoist: true
-shellEmulator: true
-verifyDepsBeforeRun: prompt
 
 packages:
   - packages/*
   - apps/*
   - docs
+autoInstallPeers: true
 
 catalog:
   '@antfu/eslint-config': ^8.3.0
@@ -58,7 +51,6 @@ catalog:
   taze: ^19.11.0
   tsx: ^4.21.0
   typescript: ^6.0.3
-  unbuild: ^3.6.1
   unocss: ^66.6.8
   unplugin-auto-import: ^21.0.0
   unplugin-turbo-console: ^2.3.2
@@ -76,7 +68,14 @@ catalog:
   vue: ^3.5.34
   vue-router: ^5.0.6
   vue-tsc: ^3.2.8
+catalogMode: prefer
 catalogs:
   docs:
     vitepress: ^1.6.4
     vitepress-plugin-comment-with-giscus: ^1.1.15
+cleanupUnusedCatalogs: true
+engineStrict: true
+ignoreWorkspaceRootCheck: true
+shamefullyHoist: true
+shellEmulator: true
+verifyDepsBeforeRun: prompt
