@@ -36,4 +36,4 @@
 
 - [`Fantastic-admin`](https://fantastic-admin.hurui.me/) - 面向 AI 的管理系统框架
 - [`Fantastic-mobile`](https://fantastic-mobile.hurui.me/) - 让你的 H5 项目拥有稳固的工程底座
-- [`One-step-admin`](https://one-step-admin.hurui.me) - 干啥都快人一步的 Vue 中后台管理系统框架
+- [`One-step Console`](https://one-step-admin.hurui.me) - 像导播一样编排你的工作现场
