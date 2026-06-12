@@ -13,56 +13,56 @@ packages:
   - docs
 catalog:
   '@antfu/eslint-config': ^9.0.0
-  '@clack/prompts': ^1.4.0
+  '@clack/prompts': ^1.5.1
   '@faker-js/faker': ^10.4.0
-  '@iconify/json': ^2.2.474
+  '@iconify/json': ^2.2.485
   '@iconify/vue': ^5.0.1
   '@spiriit/vite-plugin-svg-spritemap': ^7.0.0
   '@stylistic/stylelint-config': ^5.0.0
   '@types/cross-spawn': ^6.0.6
-  '@types/node': ^25.8.0
+  '@types/node': ^25.9.3
   '@types/nprogress': ^0.2.3
   '@types/qs': ^6.15.1
-  '@unocss/eslint-plugin': ^66.6.8
+  '@unocss/eslint-plugin': ^66.7.2
   '@vitejs/plugin-vue': ^6.0.7
   '@vitejs/plugin-vue-jsx': ^5.1.5
   '@vue/tsconfig': ^0.9.1
   autoprefixer: ^10.5.0
-  axios: ^1.16.1
+  axios: ^1.17.0
   boxen: ^8.0.1
   cross-spawn: ^7.0.6
-  dayjs: ^1.11.20
+  dayjs: ^1.11.21
   eruda: ^3.4.3
-  eslint: ^10.4.0
+  eslint: ^10.4.1
   http-server: ^14.1.1
-  lint-staged: ^17.0.5
+  lint-staged: ^17.0.7
   medium-zoom: ^1.1.0
   mitt: ^3.0.1
-  npm-run-all2: ^8.0.4
+  npm-run-all2: ^9.0.1
   nprogress: ^0.2.0
   picocolors: ^1.1.1
   pinia: ^3.0.4
   pinia-plugin-persistedstate: ^4.7.1
-  postcss: ^8.5.14
+  postcss: ^8.5.15
   postcss-nested: ^7.0.2
   qs: ^6.15.2
-  sass-embedded: ^1.99.0
+  sass-embedded: ^1.100.0
   simple-git-hooks: ^2.13.1
-  stylelint: ^17.11.1
+  stylelint: ^17.13.0
   stylelint-config-recess-order: ^7.7.0
   stylelint-config-standard-scss: ^17.0.0
   stylelint-config-standard-vue: ^1.0.0
-  stylelint-scss: ^7.1.1
+  stylelint-scss: ^7.2.0
   svgo: ^4.0.1
-  taze: ^19.12.0
-  tsx: ^4.22.1
+  taze: ^19.14.1
+  tsx: ^4.22.4
   typescript: ^6.0.3
-  unocss: ^66.6.8
+  unocss: ^66.7.2
   unplugin-auto-import: ^21.0.0
   unplugin-turbo-console: ^2.3.2
-  unplugin-vue-components: ^32.0.0
+  unplugin-vue-components: ^32.1.0
   vconsole: ^3.15.1
-  vite: ^8.0.13
+  vite: ^8.0.16
   vite-plugin-archiver: ^0.3.2
   vite-plugin-banner: ^0.8.1
   vite-plugin-compression2: ^2.5.3
@@ -71,10 +71,15 @@ catalog:
   vite-plugin-pages: ^0.33.3
   vite-plugin-vue-devtools: ^8.1.2
   vite-plugin-vue-layouts-next: ^2.1.0
-  vue: ^3.5.34
-  vue-router: ^5.0.7
-  vue-tsc: ^3.2.9
+  vue: ^3.5.38
+  vue-router: ^5.1.0
+  vue-tsc: ^3.3.4
 catalogs:
   docs:
     vitepress: ^1.6.4
     vitepress-plugin-comment-with-giscus: ^1.1.15
+allowBuilds:
+  '@parcel/watcher': true
+  core-js: true
+  esbuild: true
+  simple-git-hooks: true
