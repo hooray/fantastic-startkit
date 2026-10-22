@@ -11,11 +11,11 @@
           <div class="sub">杰出的管理系统框架</div>
         </div>
       </a>
-      <a href="https://one-step-admin.hurui.me/" target="_blank" class="sponsor-item">
-        <img src="https://one-step-admin.hurui.me/logo.png">
+      <a href="https://one-step-console.hurui.me/" target="_blank" class="sponsor-item">
+        <img src="https://one-step-console.hurui.me/logo.png">
         <div class="info">
-          <div class="main">One-step-admin</div>
-          <div class="sub">巧妙的管理系统框架</div>
+          <div class="main">One-step Console</div>
+          <div class="sub">一步控制台</div>
         </div>
       </a>
       <a href="https://fantastic-mobile.hurui.me/" target="_blank" class="sponsor-item">
